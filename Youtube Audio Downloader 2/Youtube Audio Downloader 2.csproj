@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main\List\Temp\TempUserControl.cs">
+    <Compile Include="Main\Download\Item\ItemDownloadUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Main\List\Temp\TempUserControl.Designer.cs">
-      <DependentUpon>TempUserControl.cs</DependentUpon>
+    <Compile Include="Main\Download\Item\ItemDownloadUserControl.Designer.cs">
+      <DependentUpon>ItemDownloadUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\List\Item\ItemListUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Main\List\Item\ItemListUserControl.Designer.cs">
+      <DependentUpon>ItemListUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="OptimizedRichTextBox.cs">
       <SubType>Component</SubType>
@@ -87,11 +93,14 @@
     <Compile Include="Main\SettingsUserControl.Designer.cs">
       <DependentUpon>SettingsUserControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Main\Download\Item\ItemDownloadUserControl.resx">
+      <DependentUpon>ItemDownloadUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main\List\Temp\TempUserControl.resx">
-      <DependentUpon>TempUserControl.cs</DependentUpon>
+    <EmbeddedResource Include="Main\List\Item\ItemListUserControl.resx">
+      <DependentUpon>ItemListUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -128,5 +137,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,7 +16,7 @@ namespace YoutubeAudioDownloader2.Main
         {
             panel1.Controls.Add(SearchUserControl.Instance);
             panel1.Controls.Add(ListUserControl.Instance);
-            panel1.Controls.Add(DownloadUserControl.Instance);
+            panel1.Controls.Add(ItemDownloadUserControl.Instance);
             panel1.Controls.Add(SettingsUserControl.Instance);
         }
 
@@ -32,7 +32,7 @@ namespace YoutubeAudioDownloader2.Main
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DownloadUserControl.Instance.BringToFront();
+            ItemDownloadUserControl.Instance.BringToFront();
         }
 
         private void button4_Click(object sender, EventArgs e)

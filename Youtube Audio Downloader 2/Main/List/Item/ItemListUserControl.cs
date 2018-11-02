@@ -1,10 +1,10 @@
 ﻿using System.Windows.Forms;
 
-namespace YoutubeAudioDownloader2.Main.List.Temp
+namespace YoutubeAudioDownloader2.Main.List.Item
 {
-    public partial class TempUserControl : UserControl
+    public partial class ItemListUserControl : UserControl
     {
-        public TempUserControl()
+        public ItemListUserControl()
         {
             InitializeComponent();
 

@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-using YoutubeAudioDownloader2.Main.List.Temp;
+using YoutubeAudioDownloader2.Main.List.Item;
 
 namespace YoutubeAudioDownloader2.Main.List
 {
@@ -17,9 +17,9 @@ namespace YoutubeAudioDownloader2.Main.List
 
         private void button1_Click(object sender, System.EventArgs e)
         {
-            panel2.Controls.Add(new TempUserControl());
-            panel2.Controls.Add(new TempUserControl());
-            panel2.Controls.Add(new TempUserControl());
+            panel2.Controls.Add(new ItemListUserControl());
+            panel2.Controls.Add(new ItemListUserControl());
+            panel2.Controls.Add(new ItemListUserControl());
         }
     }
 }

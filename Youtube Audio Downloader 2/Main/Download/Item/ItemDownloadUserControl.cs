@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace YoutubeAudioDownloader2.Main.Download
+namespace YoutubeAudioDownloader2.Main.Download.Item
 {
     public partial class ItemDownloadUserControl : UserControl
     {
@@ -11,7 +11,7 @@ namespace YoutubeAudioDownloader2.Main.Download
         {
             InitializeComponent();
 
-            Dock = DockStyle.Fill;
+            Dock = DockStyle.Top;
         }
     }
 }
