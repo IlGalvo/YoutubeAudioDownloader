@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using YoutubeAudioDownloader2.Main;
 
-namespace Youtube_Audio_Downloader_2
+namespace YoutubeAudioDownloader2
 {
-    static class Program
+    static class MainProgram
     {
         /// <summary>
         /// Punto di ingresso principale dell'applicazione.
@@ -16,7 +14,7 @@ namespace Youtube_Audio_Downloader_2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainForm());
         }
     }
 }
