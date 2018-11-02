@@ -52,6 +52,12 @@
     <Compile Include="Main\Download\Item\ItemDownloadUserControl.Designer.cs">
       <DependentUpon>ItemDownloadUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main\Download\DownloadUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Main\Download\DownloadUserControl.Designer.cs">
+      <DependentUpon>DownloadUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\List\Item\ItemListUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -81,12 +87,6 @@
     <Compile Include="Main\List\ListUserControl.Designer.cs">
       <DependentUpon>ListUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main\Download\DownloadUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Main\Download\DownloadUserControl.Designer.cs">
-      <DependentUpon>DownloadUserControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main\SettingsUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -95,6 +95,9 @@
     </Compile>
     <EmbeddedResource Include="Main\Download\Item\ItemDownloadUserControl.resx">
       <DependentUpon>ItemDownloadUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Download\DownloadUserControl.resx">
+      <DependentUpon>DownloadUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -117,9 +120,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main\List\ListUserControl.resx">
       <DependentUpon>ListUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main\Download\DownloadUserControl.resx">
-      <DependentUpon>DownloadUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\SettingsUserControl.resx">
       <DependentUpon>SettingsUserControl.cs</DependentUpon>
