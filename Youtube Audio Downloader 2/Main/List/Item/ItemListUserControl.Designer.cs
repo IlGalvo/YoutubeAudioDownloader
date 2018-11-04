@@ -285,7 +285,7 @@
             this.button1.Text = "Scarica";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // Temp
+            // ItemListUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -297,7 +297,7 @@
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(0);
-            this.Name = "Temp";
+            this.Name = "ItemListUserControl";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
             this.Size = new System.Drawing.Size(734, 276);
             this.groupBox1.ResumeLayout(false);

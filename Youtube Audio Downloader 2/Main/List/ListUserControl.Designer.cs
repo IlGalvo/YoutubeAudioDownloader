@@ -31,16 +31,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 556);
+            this.panel1.Location = new System.Drawing.Point(0, 564);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(734, 47);
+            this.panel1.Size = new System.Drawing.Size(734, 53);
             this.panel1.TabIndex = 1;
             // 
             // button1
@@ -51,11 +53,11 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleGreen;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(279, 3);
+            this.button1.Location = new System.Drawing.Point(282, 7);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 41);
+            this.button1.Size = new System.Drawing.Size(148, 40);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Mostra tutti";
+            this.button1.Text = "Rimuovi tutti";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -64,22 +66,34 @@
             this.panel2.AutoScroll = true;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.MaximumSize = new System.Drawing.Size(734, 556);
+            this.panel2.MinimumSize = new System.Drawing.Size(734, 556);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(734, 556);
             this.panel2.TabIndex = 2;
             // 
-            // UserControl2
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 554);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(734, 10);
+            this.panel3.TabIndex = 0;
+            // 
+            // ListUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "UserControl2";
-            this.Size = new System.Drawing.Size(734, 603);
+            this.Name = "ListUserControl";
+            this.Size = new System.Drawing.Size(734, 617);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -89,5 +103,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel3;
     }
 }
