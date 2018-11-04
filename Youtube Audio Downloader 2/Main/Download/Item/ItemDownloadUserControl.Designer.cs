@@ -48,9 +48,10 @@
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "ItemDownloadUserControl";
-            this.Size = new System.Drawing.Size(734, 556);
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
+            this.Size = new System.Drawing.Size(734, 557);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
