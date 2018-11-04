@@ -12,30 +12,30 @@ namespace YoutubeAudioDownloader2.Main
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
-            panel1.Controls.Add(SearchUserControl.Instance);
-            panel1.Controls.Add(ListUserControl.Instance);
-            panel1.Controls.Add(DownloadUserControl.Instance);
-            panel1.Controls.Add(SettingsUserControl.Instance);
+            panelContent.Controls.Add(SearchUserControl.Instance);
+            panelContent.Controls.Add(ListUserControl.Instance);
+            panelContent.Controls.Add(DownloadUserControl.Instance);
+            panelContent.Controls.Add(SettingsUserControl.Instance);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonSearch_Click(object sender, EventArgs e)
         {
             SearchUserControl.Instance.BringToFront();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonList_Click(object sender, EventArgs e)
         {
             ListUserControl.Instance.BringToFront();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonDownload_Click(object sender, EventArgs e)
         {
             DownloadUserControl.Instance.BringToFront();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonSettings_Click(object sender, EventArgs e)
         {
             SettingsUserControl.Instance.BringToFront();
         }

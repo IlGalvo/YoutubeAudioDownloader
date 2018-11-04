@@ -15,15 +15,15 @@ namespace YoutubeAudioDownloader2.Main
             Dock = DockStyle.Fill;
         }
 
-        private void optimizedTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void optimizedTextBoxSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                button1.PerformClick();
+                buttonSearch.PerformClick();
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonSearch_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Ricerca in corso...");
         }

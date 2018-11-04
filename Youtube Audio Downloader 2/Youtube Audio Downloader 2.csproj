@@ -64,6 +64,7 @@
     <Compile Include="Main\List\Item\ItemListUserControl.Designer.cs">
       <DependentUpon>ItemListUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main\MainUtilities.cs" />
     <Compile Include="OptimizedRichTextBox.cs">
       <SubType>Component</SubType>
     </Compile>

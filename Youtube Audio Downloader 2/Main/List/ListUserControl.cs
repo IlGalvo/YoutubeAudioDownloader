@@ -15,11 +15,11 @@ namespace YoutubeAudioDownloader2.Main.List
             Dock = DockStyle.Fill;
         }
 
-        private void button1_Click(object sender, System.EventArgs e)
+        private void buttonShowAll_Click(object sender, System.EventArgs e)
         {
-            panel2.Controls.Add(new ItemListUserControl());
-            panel2.Controls.Add(new ItemListUserControl());
-            panel2.Controls.Add(new ItemListUserControl());
+            panelContent.Controls.Add(new ItemListUserControl());
+            panelContent.Controls.Add(new ItemListUserControl());
+            panelContent.Controls.Add(new ItemListUserControl());
         }
     }
 }

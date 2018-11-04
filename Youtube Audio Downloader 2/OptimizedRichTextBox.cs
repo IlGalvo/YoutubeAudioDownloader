@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace YoutubeAudioDownloader2
 {
-    public class OptimizedRichTextBox : RichTextBox
+    internal sealed class OptimizedRichTextBox : RichTextBox
     {
         #region GLOBAL_VARIABLE
         private enum PlaceholderStatus
