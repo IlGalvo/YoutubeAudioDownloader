@@ -29,21 +29,20 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.optimizedTextBox1 = new OptimizedRichTextBox();
+            this.optimizedTextBox1 = new YoutubeAudioDownloader2.OptimizedRichTextBox();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button1.BackColor = System.Drawing.Color.Honeydew;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleGreen;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(650, 223);
+            this.button1.Location = new System.Drawing.Point(650, 230);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 57);
+            this.button1.Size = new System.Drawing.Size(81, 42);
             this.button1.TabIndex = 1;
             this.button1.Text = "Cerca";
             this.button1.UseVisualStyleBackColor = false;
@@ -65,7 +64,7 @@
             this.optimizedTextBox1.TabIndex = 0;
             this.optimizedTextBox1.Text = "";
             // 
-            // UserControl1
+            // SearchUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -75,7 +74,7 @@
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "UserControl1";
+            this.Name = "SearchUserControl";
             this.Size = new System.Drawing.Size(734, 603);
             this.ResumeLayout(false);
 
