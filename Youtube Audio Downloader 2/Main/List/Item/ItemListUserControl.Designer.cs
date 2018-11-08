@@ -31,7 +31,6 @@
             this.webBrowserVideo = new System.Windows.Forms.WebBrowser();
             this.groupBoxVideo = new System.Windows.Forms.GroupBox();
             this.labelRating = new System.Windows.Forms.Label();
-            this.labelAuthor = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelDuration = new System.Windows.Forms.Label();
             this.labelDate = new System.Windows.Forms.Label();
@@ -67,7 +66,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxVideo.BackColor = System.Drawing.Color.Transparent;
             this.groupBoxVideo.Controls.Add(this.labelRating);
-            this.groupBoxVideo.Controls.Add(this.labelAuthor);
             this.groupBoxVideo.Controls.Add(this.labelTitle);
             this.groupBoxVideo.Controls.Add(this.labelDuration);
             this.groupBoxVideo.Controls.Add(this.labelDate);
@@ -93,16 +91,6 @@
             this.labelRating.Size = new System.Drawing.Size(74, 17);
             this.labelRating.TabIndex = 10;
             this.labelRating.Text = "Valutazione";
-            // 
-            // labelAuthor
-            // 
-            this.labelAuthor.AutoSize = true;
-            this.labelAuthor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAuthor.Location = new System.Drawing.Point(94, 23);
-            this.labelAuthor.Name = "labelAuthor";
-            this.labelAuthor.Size = new System.Drawing.Size(47, 17);
-            this.labelAuthor.TabIndex = 9;
-            this.labelAuthor.Text = "Autore";
             // 
             // labelTitle
             // 
@@ -324,7 +312,6 @@
         private System.Windows.Forms.Label labelBitrateStatic;
         private System.Windows.Forms.Label labelEncodingStatic;
         private System.Windows.Forms.Label labelRating;
-        private System.Windows.Forms.Label labelAuthor;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelDuration;
         private System.Windows.Forms.Label labelDate;

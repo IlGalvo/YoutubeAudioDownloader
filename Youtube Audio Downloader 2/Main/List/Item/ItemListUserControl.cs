@@ -11,7 +11,7 @@ namespace YoutubeAudioDownloader2.Main.List.Item
             Dock = DockStyle.Top;
 
             webBrowserVideo.Navigate("https://www.google.it/");
-            labelAuthor.Text = MainUtilities.WidthTrim("aaaaaaaaaAbbbbbbbbbBcccccccccCdddddddddDeeeeeeeeeEfffffffffF", labelAuthor.Font, 300);
+            //labelAuthor.Text = "aaaaaaaaaAbbbbbbbbbBcccccccccCdddddddddDeeeeeeeeeEfffffffffF";
         }
     }
 }
