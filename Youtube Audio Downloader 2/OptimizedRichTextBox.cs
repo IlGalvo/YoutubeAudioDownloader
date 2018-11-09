@@ -7,14 +7,7 @@ namespace YoutubeAudioDownloader2
 {
     internal sealed class OptimizedRichTextBox : RichTextBox
     {
-        #region GLOBAL_VARIABLE
-        private enum PlaceholderStatus
-        {
-            Enable,
-            Hide,
-            Disable
-        }
-
+        #region GLOBAL_VARIABLES
         [DefaultValue("")]
         public string PlaceholderText { get; set; }
 
@@ -26,8 +19,6 @@ namespace YoutubeAudioDownloader2
 
         [DefaultValue(typeof(Color), "Window")]
         public Color PlaceholderBackColor { get; set; }
-
-        private PlaceholderStatus placeholderStatus;
         #endregion
 
         #region CONSTRUCTOR
@@ -39,8 +30,6 @@ namespace YoutubeAudioDownloader2
             PlaceholerFont = SystemFonts.DefaultFont;
             PlaceholderForeColor = Color.DimGray;
             PlaceholderBackColor = SystemColors.Window;
-
-            placeholderStatus = PlaceholderStatus.Disable;
         }
         #endregion
 
@@ -83,24 +72,17 @@ namespace YoutubeAudioDownloader2
             base.OnKeyDown(e);
         }
 
+        protected override void OnFontChanged(EventArgs e)
+        {
+            PlaceholerFont = new Font(PlaceholerFont.FontFamily, Font.Size, PlaceholerFont.Style, PlaceholerFont.Unit, PlaceholerFont.GdiCharSet);
+
+            base.OnFontChanged(e);
+        }
+
         protected override void OnPaint(PaintEventArgs e)
         {
-            switch (placeholderStatus)
-            {
-                case PlaceholderStatus.Enable:
-                    e.Graphics.FillRectangle(new SolidBrush(PlaceholderBackColor), ClientRectangle);
-
-                    PlaceholerFont = new Font(PlaceholerFont.FontFamily, Font.Size, PlaceholerFont.Style, PlaceholerFont.Unit, PlaceholerFont.GdiCharSet);
-                    e.Graphics.DrawString(PlaceholderText, PlaceholerFont, new SolidBrush(PlaceholderForeColor), new PointF(0, 0));
-                    break;
-                case PlaceholderStatus.Hide:
-                case PlaceholderStatus.Disable:
-                    e.Graphics.FillRectangle(new SolidBrush(BackColor), ClientRectangle);
-
-                    string text = ((placeholderStatus == PlaceholderStatus.Hide) ? string.Empty : Text);
-                    e.Graphics.DrawString(text, Font, new SolidBrush(ForeColor), new PointF(0, 0));
-                    break;
-            }
+            e.Graphics.FillRectangle(new SolidBrush(PlaceholderBackColor), ClientRectangle);
+            e.Graphics.DrawString(PlaceholderText, PlaceholerFont, new SolidBrush(PlaceholderForeColor), new PointF(0, 0));
 
             base.OnPaint(e);
         }
@@ -109,24 +91,9 @@ namespace YoutubeAudioDownloader2
         #region PLACEHOLDER_MANAGER
         private void ManagePlaceholderChanges()
         {
-            if (Text == string.Empty)
-            {
-                if (Focused)
-                {
-                    placeholderStatus = PlaceholderStatus.Hide;
-                }
-                else
-                {
-                    placeholderStatus = PlaceholderStatus.Enable;
-                }
-            }
-            else
-            {
-                placeholderStatus = PlaceholderStatus.Disable;
-            }
+            SetStyle(ControlStyles.UserPaint, (!Focused));
 
-            SetStyle(ControlStyles.UserPaint, ((placeholderStatus == PlaceholderStatus.Enable) ? true : false));
-            Refresh();
+            Invalidate();
         }
         #endregion
     }
