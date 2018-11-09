@@ -48,6 +48,7 @@
             this.labelBitrateStatic = new System.Windows.Forms.Label();
             this.labelEncodingStatic = new System.Windows.Forms.Label();
             this.buttonDownload = new System.Windows.Forms.Button();
+            this.optimizedLabelAuthor = new YoutubeAudioDownloader2.Main.OptimizedLabel();
             this.groupBoxVideo.SuspendLayout();
             this.groupBoxAudio.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +66,7 @@
             this.groupBoxVideo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxVideo.BackColor = System.Drawing.Color.Transparent;
+            this.groupBoxVideo.Controls.Add(this.optimizedLabelAuthor);
             this.groupBoxVideo.Controls.Add(this.labelRating);
             this.groupBoxVideo.Controls.Add(this.labelTitle);
             this.groupBoxVideo.Controls.Add(this.labelDuration);
@@ -273,6 +275,16 @@
             this.buttonDownload.Text = "Scarica";
             this.buttonDownload.UseVisualStyleBackColor = false;
             // 
+            // optimizedLabelAuthor
+            // 
+            this.optimizedLabelAuthor.AutoSize = true;
+            this.optimizedLabelAuthor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optimizedLabelAuthor.Location = new System.Drawing.Point(94, 23);
+            this.optimizedLabelAuthor.Name = "optimizedLabelAuthor";
+            this.optimizedLabelAuthor.Size = new System.Drawing.Size(47, 17);
+            this.optimizedLabelAuthor.TabIndex = 11;
+            this.optimizedLabelAuthor.Text = "Autore";
+            // 
             // ItemListUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -318,5 +330,6 @@
         private System.Windows.Forms.Label labelEncoding;
         private System.Windows.Forms.Label labelBitrate;
         private System.Windows.Forms.Label labelSize;
+        private OptimizedLabel optimizedLabelAuthor;
     }
 }
