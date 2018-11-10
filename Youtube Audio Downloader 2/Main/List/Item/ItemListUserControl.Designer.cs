@@ -30,11 +30,12 @@
         {
             this.webBrowserVideo = new System.Windows.Forms.WebBrowser();
             this.groupBoxVideo = new System.Windows.Forms.GroupBox();
+            this.optimizedLabelTitle = new YoutubeAudioDownloader2.Main.OptimizedLabel();
+            this.labelAuthor = new System.Windows.Forms.Label();
             this.labelRating = new System.Windows.Forms.Label();
-            this.labelTitle = new System.Windows.Forms.Label();
             this.labelDuration = new System.Windows.Forms.Label();
             this.labelDate = new System.Windows.Forms.Label();
-            this.labelShowAll = new System.Windows.Forms.Label();
+            this.linkLabelShowExtra = new System.Windows.Forms.LinkLabel();
             this.labelRatingStatic = new System.Windows.Forms.Label();
             this.labelDateStatic = new System.Windows.Forms.Label();
             this.labelDurationStatic = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.labelBitrateStatic = new System.Windows.Forms.Label();
             this.labelEncodingStatic = new System.Windows.Forms.Label();
             this.buttonDownload = new System.Windows.Forms.Button();
-            this.optimizedLabelAuthor = new YoutubeAudioDownloader2.Main.OptimizedLabel();
             this.groupBoxVideo.SuspendLayout();
             this.groupBoxAudio.SuspendLayout();
             this.SuspendLayout();
@@ -66,12 +66,12 @@
             this.groupBoxVideo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxVideo.BackColor = System.Drawing.Color.Transparent;
-            this.groupBoxVideo.Controls.Add(this.optimizedLabelAuthor);
+            this.groupBoxVideo.Controls.Add(this.optimizedLabelTitle);
+            this.groupBoxVideo.Controls.Add(this.labelAuthor);
             this.groupBoxVideo.Controls.Add(this.labelRating);
-            this.groupBoxVideo.Controls.Add(this.labelTitle);
             this.groupBoxVideo.Controls.Add(this.labelDuration);
             this.groupBoxVideo.Controls.Add(this.labelDate);
-            this.groupBoxVideo.Controls.Add(this.labelShowAll);
+            this.groupBoxVideo.Controls.Add(this.linkLabelShowExtra);
             this.groupBoxVideo.Controls.Add(this.labelRatingStatic);
             this.groupBoxVideo.Controls.Add(this.labelDateStatic);
             this.groupBoxVideo.Controls.Add(this.labelDurationStatic);
@@ -84,6 +84,26 @@
             this.groupBoxVideo.TabStop = false;
             this.groupBoxVideo.Text = "Video";
             // 
+            // optimizedLabelTitle
+            // 
+            this.optimizedLabelTitle.AutoSize = true;
+            this.optimizedLabelTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optimizedLabelTitle.Location = new System.Drawing.Point(94, 40);
+            this.optimizedLabelTitle.Name = "optimizedLabelTitle";
+            this.optimizedLabelTitle.Size = new System.Drawing.Size(41, 17);
+            this.optimizedLabelTitle.TabIndex = 12;
+            this.optimizedLabelTitle.Text = "Titolo";
+            // 
+            // labelAuthor
+            // 
+            this.labelAuthor.AutoSize = true;
+            this.labelAuthor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAuthor.Location = new System.Drawing.Point(94, 23);
+            this.labelAuthor.Name = "labelAuthor";
+            this.labelAuthor.Size = new System.Drawing.Size(47, 17);
+            this.labelAuthor.TabIndex = 11;
+            this.labelAuthor.Text = "Autore";
+            // 
             // labelRating
             // 
             this.labelRating.AutoSize = true;
@@ -93,16 +113,6 @@
             this.labelRating.Size = new System.Drawing.Size(74, 17);
             this.labelRating.TabIndex = 10;
             this.labelRating.Text = "Valutazione";
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.Location = new System.Drawing.Point(94, 40);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(41, 17);
-            this.labelTitle.TabIndex = 8;
-            this.labelTitle.Text = "Titolo";
             // 
             // labelDuration
             // 
@@ -124,15 +134,18 @@
             this.labelDate.TabIndex = 6;
             this.labelDate.Text = "Data";
             // 
-            // labelShowAll
+            // linkLabelShowExtra
             // 
-            this.labelShowAll.AutoSize = true;
-            this.labelShowAll.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelShowAll.Location = new System.Drawing.Point(6, 109);
-            this.labelShowAll.Name = "labelShowAll";
-            this.labelShowAll.Size = new System.Drawing.Size(89, 17);
-            this.labelShowAll.TabIndex = 5;
-            this.labelShowAll.Text = "Mostra altro...";
+            this.linkLabelShowExtra.AutoSize = true;
+            this.linkLabelShowExtra.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelShowExtra.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabelShowExtra.LinkColor = System.Drawing.Color.Blue;
+            this.linkLabelShowExtra.Location = new System.Drawing.Point(6, 109);
+            this.linkLabelShowExtra.Name = "linkLabelShowExtra";
+            this.linkLabelShowExtra.Size = new System.Drawing.Size(89, 17);
+            this.linkLabelShowExtra.TabIndex = 5;
+            this.linkLabelShowExtra.TabStop = true;
+            this.linkLabelShowExtra.Text = "Mostra altro...";
             // 
             // labelRatingStatic
             // 
@@ -275,16 +288,6 @@
             this.buttonDownload.Text = "Scarica";
             this.buttonDownload.UseVisualStyleBackColor = false;
             // 
-            // optimizedLabelAuthor
-            // 
-            this.optimizedLabelAuthor.AutoSize = true;
-            this.optimizedLabelAuthor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optimizedLabelAuthor.Location = new System.Drawing.Point(94, 23);
-            this.optimizedLabelAuthor.Name = "optimizedLabelAuthor";
-            this.optimizedLabelAuthor.Size = new System.Drawing.Size(47, 17);
-            this.optimizedLabelAuthor.TabIndex = 11;
-            this.optimizedLabelAuthor.Text = "Autore";
-            // 
             // ItemListUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -319,17 +322,17 @@
         private System.Windows.Forms.Label labelDurationStatic;
         private System.Windows.Forms.Label labelTitleStatic;
         private System.Windows.Forms.Label labelAuthorStatic;
-        private System.Windows.Forms.Label labelShowAll;
         private System.Windows.Forms.Label labelSizeStatic;
         private System.Windows.Forms.Label labelBitrateStatic;
         private System.Windows.Forms.Label labelEncodingStatic;
         private System.Windows.Forms.Label labelRating;
-        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelDuration;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.Label labelEncoding;
         private System.Windows.Forms.Label labelBitrate;
         private System.Windows.Forms.Label labelSize;
-        private OptimizedLabel optimizedLabelAuthor;
+        private OptimizedLabel optimizedLabelTitle;
+        private System.Windows.Forms.Label labelAuthor;
+        private System.Windows.Forms.LinkLabel linkLabelShowExtra;
     }
 }
