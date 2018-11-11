@@ -20,6 +20,7 @@ namespace YoutubeAudioDownloader2.Main.Download
             panelContent.Controls.Add(new ItemDownloadUserControl());
             panelContent.Controls.Add(new ItemDownloadUserControl());
             panelContent.Controls.Add(new ItemDownloadUserControl());
+            panelContent.Controls.Add(new ItemDownloadUserControl());
         }
     }
 }
