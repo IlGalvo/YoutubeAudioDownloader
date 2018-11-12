@@ -46,11 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main\Download\Item\ItemDownloadUserControl.cs">
+    <Compile Include="ColoredProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\Download\Item\EntryDownloadUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Main\Download\Item\ItemDownloadUserControl.Designer.cs">
-      <DependentUpon>ItemDownloadUserControl.cs</DependentUpon>
+    <Compile Include="Main\Download\Item\EntryDownloadUserControl.Designer.cs">
+      <DependentUpon>EntryDownloadUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Main\Download\DownloadUserControl.cs">
       <SubType>UserControl</SubType>
@@ -58,11 +61,11 @@
     <Compile Include="Main\Download\DownloadUserControl.Designer.cs">
       <DependentUpon>DownloadUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main\List\Item\ItemListUserControl.cs">
+    <Compile Include="Main\List\Item\EntryListUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Main\List\Item\ItemListUserControl.Designer.cs">
-      <DependentUpon>ItemListUserControl.cs</DependentUpon>
+    <Compile Include="Main\List\Item\EntryListUserControl.Designer.cs">
+      <DependentUpon>EntryListUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Main\MainUtilities.cs" />
     <Compile Include="Main\OptimizedLabel.cs">
@@ -97,8 +100,8 @@
     <Compile Include="Main\SettingsUserControl.Designer.cs">
       <DependentUpon>SettingsUserControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Main\Download\Item\ItemDownloadUserControl.resx">
-      <DependentUpon>ItemDownloadUserControl.cs</DependentUpon>
+    <EmbeddedResource Include="Main\Download\Item\EntryDownloadUserControl.resx">
+      <DependentUpon>EntryDownloadUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\Download\DownloadUserControl.resx">
       <DependentUpon>DownloadUserControl.cs</DependentUpon>
@@ -106,8 +109,8 @@
     <EmbeddedResource Include="Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main\List\Item\ItemListUserControl.resx">
-      <DependentUpon>ItemListUserControl.cs</DependentUpon>
+    <EmbeddedResource Include="Main\List\Item\EntryListUserControl.resx">
+      <DependentUpon>EntryListUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -17,7 +17,7 @@ namespace YoutubeAudioDownloader2.Main.List
 
         private void buttonShowAll_Click(object sender, System.EventArgs e)
         {
-            panelContent.Controls.Add(new ItemListUserControl());
+            panelContent.Controls.Add(new EntryListUserControl());
             /*panelContent.Controls.Add(new ItemListUserControl());
             panelContent.Controls.Add(new ItemListUserControl());*/
         }

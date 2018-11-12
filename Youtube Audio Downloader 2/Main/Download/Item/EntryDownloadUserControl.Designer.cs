@@ -1,6 +1,6 @@
 ﻿namespace YoutubeAudioDownloader2.Main.Download.Item
 {
-    partial class ItemDownloadUserControl
+    partial class EntryDownloadUserControl
     {
         /// <summary> 
         /// Variabile di progettazione necessaria.
@@ -35,8 +35,8 @@
             this.optimizedLabelTitle = new YoutubeAudioDownloader2.Main.OptimizedLabel();
             this.labelInformation = new System.Windows.Forms.Label();
             this.labelBitrateSizeStatic = new System.Windows.Forms.Label();
-            this.buttonDownload = new System.Windows.Forms.Button();
-            this.progressBarDownload = new System.Windows.Forms.ProgressBar();
+            this.buttonDownloadCancel = new System.Windows.Forms.Button();
+            this.coloredProgressBarDownload = new YoutubeAudioDownloader2.ColoredProgressBar();
             this.buttonRemove = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.groupBoxDownload.SuspendLayout();
@@ -115,27 +115,29 @@
             this.labelBitrateSizeStatic.TabIndex = 1;
             this.labelBitrateSizeStatic.Text = "Bitrate/Size:";
             // 
-            // buttonDownload
+            // buttonDownloadCancel
             // 
-            this.buttonDownload.BackColor = System.Drawing.Color.LightCyan;
-            this.buttonDownload.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.buttonDownload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleTurquoise;
-            this.buttonDownload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
-            this.buttonDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDownload.Location = new System.Drawing.Point(170, 100);
-            this.buttonDownload.Name = "buttonDownload";
-            this.buttonDownload.Size = new System.Drawing.Size(75, 30);
-            this.buttonDownload.TabIndex = 2;
-            this.buttonDownload.Text = "Scarica";
-            this.buttonDownload.UseVisualStyleBackColor = false;
+            this.buttonDownloadCancel.BackColor = System.Drawing.Color.LightCyan;
+            this.buttonDownloadCancel.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.buttonDownloadCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleTurquoise;
+            this.buttonDownloadCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
+            this.buttonDownloadCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDownloadCancel.Location = new System.Drawing.Point(170, 100);
+            this.buttonDownloadCancel.Name = "buttonDownloadCancel";
+            this.buttonDownloadCancel.Size = new System.Drawing.Size(75, 30);
+            this.buttonDownloadCancel.TabIndex = 2;
+            this.buttonDownloadCancel.Text = "Scarica";
+            this.buttonDownloadCancel.UseVisualStyleBackColor = false;
             // 
-            // progressBarDownload
+            // coloredProgressBarDownload
             // 
-            this.progressBarDownload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBarDownload.Location = new System.Drawing.Point(251, 100);
-            this.progressBarDownload.Name = "progressBarDownload";
-            this.progressBarDownload.Size = new System.Drawing.Size(438, 30);
-            this.progressBarDownload.TabIndex = 3;
+            this.coloredProgressBarDownload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.coloredProgressBarDownload.ForeColor = System.Drawing.Color.Blue;
+            this.coloredProgressBarDownload.Location = new System.Drawing.Point(251, 100);
+            this.coloredProgressBarDownload.Name = "coloredProgressBarDownload";
+            this.coloredProgressBarDownload.ShowPercentageText = true;
+            this.coloredProgressBarDownload.Size = new System.Drawing.Size(438, 30);
+            this.coloredProgressBarDownload.TabIndex = 3;
             // 
             // buttonRemove
             // 
@@ -159,8 +161,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.buttonRemove);
-            this.Controls.Add(this.progressBarDownload);
-            this.Controls.Add(this.buttonDownload);
+            this.Controls.Add(this.coloredProgressBarDownload);
+            this.Controls.Add(this.buttonDownloadCancel);
             this.Controls.Add(this.groupBoxDownload);
             this.Controls.Add(this.pictureBoxImage);
             this.DoubleBuffered = true;
@@ -185,8 +187,8 @@
         private OptimizedLabel optimizedLabelTitle;
         private System.Windows.Forms.Label labelInformation;
         private System.Windows.Forms.Label labelBitrateSizeStatic;
-        private System.Windows.Forms.Button buttonDownload;
-        private System.Windows.Forms.ProgressBar progressBarDownload;
+        private System.Windows.Forms.Button buttonDownloadCancel;
+        private ColoredProgressBar coloredProgressBarDownload;
         private System.Windows.Forms.Button buttonRemove;
     }
 }

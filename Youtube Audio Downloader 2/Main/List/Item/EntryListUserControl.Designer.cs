@@ -1,6 +1,6 @@
 ﻿namespace YoutubeAudioDownloader2.Main.List.Item
 {
-    partial class ItemListUserControl
+    partial class EntryListUserControl
     {
         /// <summary> 
         /// Variabile di progettazione necessaria.

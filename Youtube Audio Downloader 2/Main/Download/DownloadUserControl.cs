@@ -17,10 +17,10 @@ namespace YoutubeAudioDownloader2.Main.Download
 
         private void buttonRemoveAll_Click(object sender, System.EventArgs e)
         {
-            panelContent.Controls.Add(new ItemDownloadUserControl());
-            panelContent.Controls.Add(new ItemDownloadUserControl());
-            panelContent.Controls.Add(new ItemDownloadUserControl());
-            panelContent.Controls.Add(new ItemDownloadUserControl());
+            panelContent.Controls.Add(new EntryDownloadUserControl());
+            panelContent.Controls.Add(new EntryDownloadUserControl());
+            panelContent.Controls.Add(new EntryDownloadUserControl());
+            panelContent.Controls.Add(new EntryDownloadUserControl());
         }
     }
 }

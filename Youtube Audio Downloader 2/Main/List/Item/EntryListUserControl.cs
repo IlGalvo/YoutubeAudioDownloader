@@ -2,9 +2,9 @@
 
 namespace YoutubeAudioDownloader2.Main.List.Item
 {
-    public partial class ItemListUserControl : UserControl
+    public partial class EntryListUserControl : UserControl
     {
-        public ItemListUserControl()
+        public EntryListUserControl()
         {
             InitializeComponent();
 
