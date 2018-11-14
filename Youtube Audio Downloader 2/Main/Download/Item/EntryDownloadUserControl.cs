@@ -11,7 +11,7 @@ namespace YoutubeAudioDownloader2.Main.Download.Item
 
             Dock = DockStyle.Top;
 
-            labelInformation.Text = "Errore: Si è verificato un errore durante la conversione.";
+            labelInformation.Text = "Download in corso...";
             coloredProgressBarDownload.Value = new Random().Next(0, 100);
         }
     }

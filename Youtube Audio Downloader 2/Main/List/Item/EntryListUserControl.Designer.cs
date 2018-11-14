@@ -137,12 +137,12 @@
             // linkLabelShowExtra
             // 
             this.linkLabelShowExtra.AutoSize = true;
-            this.linkLabelShowExtra.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelShowExtra.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelShowExtra.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabelShowExtra.LinkColor = System.Drawing.Color.Blue;
             this.linkLabelShowExtra.Location = new System.Drawing.Point(6, 109);
             this.linkLabelShowExtra.Name = "linkLabelShowExtra";
-            this.linkLabelShowExtra.Size = new System.Drawing.Size(89, 17);
+            this.linkLabelShowExtra.Size = new System.Drawing.Size(95, 17);
             this.linkLabelShowExtra.TabIndex = 5;
             this.linkLabelShowExtra.TabStop = true;
             this.linkLabelShowExtra.Text = "Mostra altro...";
@@ -288,7 +288,7 @@
             this.buttonDownload.Text = "Scarica";
             this.buttonDownload.UseVisualStyleBackColor = false;
             // 
-            // ItemListUserControl
+            // EntryListUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -300,7 +300,7 @@
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(0);
-            this.Name = "ItemListUserControl";
+            this.Name = "EntryListUserControl";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
             this.Size = new System.Drawing.Size(734, 276);
             this.groupBoxVideo.ResumeLayout(false);

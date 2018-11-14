@@ -32,12 +32,12 @@
             this.groupBoxDownload = new System.Windows.Forms.GroupBox();
             this.labelBitrateSize = new System.Windows.Forms.Label();
             this.labelTitleStatic = new System.Windows.Forms.Label();
-            this.optimizedLabelTitle = new YoutubeAudioDownloader2.Main.OptimizedLabel();
-            this.labelInformation = new System.Windows.Forms.Label();
             this.labelBitrateSizeStatic = new System.Windows.Forms.Label();
             this.buttonDownloadCancel = new System.Windows.Forms.Button();
-            this.coloredProgressBarDownload = new YoutubeAudioDownloader2.ColoredProgressBar();
             this.buttonRemove = new System.Windows.Forms.Button();
+            this.labelInformation = new System.Windows.Forms.Label();
+            this.coloredProgressBarDownload = new YoutubeAudioDownloader2.ColoredProgressBar();
+            this.optimizedLabelTitle = new YoutubeAudioDownloader2.Main.OptimizedLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.groupBoxDownload.SuspendLayout();
             this.SuspendLayout();
@@ -53,10 +53,10 @@
             // groupBoxDownload
             // 
             this.groupBoxDownload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxDownload.Controls.Add(this.labelInformation);
             this.groupBoxDownload.Controls.Add(this.labelBitrateSize);
             this.groupBoxDownload.Controls.Add(this.labelTitleStatic);
             this.groupBoxDownload.Controls.Add(this.optimizedLabelTitle);
-            this.groupBoxDownload.Controls.Add(this.labelInformation);
             this.groupBoxDownload.Controls.Add(this.labelBitrateSizeStatic);
             this.groupBoxDownload.Location = new System.Drawing.Point(170, 8);
             this.groupBoxDownload.Name = "groupBoxDownload";
@@ -85,26 +85,6 @@
             this.labelTitleStatic.TabIndex = 4;
             this.labelTitleStatic.Text = "Titolo:";
             // 
-            // optimizedLabelTitle
-            // 
-            this.optimizedLabelTitle.AutoSize = true;
-            this.optimizedLabelTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optimizedLabelTitle.Location = new System.Drawing.Point(91, 26);
-            this.optimizedLabelTitle.Name = "optimizedLabelTitle";
-            this.optimizedLabelTitle.Size = new System.Drawing.Size(41, 17);
-            this.optimizedLabelTitle.TabIndex = 3;
-            this.optimizedLabelTitle.Text = "Titolo";
-            // 
-            // labelInformation
-            // 
-            this.labelInformation.AutoSize = true;
-            this.labelInformation.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInformation.Location = new System.Drawing.Point(6, 62);
-            this.labelInformation.Name = "labelInformation";
-            this.labelInformation.Size = new System.Drawing.Size(83, 17);
-            this.labelInformation.TabIndex = 2;
-            this.labelInformation.Text = "Informazioni";
-            // 
             // labelBitrateSizeStatic
             // 
             this.labelBitrateSizeStatic.AutoSize = true;
@@ -129,16 +109,6 @@
             this.buttonDownloadCancel.Text = "Scarica";
             this.buttonDownloadCancel.UseVisualStyleBackColor = false;
             // 
-            // coloredProgressBarDownload
-            // 
-            this.coloredProgressBarDownload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.coloredProgressBarDownload.ForeColor = System.Drawing.Color.Blue;
-            this.coloredProgressBarDownload.Location = new System.Drawing.Point(251, 100);
-            this.coloredProgressBarDownload.Name = "coloredProgressBarDownload";
-            this.coloredProgressBarDownload.ShowPercentageText = true;
-            this.coloredProgressBarDownload.Size = new System.Drawing.Size(438, 30);
-            this.coloredProgressBarDownload.TabIndex = 3;
-            // 
             // buttonRemove
             // 
             this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -155,7 +125,37 @@
             this.buttonRemove.Text = "X";
             this.buttonRemove.UseVisualStyleBackColor = false;
             // 
-            // ItemDownloadUserControl
+            // labelInformation
+            // 
+            this.labelInformation.AutoSize = true;
+            this.labelInformation.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInformation.Location = new System.Drawing.Point(6, 64);
+            this.labelInformation.Name = "labelInformation";
+            this.labelInformation.Size = new System.Drawing.Size(81, 17);
+            this.labelInformation.TabIndex = 6;
+            this.labelInformation.Text = "Information";
+            // 
+            // coloredProgressBarDownload
+            // 
+            this.coloredProgressBarDownload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.coloredProgressBarDownload.ForeColor = System.Drawing.Color.Blue;
+            this.coloredProgressBarDownload.Location = new System.Drawing.Point(251, 100);
+            this.coloredProgressBarDownload.Name = "coloredProgressBarDownload";
+            this.coloredProgressBarDownload.ShowPercentageText = true;
+            this.coloredProgressBarDownload.Size = new System.Drawing.Size(438, 30);
+            this.coloredProgressBarDownload.TabIndex = 3;
+            // 
+            // optimizedLabelTitle
+            // 
+            this.optimizedLabelTitle.AutoSize = true;
+            this.optimizedLabelTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optimizedLabelTitle.Location = new System.Drawing.Point(91, 26);
+            this.optimizedLabelTitle.Name = "optimizedLabelTitle";
+            this.optimizedLabelTitle.Size = new System.Drawing.Size(41, 17);
+            this.optimizedLabelTitle.TabIndex = 3;
+            this.optimizedLabelTitle.Text = "Titolo";
+            // 
+            // EntryDownloadUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -168,7 +168,7 @@
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(0);
-            this.Name = "ItemDownloadUserControl";
+            this.Name = "EntryDownloadUserControl";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
             this.Size = new System.Drawing.Size(734, 138);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
@@ -185,10 +185,10 @@
         private System.Windows.Forms.Label labelBitrateSize;
         private System.Windows.Forms.Label labelTitleStatic;
         private OptimizedLabel optimizedLabelTitle;
-        private System.Windows.Forms.Label labelInformation;
         private System.Windows.Forms.Label labelBitrateSizeStatic;
         private System.Windows.Forms.Button buttonDownloadCancel;
         private ColoredProgressBar coloredProgressBarDownload;
         private System.Windows.Forms.Button buttonRemove;
+        private System.Windows.Forms.Label labelInformation;
     }
 }
