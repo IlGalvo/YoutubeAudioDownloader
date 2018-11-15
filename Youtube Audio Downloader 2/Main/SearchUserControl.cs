@@ -15,9 +15,9 @@ namespace YoutubeAudioDownloader2.Main
             Dock = DockStyle.Fill;
         }
 
-        private void optimizedTextBoxSearch_KeyPress(object sender, KeyPressEventArgs e)
+        private void optimizedTextBoxSearch_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            if (e.KeyCode == Keys.Enter)
             {
                 buttonSearch.PerformClick();
             }
