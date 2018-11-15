@@ -13,5 +13,13 @@ namespace YoutubeAudioDownloader2.Main.List.Item
             webBrowserVideo.Navigate("https://www.google.it/");
             optimizedLabelTitle.Text = "aaaaaaaaaAbbbbbbbbbBcccccccccCdddddddddDeeeeeeeeeE";
         }
+
+        private void linkLabelShowExtra_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            using (InformationForm informationForm = new InformationForm())
+            {
+                informationForm.ShowDialog();
+            }
+        }
     }
 }

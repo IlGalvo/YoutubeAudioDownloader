@@ -137,7 +137,7 @@
             this.MinimumSize = new System.Drawing.Size(847, 659);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.flowLayoutPanelMenu.ResumeLayout(false);
             this.ResumeLayout(false);

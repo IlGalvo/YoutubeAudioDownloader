@@ -146,6 +146,7 @@
             this.linkLabelShowExtra.TabIndex = 5;
             this.linkLabelShowExtra.TabStop = true;
             this.linkLabelShowExtra.Text = "Mostra altro...";
+            this.linkLabelShowExtra.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelShowExtra_LinkClicked);
             // 
             // labelRatingStatic
             // 

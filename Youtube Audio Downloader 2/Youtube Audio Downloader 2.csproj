@@ -67,6 +67,12 @@
     <Compile Include="Main\List\Item\EntryListUserControl.Designer.cs">
       <DependentUpon>EntryListUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main\List\Item\InformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\List\Item\InformationForm.Designer.cs">
+      <DependentUpon>InformationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\MainUtilities.cs" />
     <Compile Include="Main\OptimizedLabel.cs">
       <SubType>Component</SubType>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main\Download\DownloadUserControl.resx">
       <DependentUpon>DownloadUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\List\Item\InformationForm.resx">
+      <DependentUpon>InformationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
