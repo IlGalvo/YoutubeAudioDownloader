@@ -79,7 +79,7 @@
             this.groupBoxVideo.Controls.Add(this.labelAuthorStatic);
             this.groupBoxVideo.Location = new System.Drawing.Point(305, 8);
             this.groupBoxVideo.Name = "groupBoxVideo";
-            this.groupBoxVideo.Size = new System.Drawing.Size(420, 131);
+            this.groupBoxVideo.Size = new System.Drawing.Size(420, 134);
             this.groupBoxVideo.TabIndex = 1;
             this.groupBoxVideo.TabStop = false;
             this.groupBoxVideo.Text = "Video";
@@ -140,7 +140,7 @@
             this.linkLabelShowExtra.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelShowExtra.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabelShowExtra.LinkColor = System.Drawing.Color.Blue;
-            this.linkLabelShowExtra.Location = new System.Drawing.Point(6, 109);
+            this.linkLabelShowExtra.Location = new System.Drawing.Point(6, 110);
             this.linkLabelShowExtra.Name = "linkLabelShowExtra";
             this.linkLabelShowExtra.Size = new System.Drawing.Size(95, 17);
             this.linkLabelShowExtra.TabIndex = 5;
@@ -208,7 +208,7 @@
             this.groupBoxAudio.Controls.Add(this.labelSizeStatic);
             this.groupBoxAudio.Controls.Add(this.labelBitrateStatic);
             this.groupBoxAudio.Controls.Add(this.labelEncodingStatic);
-            this.groupBoxAudio.Location = new System.Drawing.Point(305, 145);
+            this.groupBoxAudio.Location = new System.Drawing.Point(305, 148);
             this.groupBoxAudio.Name = "groupBoxAudio";
             this.groupBoxAudio.Size = new System.Drawing.Size(420, 80);
             this.groupBoxAudio.TabIndex = 2;
@@ -282,9 +282,9 @@
             this.buttonDownload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleTurquoise;
             this.buttonDownload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
             this.buttonDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDownload.Location = new System.Drawing.Point(305, 231);
+            this.buttonDownload.Location = new System.Drawing.Point(305, 234);
             this.buttonDownload.Name = "buttonDownload";
-            this.buttonDownload.Size = new System.Drawing.Size(85, 38);
+            this.buttonDownload.Size = new System.Drawing.Size(85, 35);
             this.buttonDownload.TabIndex = 3;
             this.buttonDownload.Text = "Scarica";
             this.buttonDownload.UseVisualStyleBackColor = false;
