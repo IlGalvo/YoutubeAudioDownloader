@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace YoutubeAudioDownloader2.Main.List.Item
 {
@@ -15,6 +7,8 @@ namespace YoutubeAudioDownloader2.Main.List.Item
         public InformationForm()
         {
             InitializeComponent();
+
+            linkLabelVideo.Text = "https://www.youtube.com/watch?v=v75Vv4__cdI";
         }
     }
 }
