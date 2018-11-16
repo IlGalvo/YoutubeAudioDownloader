@@ -138,9 +138,9 @@
             // 
             this.linkLabelShowExtra.AutoSize = true;
             this.linkLabelShowExtra.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelShowExtra.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabelShowExtra.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabelShowExtra.LinkColor = System.Drawing.Color.Blue;
-            this.linkLabelShowExtra.Location = new System.Drawing.Point(6, 110);
+            this.linkLabelShowExtra.Location = new System.Drawing.Point(6, 109);
             this.linkLabelShowExtra.Name = "linkLabelShowExtra";
             this.linkLabelShowExtra.Size = new System.Drawing.Size(95, 17);
             this.linkLabelShowExtra.TabIndex = 5;
