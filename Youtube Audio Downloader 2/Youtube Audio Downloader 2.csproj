@@ -77,6 +77,9 @@
     <Compile Include="Main\OptimizedLabel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Main\ToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="OptimizedRichTextBox.cs">
       <SubType>Component</SubType>
     </Compile>

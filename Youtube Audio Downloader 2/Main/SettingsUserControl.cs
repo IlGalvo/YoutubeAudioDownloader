@@ -13,10 +13,5 @@ namespace YoutubeAudioDownloader2.Main
 
             Dock = DockStyle.Fill;
         }
-
-        private void buttonRestore_Click(object sender, System.EventArgs e)
-        {
-
-        }
     }
 }
