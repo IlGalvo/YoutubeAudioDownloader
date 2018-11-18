@@ -30,12 +30,12 @@
         {
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.groupBoxDownload = new System.Windows.Forms.GroupBox();
+            this.labelInformation = new System.Windows.Forms.Label();
             this.labelBitrateSize = new System.Windows.Forms.Label();
             this.labelTitleStatic = new System.Windows.Forms.Label();
             this.labelBitrateSizeStatic = new System.Windows.Forms.Label();
             this.buttonDownloadCancel = new System.Windows.Forms.Button();
             this.buttonRemove = new System.Windows.Forms.Button();
-            this.labelInformation = new System.Windows.Forms.Label();
             this.coloredProgressBarDownload = new YoutubeAudioDownloader2.ColoredProgressBar();
             this.optimizedLabelTitle = new YoutubeAudioDownloader2.Main.OptimizedLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
@@ -61,9 +61,19 @@
             this.groupBoxDownload.Location = new System.Drawing.Point(170, 8);
             this.groupBoxDownload.Name = "groupBoxDownload";
             this.groupBoxDownload.Size = new System.Drawing.Size(519, 86);
-            this.groupBoxDownload.TabIndex = 1;
+            this.groupBoxDownload.TabIndex = 0;
             this.groupBoxDownload.TabStop = false;
             this.groupBoxDownload.Text = "Download Mp3";
+            // 
+            // labelInformation
+            // 
+            this.labelInformation.AutoSize = true;
+            this.labelInformation.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInformation.Location = new System.Drawing.Point(6, 64);
+            this.labelInformation.Name = "labelInformation";
+            this.labelInformation.Size = new System.Drawing.Size(81, 17);
+            this.labelInformation.TabIndex = 5;
+            this.labelInformation.Text = "Information";
             // 
             // labelBitrateSize
             // 
@@ -72,7 +82,7 @@
             this.labelBitrateSize.Location = new System.Drawing.Point(91, 43);
             this.labelBitrateSize.Name = "labelBitrateSize";
             this.labelBitrateSize.Size = new System.Drawing.Size(73, 17);
-            this.labelBitrateSize.TabIndex = 5;
+            this.labelBitrateSize.TabIndex = 4;
             this.labelBitrateSize.Text = "Bitrate/Size";
             // 
             // labelTitleStatic
@@ -82,7 +92,7 @@
             this.labelTitleStatic.Location = new System.Drawing.Point(6, 26);
             this.labelTitleStatic.Name = "labelTitleStatic";
             this.labelTitleStatic.Size = new System.Drawing.Size(45, 17);
-            this.labelTitleStatic.TabIndex = 4;
+            this.labelTitleStatic.TabIndex = 1;
             this.labelTitleStatic.Text = "Titolo:";
             // 
             // labelBitrateSizeStatic
@@ -92,7 +102,7 @@
             this.labelBitrateSizeStatic.Location = new System.Drawing.Point(6, 43);
             this.labelBitrateSizeStatic.Name = "labelBitrateSizeStatic";
             this.labelBitrateSizeStatic.Size = new System.Drawing.Size(79, 17);
-            this.labelBitrateSizeStatic.TabIndex = 1;
+            this.labelBitrateSizeStatic.TabIndex = 3;
             this.labelBitrateSizeStatic.Text = "Bitrate/Size:";
             // 
             // buttonDownloadCancel
@@ -105,7 +115,7 @@
             this.buttonDownloadCancel.Location = new System.Drawing.Point(170, 100);
             this.buttonDownloadCancel.Name = "buttonDownloadCancel";
             this.buttonDownloadCancel.Size = new System.Drawing.Size(75, 30);
-            this.buttonDownloadCancel.TabIndex = 2;
+            this.buttonDownloadCancel.TabIndex = 6;
             this.buttonDownloadCancel.Text = "Scarica";
             this.buttonDownloadCancel.UseVisualStyleBackColor = false;
             // 
@@ -121,19 +131,9 @@
             this.buttonRemove.Location = new System.Drawing.Point(698, 56);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(27, 27);
-            this.buttonRemove.TabIndex = 4;
+            this.buttonRemove.TabIndex = 8;
             this.buttonRemove.Text = "X";
             this.buttonRemove.UseVisualStyleBackColor = false;
-            // 
-            // labelInformation
-            // 
-            this.labelInformation.AutoSize = true;
-            this.labelInformation.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInformation.Location = new System.Drawing.Point(6, 64);
-            this.labelInformation.Name = "labelInformation";
-            this.labelInformation.Size = new System.Drawing.Size(81, 17);
-            this.labelInformation.TabIndex = 6;
-            this.labelInformation.Text = "Information";
             // 
             // coloredProgressBarDownload
             // 
@@ -143,7 +143,7 @@
             this.coloredProgressBarDownload.Name = "coloredProgressBarDownload";
             this.coloredProgressBarDownload.ShowPercentageText = true;
             this.coloredProgressBarDownload.Size = new System.Drawing.Size(438, 30);
-            this.coloredProgressBarDownload.TabIndex = 3;
+            this.coloredProgressBarDownload.TabIndex = 7;
             // 
             // optimizedLabelTitle
             // 
@@ -152,7 +152,7 @@
             this.optimizedLabelTitle.Location = new System.Drawing.Point(91, 26);
             this.optimizedLabelTitle.Name = "optimizedLabelTitle";
             this.optimizedLabelTitle.Size = new System.Drawing.Size(41, 17);
-            this.optimizedLabelTitle.TabIndex = 3;
+            this.optimizedLabelTitle.TabIndex = 2;
             this.optimizedLabelTitle.Text = "Titolo";
             // 
             // EntryDownloadUserControl

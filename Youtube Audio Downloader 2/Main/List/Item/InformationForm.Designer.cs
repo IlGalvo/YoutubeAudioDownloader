@@ -59,7 +59,7 @@
             this.richTextBoxDescription.Name = "richTextBoxDescription";
             this.richTextBoxDescription.ReadOnly = true;
             this.richTextBoxDescription.Size = new System.Drawing.Size(449, 287);
-            this.richTextBoxDescription.TabIndex = 0;
+            this.richTextBoxDescription.TabIndex = 1;
             this.richTextBoxDescription.Text = "";
             // 
             // groupBoxDescription
@@ -71,7 +71,7 @@
             this.groupBoxDescription.Location = new System.Drawing.Point(12, 12);
             this.groupBoxDescription.Name = "groupBoxDescription";
             this.groupBoxDescription.Size = new System.Drawing.Size(455, 313);
-            this.groupBoxDescription.TabIndex = 1;
+            this.groupBoxDescription.TabIndex = 0;
             this.groupBoxDescription.TabStop = false;
             this.groupBoxDescription.Text = "Descrizione";
             // 
@@ -99,7 +99,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(446, 64);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
@@ -114,7 +114,7 @@
             this.panelViewsVerified.Location = new System.Drawing.Point(226, 3);
             this.panelViewsVerified.Name = "panelViewsVerified";
             this.panelViewsVerified.Size = new System.Drawing.Size(217, 58);
-            this.panelViewsVerified.TabIndex = 2;
+            this.panelViewsVerified.TabIndex = 8;
             // 
             // labelViews
             // 
@@ -123,7 +123,7 @@
             this.labelViews.Location = new System.Drawing.Point(105, 8);
             this.labelViews.Name = "labelViews";
             this.labelViews.Size = new System.Drawing.Size(91, 17);
-            this.labelViews.TabIndex = 7;
+            this.labelViews.TabIndex = 10;
             this.labelViews.Text = "Visualizzazioni";
             // 
             // labelVerified
@@ -133,7 +133,7 @@
             this.labelVerified.Location = new System.Drawing.Point(105, 31);
             this.labelVerified.Name = "labelVerified";
             this.labelVerified.Size = new System.Drawing.Size(62, 17);
-            this.labelVerified.TabIndex = 6;
+            this.labelVerified.TabIndex = 12;
             this.labelVerified.Text = "Verificato";
             // 
             // labelVerifiedStatic
@@ -143,7 +143,7 @@
             this.labelVerifiedStatic.Location = new System.Drawing.Point(3, 31);
             this.labelVerifiedStatic.Name = "labelVerifiedStatic";
             this.labelVerifiedStatic.Size = new System.Drawing.Size(66, 17);
-            this.labelVerifiedStatic.TabIndex = 5;
+            this.labelVerifiedStatic.TabIndex = 11;
             this.labelVerifiedStatic.Text = "Verificato:";
             // 
             // labelViewsStatic
@@ -153,7 +153,7 @@
             this.labelViewsStatic.Location = new System.Drawing.Point(3, 8);
             this.labelViewsStatic.Name = "labelViewsStatic";
             this.labelViewsStatic.Size = new System.Drawing.Size(96, 17);
-            this.labelViewsStatic.TabIndex = 4;
+            this.labelViewsStatic.TabIndex = 9;
             this.labelViewsStatic.Text = "Visualizzazioni:";
             // 
             // panelLikesDislikes
@@ -167,7 +167,7 @@
             this.panelLikesDislikes.Location = new System.Drawing.Point(3, 3);
             this.panelLikesDislikes.Name = "panelLikesDislikes";
             this.panelLikesDislikes.Size = new System.Drawing.Size(217, 58);
-            this.panelLikesDislikes.TabIndex = 1;
+            this.panelLikesDislikes.TabIndex = 3;
             // 
             // labelDislikes
             // 
@@ -176,7 +176,7 @@
             this.labelDislikes.Location = new System.Drawing.Point(100, 31);
             this.labelDislikes.Name = "labelDislikes";
             this.labelDislikes.Size = new System.Drawing.Size(86, 17);
-            this.labelDislikes.TabIndex = 3;
+            this.labelDislikes.TabIndex = 7;
             this.labelDislikes.Text = "Non mi piace";
             // 
             // labelLikesStatic
@@ -186,7 +186,7 @@
             this.labelLikesStatic.Location = new System.Drawing.Point(3, 8);
             this.labelLikesStatic.Name = "labelLikesStatic";
             this.labelLikesStatic.Size = new System.Drawing.Size(61, 17);
-            this.labelLikesStatic.TabIndex = 0;
+            this.labelLikesStatic.TabIndex = 4;
             this.labelLikesStatic.Text = "Mi piace:";
             // 
             // labelDislikesStatic
@@ -196,7 +196,7 @@
             this.labelDislikesStatic.Location = new System.Drawing.Point(3, 31);
             this.labelDislikesStatic.Name = "labelDislikesStatic";
             this.labelDislikesStatic.Size = new System.Drawing.Size(91, 17);
-            this.labelDislikesStatic.TabIndex = 1;
+            this.labelDislikesStatic.TabIndex = 6;
             this.labelDislikesStatic.Text = "Non mi piace:";
             // 
             // labelLikes
@@ -206,7 +206,7 @@
             this.labelLikes.Location = new System.Drawing.Point(100, 8);
             this.labelLikes.Name = "labelLikes";
             this.labelLikes.Size = new System.Drawing.Size(58, 17);
-            this.labelLikes.TabIndex = 2;
+            this.labelLikes.TabIndex = 5;
             this.labelLikes.Text = "Mi piace";
             // 
             // linkLabelVideo
@@ -217,7 +217,7 @@
             this.linkLabelVideo.Location = new System.Drawing.Point(70, 427);
             this.linkLabelVideo.Name = "linkLabelVideo";
             this.linkLabelVideo.Size = new System.Drawing.Size(81, 20);
-            this.linkLabelVideo.TabIndex = 3;
+            this.linkLabelVideo.TabIndex = 13;
             this.linkLabelVideo.TabStop = true;
             this.linkLabelVideo.Text = "Video Link";
             // 

@@ -73,7 +73,6 @@
     <Compile Include="Main\List\Item\InformationForm.Designer.cs">
       <DependentUpon>InformationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main\MainUtilities.cs" />
     <Compile Include="Main\OptimizedLabel.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -34,14 +34,14 @@
             this.panelContent = new System.Windows.Forms.Panel();
             this.tableLayoutPanelSettings = new System.Windows.Forms.TableLayoutPanel();
             this.groupBoxSearch = new System.Windows.Forms.GroupBox();
+            this.labelSearchResultsStatic = new System.Windows.Forms.Label();
             this.numericUpDownSearchResults = new System.Windows.Forms.NumericUpDown();
             this.groupBoxGeneral = new System.Windows.Forms.GroupBox();
-            this.toggleButtonSilentDownload = new YoutubeAudioDownloader.Main.ToggleButton();
+            this.labelSilentDownloadStatic = new System.Windows.Forms.Label();
             this.groupBoxDownload = new System.Windows.Forms.GroupBox();
             this.buttonDownloadPath = new System.Windows.Forms.Button();
             this.richTextBoxDownloadPath = new System.Windows.Forms.RichTextBox();
-            this.labelSearchResultsStatic = new System.Windows.Forms.Label();
-            this.labelSilentDownloadStatic = new System.Windows.Forms.Label();
+            this.toggleButtonSilentDownload = new YoutubeAudioDownloader.Main.ToggleButton();
             this.panelActionOffset.SuspendLayout();
             this.panelContent.SuspendLayout();
             this.tableLayoutPanelSettings.SuspendLayout();
@@ -60,7 +60,7 @@
             this.panelActionOffset.Location = new System.Drawing.Point(0, 557);
             this.panelActionOffset.Name = "panelActionOffset";
             this.panelActionOffset.Size = new System.Drawing.Size(734, 63);
-            this.panelActionOffset.TabIndex = 1;
+            this.panelActionOffset.TabIndex = 10;
             // 
             // buttonRestore
             // 
@@ -73,7 +73,7 @@
             this.buttonRestore.Location = new System.Drawing.Point(293, 17);
             this.buttonRestore.Name = "buttonRestore";
             this.buttonRestore.Size = new System.Drawing.Size(148, 40);
-            this.buttonRestore.TabIndex = 0;
+            this.buttonRestore.TabIndex = 12;
             this.buttonRestore.Text = "Ripristina";
             this.buttonRestore.UseVisualStyleBackColor = false;
             // 
@@ -85,7 +85,7 @@
             this.panelAction.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.panelAction.Name = "panelAction";
             this.panelAction.Size = new System.Drawing.Size(734, 53);
-            this.panelAction.TabIndex = 1;
+            this.panelAction.TabIndex = 11;
             // 
             // panelContent
             // 
@@ -113,7 +113,7 @@
             this.tableLayoutPanelSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanelSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanelSettings.Size = new System.Drawing.Size(734, 557);
-            this.tableLayoutPanelSettings.TabIndex = 6;
+            this.tableLayoutPanelSettings.TabIndex = 0;
             // 
             // groupBoxSearch
             // 
@@ -123,9 +123,19 @@
             this.groupBoxSearch.Location = new System.Drawing.Point(9, 9);
             this.groupBoxSearch.Name = "groupBoxSearch";
             this.groupBoxSearch.Size = new System.Drawing.Size(716, 175);
-            this.groupBoxSearch.TabIndex = 0;
+            this.groupBoxSearch.TabIndex = 1;
             this.groupBoxSearch.TabStop = false;
             this.groupBoxSearch.Text = "Ricerca";
+            // 
+            // labelSearchResultsStatic
+            // 
+            this.labelSearchResultsStatic.AutoSize = true;
+            this.labelSearchResultsStatic.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSearchResultsStatic.Location = new System.Drawing.Point(5, 81);
+            this.labelSearchResultsStatic.Name = "labelSearchResultsStatic";
+            this.labelSearchResultsStatic.Size = new System.Drawing.Size(286, 25);
+            this.labelSearchResultsStatic.TabIndex = 2;
+            this.labelSearchResultsStatic.Text = "Numero risultati ricerca (1 - 20):";
             // 
             // numericUpDownSearchResults
             // 
@@ -146,7 +156,7 @@
             this.numericUpDownSearchResults.Name = "numericUpDownSearchResults";
             this.numericUpDownSearchResults.ReadOnly = true;
             this.numericUpDownSearchResults.Size = new System.Drawing.Size(50, 29);
-            this.numericUpDownSearchResults.TabIndex = 1;
+            this.numericUpDownSearchResults.TabIndex = 3;
             this.numericUpDownSearchResults.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDownSearchResults.Value = new decimal(new int[] {
             5,
@@ -162,22 +172,19 @@
             this.groupBoxGeneral.Location = new System.Drawing.Point(9, 371);
             this.groupBoxGeneral.Name = "groupBoxGeneral";
             this.groupBoxGeneral.Size = new System.Drawing.Size(716, 177);
-            this.groupBoxGeneral.TabIndex = 5;
+            this.groupBoxGeneral.TabIndex = 7;
             this.groupBoxGeneral.TabStop = false;
             this.groupBoxGeneral.Text = "Generale";
             // 
-            // toggleButtonSilentDownload
+            // labelSilentDownloadStatic
             // 
-            this.toggleButtonSilentDownload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.toggleButtonSilentDownload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.toggleButtonSilentDownload.Location = new System.Drawing.Point(660, 81);
-            this.toggleButtonSilentDownload.Name = "toggleButtonSilentDownload";
-            this.toggleButtonSilentDownload.OffColor = System.Drawing.Color.Red;
-            this.toggleButtonSilentDownload.OnColor = System.Drawing.Color.DodgerBlue;
-            this.toggleButtonSilentDownload.Size = new System.Drawing.Size(50, 25);
-            this.toggleButtonSilentDownload.TabIndex = 4;
-            this.toggleButtonSilentDownload.ToggleColor = System.Drawing.Color.White;
-            this.toggleButtonSilentDownload.ToggleState = false;
+            this.labelSilentDownloadStatic.AutoSize = true;
+            this.labelSilentDownloadStatic.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSilentDownloadStatic.Location = new System.Drawing.Point(5, 81);
+            this.labelSilentDownloadStatic.Name = "labelSilentDownloadStatic";
+            this.labelSilentDownloadStatic.Size = new System.Drawing.Size(248, 25);
+            this.labelSilentDownloadStatic.TabIndex = 8;
+            this.labelSilentDownloadStatic.Text = "Attiva download silenzioso:";
             // 
             // groupBoxDownload
             // 
@@ -202,7 +209,7 @@
             this.buttonDownloadPath.Location = new System.Drawing.Point(660, 81);
             this.buttonDownloadPath.Name = "buttonDownloadPath";
             this.buttonDownloadPath.Size = new System.Drawing.Size(50, 35);
-            this.buttonDownloadPath.TabIndex = 4;
+            this.buttonDownloadPath.TabIndex = 6;
             this.buttonDownloadPath.Text = ". . .";
             this.buttonDownloadPath.UseVisualStyleBackColor = false;
             // 
@@ -219,25 +226,18 @@
             this.richTextBoxDownloadPath.TabIndex = 5;
             this.richTextBoxDownloadPath.Text = "C:\\Users\\Andre\\Music";
             // 
-            // labelSearchResultsStatic
+            // toggleButtonSilentDownload
             // 
-            this.labelSearchResultsStatic.AutoSize = true;
-            this.labelSearchResultsStatic.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSearchResultsStatic.Location = new System.Drawing.Point(5, 81);
-            this.labelSearchResultsStatic.Name = "labelSearchResultsStatic";
-            this.labelSearchResultsStatic.Size = new System.Drawing.Size(286, 25);
-            this.labelSearchResultsStatic.TabIndex = 2;
-            this.labelSearchResultsStatic.Text = "Numero risultati ricerca (1 - 20):";
-            // 
-            // labelSilentDownloadStatic
-            // 
-            this.labelSilentDownloadStatic.AutoSize = true;
-            this.labelSilentDownloadStatic.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSilentDownloadStatic.Location = new System.Drawing.Point(5, 81);
-            this.labelSilentDownloadStatic.Name = "labelSilentDownloadStatic";
-            this.labelSilentDownloadStatic.Size = new System.Drawing.Size(248, 25);
-            this.labelSilentDownloadStatic.TabIndex = 5;
-            this.labelSilentDownloadStatic.Text = "Attiva download silenzioso:";
+            this.toggleButtonSilentDownload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.toggleButtonSilentDownload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.toggleButtonSilentDownload.Location = new System.Drawing.Point(660, 81);
+            this.toggleButtonSilentDownload.Name = "toggleButtonSilentDownload";
+            this.toggleButtonSilentDownload.OffColor = System.Drawing.Color.Red;
+            this.toggleButtonSilentDownload.OnColor = System.Drawing.Color.DodgerBlue;
+            this.toggleButtonSilentDownload.Size = new System.Drawing.Size(50, 25);
+            this.toggleButtonSilentDownload.TabIndex = 9;
+            this.toggleButtonSilentDownload.ToggleColor = System.Drawing.Color.White;
+            this.toggleButtonSilentDownload.ToggleState = false;
             // 
             // SettingsUserControl
             // 

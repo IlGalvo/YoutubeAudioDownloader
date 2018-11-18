@@ -91,7 +91,7 @@
             this.optimizedLabelTitle.Location = new System.Drawing.Point(94, 40);
             this.optimizedLabelTitle.Name = "optimizedLabelTitle";
             this.optimizedLabelTitle.Size = new System.Drawing.Size(41, 17);
-            this.optimizedLabelTitle.TabIndex = 12;
+            this.optimizedLabelTitle.TabIndex = 5;
             this.optimizedLabelTitle.Text = "Titolo";
             // 
             // labelAuthor
@@ -101,7 +101,7 @@
             this.labelAuthor.Location = new System.Drawing.Point(94, 23);
             this.labelAuthor.Name = "labelAuthor";
             this.labelAuthor.Size = new System.Drawing.Size(47, 17);
-            this.labelAuthor.TabIndex = 11;
+            this.labelAuthor.TabIndex = 3;
             this.labelAuthor.Text = "Autore";
             // 
             // labelRating
@@ -111,7 +111,7 @@
             this.labelRating.Location = new System.Drawing.Point(94, 91);
             this.labelRating.Name = "labelRating";
             this.labelRating.Size = new System.Drawing.Size(74, 17);
-            this.labelRating.TabIndex = 10;
+            this.labelRating.TabIndex = 11;
             this.labelRating.Text = "Valutazione";
             // 
             // labelDuration
@@ -131,7 +131,7 @@
             this.labelDate.Location = new System.Drawing.Point(94, 74);
             this.labelDate.Name = "labelDate";
             this.labelDate.Size = new System.Drawing.Size(35, 17);
-            this.labelDate.TabIndex = 6;
+            this.labelDate.TabIndex = 9;
             this.labelDate.Text = "Data";
             // 
             // linkLabelShowExtra
@@ -143,7 +143,7 @@
             this.linkLabelShowExtra.Location = new System.Drawing.Point(6, 110);
             this.linkLabelShowExtra.Name = "linkLabelShowExtra";
             this.linkLabelShowExtra.Size = new System.Drawing.Size(95, 17);
-            this.linkLabelShowExtra.TabIndex = 5;
+            this.linkLabelShowExtra.TabIndex = 12;
             this.linkLabelShowExtra.TabStop = true;
             this.linkLabelShowExtra.Text = "Mostra altro...";
             this.linkLabelShowExtra.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelShowExtra_LinkClicked);
@@ -155,7 +155,7 @@
             this.labelRatingStatic.Location = new System.Drawing.Point(6, 91);
             this.labelRatingStatic.Name = "labelRatingStatic";
             this.labelRatingStatic.Size = new System.Drawing.Size(80, 17);
-            this.labelRatingStatic.TabIndex = 4;
+            this.labelRatingStatic.TabIndex = 10;
             this.labelRatingStatic.Text = "Valutazione:";
             // 
             // labelDateStatic
@@ -165,7 +165,7 @@
             this.labelDateStatic.Location = new System.Drawing.Point(6, 74);
             this.labelDateStatic.Name = "labelDateStatic";
             this.labelDateStatic.Size = new System.Drawing.Size(39, 17);
-            this.labelDateStatic.TabIndex = 3;
+            this.labelDateStatic.TabIndex = 8;
             this.labelDateStatic.Text = "Data:";
             // 
             // labelDurationStatic
@@ -175,7 +175,7 @@
             this.labelDurationStatic.Location = new System.Drawing.Point(6, 57);
             this.labelDurationStatic.Name = "labelDurationStatic";
             this.labelDurationStatic.Size = new System.Drawing.Size(52, 17);
-            this.labelDurationStatic.TabIndex = 2;
+            this.labelDurationStatic.TabIndex = 6;
             this.labelDurationStatic.Text = "Durata:";
             // 
             // labelTitleStatic
@@ -185,7 +185,7 @@
             this.labelTitleStatic.Location = new System.Drawing.Point(6, 40);
             this.labelTitleStatic.Name = "labelTitleStatic";
             this.labelTitleStatic.Size = new System.Drawing.Size(45, 17);
-            this.labelTitleStatic.TabIndex = 1;
+            this.labelTitleStatic.TabIndex = 4;
             this.labelTitleStatic.Text = "Titolo:";
             // 
             // labelAuthorStatic
@@ -195,7 +195,7 @@
             this.labelAuthorStatic.Location = new System.Drawing.Point(6, 23);
             this.labelAuthorStatic.Name = "labelAuthorStatic";
             this.labelAuthorStatic.Size = new System.Drawing.Size(53, 17);
-            this.labelAuthorStatic.TabIndex = 0;
+            this.labelAuthorStatic.TabIndex = 2;
             this.labelAuthorStatic.Text = "Autore:";
             // 
             // groupBoxAudio
@@ -211,7 +211,7 @@
             this.groupBoxAudio.Location = new System.Drawing.Point(305, 148);
             this.groupBoxAudio.Name = "groupBoxAudio";
             this.groupBoxAudio.Size = new System.Drawing.Size(420, 80);
-            this.groupBoxAudio.TabIndex = 2;
+            this.groupBoxAudio.TabIndex = 13;
             this.groupBoxAudio.TabStop = false;
             this.groupBoxAudio.Text = "Audio";
             // 
@@ -222,7 +222,7 @@
             this.labelEncoding.Location = new System.Drawing.Point(94, 23);
             this.labelEncoding.Name = "labelEncoding";
             this.labelEncoding.Size = new System.Drawing.Size(55, 17);
-            this.labelEncoding.TabIndex = 12;
+            this.labelEncoding.TabIndex = 15;
             this.labelEncoding.Text = "Codifica";
             // 
             // labelBitrate
@@ -232,7 +232,7 @@
             this.labelBitrate.Location = new System.Drawing.Point(94, 40);
             this.labelBitrate.Name = "labelBitrate";
             this.labelBitrate.Size = new System.Drawing.Size(45, 17);
-            this.labelBitrate.TabIndex = 11;
+            this.labelBitrate.TabIndex = 17;
             this.labelBitrate.Text = "Bitrate";
             // 
             // labelSize
@@ -242,7 +242,7 @@
             this.labelSize.Location = new System.Drawing.Point(94, 57);
             this.labelSize.Name = "labelSize";
             this.labelSize.Size = new System.Drawing.Size(76, 17);
-            this.labelSize.TabIndex = 10;
+            this.labelSize.TabIndex = 19;
             this.labelSize.Text = "Dimensione";
             // 
             // labelSizeStatic
@@ -252,7 +252,7 @@
             this.labelSizeStatic.Location = new System.Drawing.Point(6, 57);
             this.labelSizeStatic.Name = "labelSizeStatic";
             this.labelSizeStatic.Size = new System.Drawing.Size(82, 17);
-            this.labelSizeStatic.TabIndex = 2;
+            this.labelSizeStatic.TabIndex = 18;
             this.labelSizeStatic.Text = "Dimensione:";
             // 
             // labelBitrateStatic
@@ -262,7 +262,7 @@
             this.labelBitrateStatic.Location = new System.Drawing.Point(6, 40);
             this.labelBitrateStatic.Name = "labelBitrateStatic";
             this.labelBitrateStatic.Size = new System.Drawing.Size(51, 17);
-            this.labelBitrateStatic.TabIndex = 1;
+            this.labelBitrateStatic.TabIndex = 16;
             this.labelBitrateStatic.Text = "Bitrate:";
             // 
             // labelEncodingStatic
@@ -272,7 +272,7 @@
             this.labelEncodingStatic.Location = new System.Drawing.Point(6, 23);
             this.labelEncodingStatic.Name = "labelEncodingStatic";
             this.labelEncodingStatic.Size = new System.Drawing.Size(58, 17);
-            this.labelEncodingStatic.TabIndex = 0;
+            this.labelEncodingStatic.TabIndex = 14;
             this.labelEncodingStatic.Text = "Codifica:";
             // 
             // buttonDownload
@@ -285,7 +285,7 @@
             this.buttonDownload.Location = new System.Drawing.Point(305, 234);
             this.buttonDownload.Name = "buttonDownload";
             this.buttonDownload.Size = new System.Drawing.Size(85, 35);
-            this.buttonDownload.TabIndex = 3;
+            this.buttonDownload.TabIndex = 20;
             this.buttonDownload.Text = "Scarica";
             this.buttonDownload.UseVisualStyleBackColor = false;
             // 

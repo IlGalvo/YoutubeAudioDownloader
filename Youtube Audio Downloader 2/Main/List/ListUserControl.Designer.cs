@@ -57,7 +57,7 @@
             this.buttonShowAll.Location = new System.Drawing.Point(293, 17);
             this.buttonShowAll.Name = "buttonShowAll";
             this.buttonShowAll.Size = new System.Drawing.Size(148, 40);
-            this.buttonShowAll.TabIndex = 0;
+            this.buttonShowAll.TabIndex = 3;
             this.buttonShowAll.Text = "Mostra tutti";
             this.buttonShowAll.UseVisualStyleBackColor = false;
             this.buttonShowAll.Click += new System.EventHandler(this.buttonShowAll_Click);
@@ -70,7 +70,7 @@
             this.panelAction.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.panelAction.Name = "panelAction";
             this.panelAction.Size = new System.Drawing.Size(734, 53);
-            this.panelAction.TabIndex = 1;
+            this.panelAction.TabIndex = 2;
             // 
             // panelContent
             // 
@@ -79,7 +79,7 @@
             this.panelContent.Location = new System.Drawing.Point(0, 0);
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(734, 557);
-            this.panelContent.TabIndex = 2;
+            this.panelContent.TabIndex = 0;
             // 
             // ListUserControl
             // 

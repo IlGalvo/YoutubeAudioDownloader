@@ -48,7 +48,7 @@
             this.buttonSearch.Location = new System.Drawing.Point(650, 230);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(81, 42);
-            this.buttonSearch.TabIndex = 1;
+            this.buttonSearch.TabIndex = 2;
             this.buttonSearch.Text = "Cerca";
             this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
@@ -62,7 +62,7 @@
             this.panelActionOffset.Location = new System.Drawing.Point(0, 540);
             this.panelActionOffset.Name = "panelActionOffset";
             this.panelActionOffset.Size = new System.Drawing.Size(734, 63);
-            this.panelActionOffset.TabIndex = 1;
+            this.panelActionOffset.TabIndex = 3;
             // 
             // buttonTemp
             // 
@@ -75,7 +75,7 @@
             this.buttonTemp.Location = new System.Drawing.Point(293, 17);
             this.buttonTemp.Name = "buttonTemp";
             this.buttonTemp.Size = new System.Drawing.Size(148, 40);
-            this.buttonTemp.TabIndex = 0;
+            this.buttonTemp.TabIndex = 5;
             this.buttonTemp.Text = "Temp";
             this.buttonTemp.UseVisualStyleBackColor = false;
             this.buttonTemp.Visible = false;
@@ -88,7 +88,7 @@
             this.panelAction.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.panelAction.Name = "panelAction";
             this.panelAction.Size = new System.Drawing.Size(734, 53);
-            this.panelAction.TabIndex = 1;
+            this.panelAction.TabIndex = 4;
             // 
             // panelContent
             // 
@@ -97,7 +97,7 @@
             this.panelContent.Location = new System.Drawing.Point(0, 0);
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(734, 540);
-            this.panelContent.TabIndex = 2;
+            this.panelContent.TabIndex = 0;
             // 
             // optimizedTextBoxSearch
             // 
@@ -112,7 +112,7 @@
             this.optimizedTextBoxSearch.PlaceholerFont = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optimizedTextBoxSearch.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.optimizedTextBoxSearch.Size = new System.Drawing.Size(650, 43);
-            this.optimizedTextBoxSearch.TabIndex = 0;
+            this.optimizedTextBoxSearch.TabIndex = 1;
             this.optimizedTextBoxSearch.Text = "";
             this.optimizedTextBoxSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.optimizedTextBoxSearch_KeyUp);
             // 
