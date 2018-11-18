@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace YoutubeAudioDownloader2.Main
+namespace YoutubeAudioDownloader2.Main.Search
 {
     public partial class SearchUserControl : UserControl
     {

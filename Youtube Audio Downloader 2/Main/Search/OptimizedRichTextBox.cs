@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace YoutubeAudioDownloader2
+namespace YoutubeAudioDownloader2.Main.Search
 {
     internal sealed class OptimizedRichTextBox : RichTextBox
     {

@@ -1,4 +1,4 @@
-﻿namespace YoutubeAudioDownloader2.Main
+﻿namespace YoutubeAudioDownloader2.Main.Settings
 {
     partial class SettingsUserControl
     {
@@ -41,7 +41,7 @@
             this.groupBoxDownload = new System.Windows.Forms.GroupBox();
             this.buttonDownloadPath = new System.Windows.Forms.Button();
             this.richTextBoxDownloadPath = new System.Windows.Forms.RichTextBox();
-            this.toggleButtonSilentDownload = new YoutubeAudioDownloader.Main.ToggleButton();
+            this.toggleButtonSilentDownload = new YoutubeAudioDownloader.Main.Settings.ToggleButton();
             this.panelActionOffset.SuspendLayout();
             this.panelContent.SuspendLayout();
             this.tableLayoutPanelSettings.SuspendLayout();
@@ -273,7 +273,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDownSearchResults;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelSettings;
         private System.Windows.Forms.GroupBox groupBoxGeneral;
-        private YoutubeAudioDownloader.Main.ToggleButton toggleButtonSilentDownload;
+        private YoutubeAudioDownloader.Main.Settings.ToggleButton toggleButtonSilentDownload;
         private System.Windows.Forms.GroupBox groupBoxDownload;
         private System.Windows.Forms.Button buttonDownloadPath;
         private System.Windows.Forms.RichTextBox richTextBoxDownloadPath;

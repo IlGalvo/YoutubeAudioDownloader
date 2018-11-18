@@ -1,4 +1,4 @@
-﻿namespace YoutubeAudioDownloader2.Main
+﻿namespace YoutubeAudioDownloader2.Main.Search
 {
     partial class SearchUserControl
     {
@@ -33,7 +33,7 @@
             this.buttonTemp = new System.Windows.Forms.Button();
             this.panelAction = new System.Windows.Forms.Panel();
             this.panelContent = new System.Windows.Forms.Panel();
-            this.optimizedTextBoxSearch = new YoutubeAudioDownloader2.OptimizedRichTextBox();
+            this.optimizedTextBoxSearch = new YoutubeAudioDownloader2.Main.Search.OptimizedRichTextBox();
             this.panelActionOffset.SuspendLayout();
             this.SuspendLayout();
             // 

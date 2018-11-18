@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using YoutubeAudioDownloader2.Main.Download;
 using YoutubeAudioDownloader2.Main.List;
+using YoutubeAudioDownloader2.Main.Search;
+using YoutubeAudioDownloader2.Main.Settings;
 
 namespace YoutubeAudioDownloader2.Main
 {

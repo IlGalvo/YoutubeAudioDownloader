@@ -76,10 +76,10 @@
     <Compile Include="Main\OptimizedLabel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Main\ToggleButton.cs">
+    <Compile Include="Main\Settings\ToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="OptimizedRichTextBox.cs">
+    <Compile Include="Main\Search\OptimizedRichTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Main\MainForm.cs">
@@ -90,10 +90,10 @@
     </Compile>
     <Compile Include="MainProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Main\SearchUserControl.cs">
+    <Compile Include="Main\Search\SearchUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Main\SearchUserControl.Designer.cs">
+    <Compile Include="Main\Search\SearchUserControl.Designer.cs">
       <DependentUpon>SearchUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Main\List\ListUserControl.cs">
@@ -102,10 +102,10 @@
     <Compile Include="Main\List\ListUserControl.Designer.cs">
       <DependentUpon>ListUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main\SettingsUserControl.cs">
+    <Compile Include="Main\Settings\SettingsUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Main\SettingsUserControl.Designer.cs">
+    <Compile Include="Main\Settings\SettingsUserControl.Designer.cs">
       <DependentUpon>SettingsUserControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Main\Download\Item\EntryDownloadUserControl.resx">
@@ -133,13 +133,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Main\SearchUserControl.resx">
+    <EmbeddedResource Include="Main\Search\SearchUserControl.resx">
       <DependentUpon>SearchUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\List\ListUserControl.resx">
       <DependentUpon>ListUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main\SettingsUserControl.resx">
+    <EmbeddedResource Include="Main\Settings\SettingsUserControl.resx">
       <DependentUpon>SettingsUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
