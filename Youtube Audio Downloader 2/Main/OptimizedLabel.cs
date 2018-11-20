@@ -34,12 +34,7 @@ namespace YoutubeAudioDownloader2.Main
 
         private void Parent_SizeChanged(object sender, EventArgs e)
         {
-            Form form = FindForm();
-
-            if ((form != null) && (form.WindowState != FormWindowState.Minimized))
-            {
-                WidthTrim();
-            }
+            WidthTrim();
         }
         #endregion
 
