@@ -67,7 +67,7 @@
             this.buttonRestore.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonRestore.BackColor = System.Drawing.Color.Honeydew;
             this.buttonRestore.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
-            this.buttonRestore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonRestore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
             this.buttonRestore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.buttonRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRestore.Location = new System.Drawing.Point(293, 17);
@@ -203,7 +203,7 @@
             this.buttonDownloadPath.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.buttonDownloadPath.BackColor = System.Drawing.Color.Honeydew;
             this.buttonDownloadPath.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
-            this.buttonDownloadPath.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonDownloadPath.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
             this.buttonDownloadPath.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.buttonDownloadPath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDownloadPath.Location = new System.Drawing.Point(660, 81);

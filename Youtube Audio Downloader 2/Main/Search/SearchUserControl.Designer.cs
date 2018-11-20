@@ -42,7 +42,7 @@
             this.buttonSearch.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.buttonSearch.BackColor = System.Drawing.Color.Honeydew;
             this.buttonSearch.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
-            this.buttonSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
             this.buttonSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearch.Location = new System.Drawing.Point(650, 230);
@@ -69,7 +69,7 @@
             this.buttonTemp.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonTemp.BackColor = System.Drawing.Color.Honeydew;
             this.buttonTemp.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
-            this.buttonTemp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonTemp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
             this.buttonTemp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.buttonTemp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTemp.Location = new System.Drawing.Point(293, 17);

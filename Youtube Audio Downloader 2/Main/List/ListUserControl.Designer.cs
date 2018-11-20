@@ -51,7 +51,7 @@
             this.buttonShowAll.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonShowAll.BackColor = System.Drawing.Color.Honeydew;
             this.buttonShowAll.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
-            this.buttonShowAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonShowAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
             this.buttonShowAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.buttonShowAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonShowAll.Location = new System.Drawing.Point(293, 17);

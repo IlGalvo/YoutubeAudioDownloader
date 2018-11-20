@@ -51,7 +51,7 @@
             this.buttonRemoveAll.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonRemoveAll.BackColor = System.Drawing.Color.Honeydew;
             this.buttonRemoveAll.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
-            this.buttonRemoveAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonRemoveAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
             this.buttonRemoveAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.buttonRemoveAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRemoveAll.Location = new System.Drawing.Point(293, 17);
