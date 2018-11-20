@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.flowLayoutPanelMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonResearch = new System.Windows.Forms.Button();
             this.buttonList = new System.Windows.Forms.Button();
@@ -59,11 +60,15 @@
             this.buttonResearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleGreen;
             this.buttonResearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.buttonResearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonResearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonResearch.ForeColor = System.Drawing.Color.DarkGreen;
+            this.buttonResearch.Image = ((System.Drawing.Image)(resources.GetObject("buttonResearch.Image")));
             this.buttonResearch.Location = new System.Drawing.Point(3, 3);
             this.buttonResearch.Name = "buttonResearch";
             this.buttonResearch.Size = new System.Drawing.Size(90, 90);
             this.buttonResearch.TabIndex = 0;
             this.buttonResearch.Text = "Ricerca";
+            this.buttonResearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonResearch.UseVisualStyleBackColor = false;
             this.buttonResearch.Click += new System.EventHandler(this.buttonResearch_Click);
             // 
@@ -75,11 +80,15 @@
             this.buttonList.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleGreen;
             this.buttonList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.buttonList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonList.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonList.ForeColor = System.Drawing.Color.DarkGreen;
+            this.buttonList.Image = ((System.Drawing.Image)(resources.GetObject("buttonList.Image")));
             this.buttonList.Location = new System.Drawing.Point(3, 99);
             this.buttonList.Name = "buttonList";
             this.buttonList.Size = new System.Drawing.Size(90, 90);
             this.buttonList.TabIndex = 1;
             this.buttonList.Text = "Lista";
+            this.buttonList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonList.UseVisualStyleBackColor = false;
             this.buttonList.Click += new System.EventHandler(this.buttonList_Click);
             // 
@@ -91,11 +100,15 @@
             this.buttonDownload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleGreen;
             this.buttonDownload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.buttonDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDownload.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDownload.ForeColor = System.Drawing.Color.DarkGreen;
+            this.buttonDownload.Image = ((System.Drawing.Image)(resources.GetObject("buttonDownload.Image")));
             this.buttonDownload.Location = new System.Drawing.Point(3, 195);
             this.buttonDownload.Name = "buttonDownload";
             this.buttonDownload.Size = new System.Drawing.Size(90, 90);
             this.buttonDownload.TabIndex = 2;
             this.buttonDownload.Text = "Download";
+            this.buttonDownload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonDownload.UseVisualStyleBackColor = false;
             this.buttonDownload.Click += new System.EventHandler(this.buttonDownload_Click);
             // 
@@ -107,11 +120,15 @@
             this.buttonSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleGreen;
             this.buttonSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.buttonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSettings.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSettings.ForeColor = System.Drawing.Color.DarkGreen;
+            this.buttonSettings.Image = ((System.Drawing.Image)(resources.GetObject("buttonSettings.Image")));
             this.buttonSettings.Location = new System.Drawing.Point(3, 291);
             this.buttonSettings.Name = "buttonSettings";
             this.buttonSettings.Size = new System.Drawing.Size(90, 90);
             this.buttonSettings.TabIndex = 3;
             this.buttonSettings.Text = "Opzioni";
+            this.buttonSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonSettings.UseVisualStyleBackColor = false;
             this.buttonSettings.Click += new System.EventHandler(this.buttonSettings_Click);
             // 
