@@ -91,9 +91,12 @@ namespace YoutubeAudioDownloader2.Main.Search
         #region PLACEHOLDER_MANAGER
         private void ManagePlaceholderChanges()
         {
-            SetStyle(ControlStyles.UserPaint, (!Focused));
+            if (Text == string.Empty)
+            {
+                SetStyle(ControlStyles.UserPaint, (!Focused));
 
-            Invalidate();
+                Invalidate();
+            }
         }
         #endregion
     }

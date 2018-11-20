@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanelMenu = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonSearch = new System.Windows.Forms.Button();
+            this.buttonResearch = new System.Windows.Forms.Button();
             this.buttonList = new System.Windows.Forms.Button();
             this.buttonDownload = new System.Windows.Forms.Button();
             this.buttonSettings = new System.Windows.Forms.Button();
@@ -40,7 +40,7 @@
             // flowLayoutPanelMenu
             // 
             this.flowLayoutPanelMenu.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.flowLayoutPanelMenu.Controls.Add(this.buttonSearch);
+            this.flowLayoutPanelMenu.Controls.Add(this.buttonResearch);
             this.flowLayoutPanelMenu.Controls.Add(this.buttonList);
             this.flowLayoutPanelMenu.Controls.Add(this.buttonDownload);
             this.flowLayoutPanelMenu.Controls.Add(this.buttonSettings);
@@ -51,21 +51,21 @@
             this.flowLayoutPanelMenu.Size = new System.Drawing.Size(97, 620);
             this.flowLayoutPanelMenu.TabIndex = 0;
             // 
-            // buttonSearch
+            // buttonResearch
             // 
-            this.buttonSearch.BackColor = System.Drawing.Color.Honeydew;
-            this.buttonSearch.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
-            this.buttonSearch.FlatAppearance.CheckedBackColor = System.Drawing.Color.PaleGreen;
-            this.buttonSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleGreen;
-            this.buttonSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
-            this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSearch.Location = new System.Drawing.Point(3, 3);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(90, 90);
-            this.buttonSearch.TabIndex = 0;
-            this.buttonSearch.Text = "Cerca";
-            this.buttonSearch.UseVisualStyleBackColor = false;
-            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            this.buttonResearch.BackColor = System.Drawing.Color.Honeydew;
+            this.buttonResearch.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
+            this.buttonResearch.FlatAppearance.CheckedBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonResearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonResearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonResearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonResearch.Location = new System.Drawing.Point(3, 3);
+            this.buttonResearch.Name = "buttonResearch";
+            this.buttonResearch.Size = new System.Drawing.Size(90, 90);
+            this.buttonResearch.TabIndex = 0;
+            this.buttonResearch.Text = "Ricerca";
+            this.buttonResearch.UseVisualStyleBackColor = false;
+            this.buttonResearch.Click += new System.EventHandler(this.buttonResearch_Click);
             // 
             // buttonList
             // 
@@ -146,7 +146,7 @@
 
         #endregion
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMenu;
-        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.Button buttonResearch;
         private System.Windows.Forms.Button buttonList;
         private System.Windows.Forms.Button buttonDownload;
         private System.Windows.Forms.Button buttonSettings;

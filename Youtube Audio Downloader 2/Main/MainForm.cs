@@ -22,7 +22,7 @@ namespace YoutubeAudioDownloader2.Main
             panelContent.Controls.Add(SettingsUserControl.Instance);
         }
 
-        private void buttonSearch_Click(object sender, EventArgs e)
+        private void buttonResearch_Click(object sender, EventArgs e)
         {
             SearchUserControl.Instance.BringToFront();
         }
