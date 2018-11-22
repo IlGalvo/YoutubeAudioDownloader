@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using YoutubeAudioDownloader2.Main.Download;
 using YoutubeAudioDownloader2.Main.List;
@@ -24,22 +25,38 @@ namespace YoutubeAudioDownloader2.Main
 
         private void buttonResearch_Click(object sender, EventArgs e)
         {
+            ManageButtonMenuColor(sender);
+
             SearchUserControl.Instance.BringToFront();
         }
 
         private void buttonList_Click(object sender, EventArgs e)
         {
+            ManageButtonMenuColor(sender);
+
             ListUserControl.Instance.BringToFront();
         }
 
         private void buttonDownload_Click(object sender, EventArgs e)
         {
+            ManageButtonMenuColor(sender);
+
             DownloadUserControl.Instance.BringToFront();
         }
 
         private void buttonSettings_Click(object sender, EventArgs e)
         {
+            ManageButtonMenuColor(sender);
+
             SettingsUserControl.Instance.BringToFront();
+        }
+
+        private void ManageButtonMenuColor(object sender)
+        {
+            foreach (Button button in panelMenu.Controls)
+            {
+                button.BackColor = ((button == ((Button)sender)) ? Color.LightGreen : Color.Honeydew);
+            }
         }
     }
 }
