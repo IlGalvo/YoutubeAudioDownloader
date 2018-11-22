@@ -65,7 +65,7 @@
             this.buttonResearch.Image = ((System.Drawing.Image)(resources.GetObject("buttonResearch.Image")));
             this.buttonResearch.Location = new System.Drawing.Point(3, 3);
             this.buttonResearch.Name = "buttonResearch";
-            this.buttonResearch.Size = new System.Drawing.Size(90, 90);
+            this.buttonResearch.Size = new System.Drawing.Size(91, 91);
             this.buttonResearch.TabIndex = 0;
             this.buttonResearch.Text = "Ricerca";
             this.buttonResearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -83,9 +83,9 @@
             this.buttonList.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonList.ForeColor = System.Drawing.Color.DarkGreen;
             this.buttonList.Image = ((System.Drawing.Image)(resources.GetObject("buttonList.Image")));
-            this.buttonList.Location = new System.Drawing.Point(3, 99);
+            this.buttonList.Location = new System.Drawing.Point(3, 100);
             this.buttonList.Name = "buttonList";
-            this.buttonList.Size = new System.Drawing.Size(90, 90);
+            this.buttonList.Size = new System.Drawing.Size(91, 91);
             this.buttonList.TabIndex = 1;
             this.buttonList.Text = "Lista";
             this.buttonList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -103,9 +103,9 @@
             this.buttonDownload.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDownload.ForeColor = System.Drawing.Color.DarkGreen;
             this.buttonDownload.Image = ((System.Drawing.Image)(resources.GetObject("buttonDownload.Image")));
-            this.buttonDownload.Location = new System.Drawing.Point(3, 195);
+            this.buttonDownload.Location = new System.Drawing.Point(3, 197);
             this.buttonDownload.Name = "buttonDownload";
-            this.buttonDownload.Size = new System.Drawing.Size(90, 90);
+            this.buttonDownload.Size = new System.Drawing.Size(91, 91);
             this.buttonDownload.TabIndex = 2;
             this.buttonDownload.Text = "Download";
             this.buttonDownload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -123,9 +123,9 @@
             this.buttonSettings.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSettings.ForeColor = System.Drawing.Color.DarkGreen;
             this.buttonSettings.Image = ((System.Drawing.Image)(resources.GetObject("buttonSettings.Image")));
-            this.buttonSettings.Location = new System.Drawing.Point(3, 291);
+            this.buttonSettings.Location = new System.Drawing.Point(3, 294);
             this.buttonSettings.Name = "buttonSettings";
-            this.buttonSettings.Size = new System.Drawing.Size(90, 90);
+            this.buttonSettings.Size = new System.Drawing.Size(91, 91);
             this.buttonSettings.TabIndex = 3;
             this.buttonSettings.Text = "Opzioni";
             this.buttonSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
