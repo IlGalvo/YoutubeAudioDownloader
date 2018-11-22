@@ -232,6 +232,7 @@
             // 
             // richTextBoxDownloadPath
             // 
+            this.richTextBoxDownloadPath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxDownloadPath.BackColor = System.Drawing.Color.White;
             this.richTextBoxDownloadPath.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBoxDownloadPath.Location = new System.Drawing.Point(10, 81);
