@@ -54,6 +54,8 @@
             this.buttonShowAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
             this.buttonShowAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.buttonShowAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonShowAll.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonShowAll.ForeColor = System.Drawing.Color.DarkGreen;
             this.buttonShowAll.Location = new System.Drawing.Point(293, 17);
             this.buttonShowAll.Name = "buttonShowAll";
             this.buttonShowAll.Size = new System.Drawing.Size(148, 40);

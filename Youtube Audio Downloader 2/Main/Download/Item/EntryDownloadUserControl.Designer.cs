@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EntryDownloadUserControl));
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.groupBoxDownload = new System.Windows.Forms.GroupBox();
             this.labelInformation = new System.Windows.Forms.Label();
             this.labelBitrateSize = new System.Windows.Forms.Label();
             this.labelTitleStatic = new System.Windows.Forms.Label();
+            this.optimizedLabelTitle = new YoutubeAudioDownloader2.Main.OptimizedLabel();
             this.labelBitrateSizeStatic = new System.Windows.Forms.Label();
             this.buttonDownloadCancel = new System.Windows.Forms.Button();
             this.buttonRemove = new System.Windows.Forms.Button();
             this.coloredProgressBarDownload = new YoutubeAudioDownloader2.ColoredProgressBar();
-            this.optimizedLabelTitle = new YoutubeAudioDownloader2.Main.OptimizedLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.groupBoxDownload.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +61,7 @@
             this.groupBoxDownload.Controls.Add(this.labelBitrateSizeStatic);
             this.groupBoxDownload.Location = new System.Drawing.Point(170, 8);
             this.groupBoxDownload.Name = "groupBoxDownload";
-            this.groupBoxDownload.Size = new System.Drawing.Size(519, 86);
+            this.groupBoxDownload.Size = new System.Drawing.Size(521, 86);
             this.groupBoxDownload.TabIndex = 0;
             this.groupBoxDownload.TabStop = false;
             this.groupBoxDownload.Text = "Download Mp3";
@@ -95,6 +96,16 @@
             this.labelTitleStatic.TabIndex = 1;
             this.labelTitleStatic.Text = "Titolo:";
             // 
+            // optimizedLabelTitle
+            // 
+            this.optimizedLabelTitle.AutoSize = true;
+            this.optimizedLabelTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optimizedLabelTitle.Location = new System.Drawing.Point(91, 26);
+            this.optimizedLabelTitle.Name = "optimizedLabelTitle";
+            this.optimizedLabelTitle.Size = new System.Drawing.Size(41, 17);
+            this.optimizedLabelTitle.TabIndex = 2;
+            this.optimizedLabelTitle.Text = "Titolo";
+            // 
             // labelBitrateSizeStatic
             // 
             this.labelBitrateSizeStatic.AutoSize = true;
@@ -109,9 +120,10 @@
             // 
             this.buttonDownloadCancel.BackColor = System.Drawing.Color.LightCyan;
             this.buttonDownloadCancel.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.buttonDownloadCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleTurquoise;
+            this.buttonDownloadCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise;
             this.buttonDownloadCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
             this.buttonDownloadCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDownloadCancel.ForeColor = System.Drawing.Color.MidnightBlue;
             this.buttonDownloadCancel.Location = new System.Drawing.Point(170, 100);
             this.buttonDownloadCancel.Name = "buttonDownloadCancel";
             this.buttonDownloadCancel.Size = new System.Drawing.Size(75, 30);
@@ -124,15 +136,15 @@
             this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRemove.BackColor = System.Drawing.Color.PeachPuff;
             this.buttonRemove.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.buttonRemove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
+            this.buttonRemove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSalmon;
             this.buttonRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.buttonRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRemove.ForeColor = System.Drawing.Color.DarkRed;
-            this.buttonRemove.Location = new System.Drawing.Point(698, 56);
+            this.buttonRemove.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonRemove.Image = ((System.Drawing.Image)(resources.GetObject("buttonRemove.Image")));
+            this.buttonRemove.Location = new System.Drawing.Point(700, 56);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(27, 27);
+            this.buttonRemove.Size = new System.Drawing.Size(25, 25);
             this.buttonRemove.TabIndex = 8;
-            this.buttonRemove.Text = "X";
             this.buttonRemove.UseVisualStyleBackColor = false;
             // 
             // coloredProgressBarDownload
@@ -141,19 +153,10 @@
             this.coloredProgressBarDownload.ForeColor = System.Drawing.Color.Blue;
             this.coloredProgressBarDownload.Location = new System.Drawing.Point(251, 100);
             this.coloredProgressBarDownload.Name = "coloredProgressBarDownload";
+            this.coloredProgressBarDownload.ProgressColor = System.Drawing.Color.SkyBlue;
             this.coloredProgressBarDownload.ShowPercentageText = true;
-            this.coloredProgressBarDownload.Size = new System.Drawing.Size(438, 30);
+            this.coloredProgressBarDownload.Size = new System.Drawing.Size(440, 30);
             this.coloredProgressBarDownload.TabIndex = 7;
-            // 
-            // optimizedLabelTitle
-            // 
-            this.optimizedLabelTitle.AutoSize = true;
-            this.optimizedLabelTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optimizedLabelTitle.Location = new System.Drawing.Point(91, 26);
-            this.optimizedLabelTitle.Name = "optimizedLabelTitle";
-            this.optimizedLabelTitle.Size = new System.Drawing.Size(41, 17);
-            this.optimizedLabelTitle.TabIndex = 2;
-            this.optimizedLabelTitle.Text = "Titolo";
             // 
             // EntryDownloadUserControl
             // 

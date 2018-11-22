@@ -38,10 +38,10 @@
             this.numericUpDownSearchResults = new System.Windows.Forms.NumericUpDown();
             this.groupBoxGeneral = new System.Windows.Forms.GroupBox();
             this.labelSilentDownloadStatic = new System.Windows.Forms.Label();
+            this.toggleButtonSilentDownload = new YoutubeAudioDownloader.Main.Settings.ToggleButton();
             this.groupBoxDownload = new System.Windows.Forms.GroupBox();
             this.buttonDownloadPath = new System.Windows.Forms.Button();
             this.richTextBoxDownloadPath = new System.Windows.Forms.RichTextBox();
-            this.toggleButtonSilentDownload = new YoutubeAudioDownloader.Main.Settings.ToggleButton();
             this.panelActionOffset.SuspendLayout();
             this.panelContent.SuspendLayout();
             this.tableLayoutPanelSettings.SuspendLayout();
@@ -70,6 +70,8 @@
             this.buttonRestore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
             this.buttonRestore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.buttonRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRestore.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRestore.ForeColor = System.Drawing.Color.DarkGreen;
             this.buttonRestore.Location = new System.Drawing.Point(293, 17);
             this.buttonRestore.Name = "buttonRestore";
             this.buttonRestore.Size = new System.Drawing.Size(148, 40);
@@ -186,6 +188,19 @@
             this.labelSilentDownloadStatic.TabIndex = 8;
             this.labelSilentDownloadStatic.Text = "Attiva download silenzioso:";
             // 
+            // toggleButtonSilentDownload
+            // 
+            this.toggleButtonSilentDownload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.toggleButtonSilentDownload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.toggleButtonSilentDownload.Location = new System.Drawing.Point(660, 81);
+            this.toggleButtonSilentDownload.Name = "toggleButtonSilentDownload";
+            this.toggleButtonSilentDownload.OffColor = System.Drawing.Color.Red;
+            this.toggleButtonSilentDownload.OnColor = System.Drawing.Color.DodgerBlue;
+            this.toggleButtonSilentDownload.Size = new System.Drawing.Size(50, 25);
+            this.toggleButtonSilentDownload.TabIndex = 9;
+            this.toggleButtonSilentDownload.ToggleColor = System.Drawing.Color.White;
+            this.toggleButtonSilentDownload.ToggleState = false;
+            // 
             // groupBoxDownload
             // 
             this.groupBoxDownload.Controls.Add(this.buttonDownloadPath);
@@ -206,6 +221,8 @@
             this.buttonDownloadPath.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
             this.buttonDownloadPath.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.buttonDownloadPath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDownloadPath.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDownloadPath.ForeColor = System.Drawing.Color.DarkGreen;
             this.buttonDownloadPath.Location = new System.Drawing.Point(660, 81);
             this.buttonDownloadPath.Name = "buttonDownloadPath";
             this.buttonDownloadPath.Size = new System.Drawing.Size(50, 35);
@@ -225,19 +242,6 @@
             this.richTextBoxDownloadPath.Size = new System.Drawing.Size(652, 36);
             this.richTextBoxDownloadPath.TabIndex = 5;
             this.richTextBoxDownloadPath.Text = "C:\\Users\\Andre\\Music";
-            // 
-            // toggleButtonSilentDownload
-            // 
-            this.toggleButtonSilentDownload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.toggleButtonSilentDownload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.toggleButtonSilentDownload.Location = new System.Drawing.Point(660, 81);
-            this.toggleButtonSilentDownload.Name = "toggleButtonSilentDownload";
-            this.toggleButtonSilentDownload.OffColor = System.Drawing.Color.Red;
-            this.toggleButtonSilentDownload.OnColor = System.Drawing.Color.DodgerBlue;
-            this.toggleButtonSilentDownload.Size = new System.Drawing.Size(50, 25);
-            this.toggleButtonSilentDownload.TabIndex = 9;
-            this.toggleButtonSilentDownload.ToggleColor = System.Drawing.Color.White;
-            this.toggleButtonSilentDownload.ToggleState = false;
             // 
             // SettingsUserControl
             // 

@@ -45,6 +45,8 @@
             this.buttonSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
             this.buttonSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSearch.ForeColor = System.Drawing.Color.DarkGreen;
             this.buttonSearch.Location = new System.Drawing.Point(650, 230);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(81, 42);

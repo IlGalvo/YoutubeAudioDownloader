@@ -279,9 +279,11 @@
             // 
             this.buttonDownload.BackColor = System.Drawing.Color.LightCyan;
             this.buttonDownload.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.buttonDownload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleTurquoise;
+            this.buttonDownload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise;
             this.buttonDownload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
             this.buttonDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDownload.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDownload.ForeColor = System.Drawing.Color.MidnightBlue;
             this.buttonDownload.Location = new System.Drawing.Point(305, 234);
             this.buttonDownload.Name = "buttonDownload";
             this.buttonDownload.Size = new System.Drawing.Size(85, 35);

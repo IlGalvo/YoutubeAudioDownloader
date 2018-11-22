@@ -54,6 +54,8 @@
             this.buttonRemoveAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
             this.buttonRemoveAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.buttonRemoveAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRemoveAll.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRemoveAll.ForeColor = System.Drawing.Color.DarkGreen;
             this.buttonRemoveAll.Location = new System.Drawing.Point(293, 17);
             this.buttonRemoveAll.Name = "buttonRemoveAll";
             this.buttonRemoveAll.Size = new System.Drawing.Size(148, 40);
