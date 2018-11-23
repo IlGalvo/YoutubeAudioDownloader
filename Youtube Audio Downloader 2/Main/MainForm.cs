@@ -53,7 +53,7 @@ namespace YoutubeAudioDownloader2.Main
 
         private void ManageButtonMenuColor(object sender)
         {
-            foreach (Button button in panelMenu.Controls)
+            foreach (Button button in tableLayoutPanelMenu.Controls)
             {
                 button.BackColor = ((button == ((Button)sender)) ? Color.LightGreen : Color.Honeydew);
             }
