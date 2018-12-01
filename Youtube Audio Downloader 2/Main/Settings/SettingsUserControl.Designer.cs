@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panelActionOffset = new System.Windows.Forms.Panel();
-            this.buttonRestore = new System.Windows.Forms.Button();
             this.panelAction = new System.Windows.Forms.Panel();
             this.tableLayoutPanelSettings = new System.Windows.Forms.TableLayoutPanel();
             this.groupBoxGeneral = new System.Windows.Forms.GroupBox();
@@ -41,7 +40,9 @@
             this.labelSearchResultsStatic = new System.Windows.Forms.Label();
             this.numericUpDownSearchResults = new System.Windows.Forms.NumericUpDown();
             this.toggleButtonSilentDownload = new YoutubeAudioDownloader.Main.Settings.ToggleButton();
+            this.buttonRestore = new System.Windows.Forms.Button();
             this.panelActionOffset.SuspendLayout();
+            this.panelAction.SuspendLayout();
             this.tableLayoutPanelSettings.SuspendLayout();
             this.groupBoxGeneral.SuspendLayout();
             this.groupBoxDownload.SuspendLayout();
@@ -52,7 +53,6 @@
             // panelActionOffset
             // 
             this.panelActionOffset.BackColor = System.Drawing.Color.Transparent;
-            this.panelActionOffset.Controls.Add(this.buttonRestore);
             this.panelActionOffset.Controls.Add(this.panelAction);
             this.panelActionOffset.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelActionOffset.Location = new System.Drawing.Point(0, 557);
@@ -60,26 +60,10 @@
             this.panelActionOffset.Size = new System.Drawing.Size(734, 63);
             this.panelActionOffset.TabIndex = 10;
             // 
-            // buttonRestore
-            // 
-            this.buttonRestore.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonRestore.BackColor = System.Drawing.Color.Honeydew;
-            this.buttonRestore.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
-            this.buttonRestore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
-            this.buttonRestore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
-            this.buttonRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRestore.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRestore.ForeColor = System.Drawing.Color.DarkGreen;
-            this.buttonRestore.Location = new System.Drawing.Point(293, 17);
-            this.buttonRestore.Name = "buttonRestore";
-            this.buttonRestore.Size = new System.Drawing.Size(148, 40);
-            this.buttonRestore.TabIndex = 12;
-            this.buttonRestore.Text = "Ripristina";
-            this.buttonRestore.UseVisualStyleBackColor = false;
-            // 
             // panelAction
             // 
             this.panelAction.BackColor = System.Drawing.Color.SeaGreen;
+            this.panelAction.Controls.Add(this.buttonRestore);
             this.panelAction.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelAction.Location = new System.Drawing.Point(0, 10);
             this.panelAction.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
@@ -234,6 +218,23 @@
             this.toggleButtonSilentDownload.ToggleColor = System.Drawing.Color.White;
             this.toggleButtonSilentDownload.ToggleState = false;
             // 
+            // buttonRestore
+            // 
+            this.buttonRestore.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonRestore.BackColor = System.Drawing.Color.Honeydew;
+            this.buttonRestore.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
+            this.buttonRestore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
+            this.buttonRestore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRestore.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRestore.ForeColor = System.Drawing.Color.DarkGreen;
+            this.buttonRestore.Location = new System.Drawing.Point(293, 7);
+            this.buttonRestore.Name = "buttonRestore";
+            this.buttonRestore.Size = new System.Drawing.Size(148, 40);
+            this.buttonRestore.TabIndex = 12;
+            this.buttonRestore.Text = "Ripristina";
+            this.buttonRestore.UseVisualStyleBackColor = false;
+            // 
             // SettingsUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -247,6 +248,7 @@
             this.Name = "SettingsUserControl";
             this.Size = new System.Drawing.Size(734, 620);
             this.panelActionOffset.ResumeLayout(false);
+            this.panelAction.ResumeLayout(false);
             this.tableLayoutPanelSettings.ResumeLayout(false);
             this.groupBoxGeneral.ResumeLayout(false);
             this.groupBoxGeneral.PerformLayout();
@@ -260,7 +262,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panelActionOffset;
-        private System.Windows.Forms.Button buttonRestore;
         private System.Windows.Forms.Panel panelAction;
         private System.Windows.Forms.GroupBox groupBoxSearch;
         private System.Windows.Forms.NumericUpDown numericUpDownSearchResults;
@@ -272,5 +273,6 @@
         private System.Windows.Forms.RichTextBox richTextBoxDownloadPath;
         private System.Windows.Forms.Label labelSearchResultsStatic;
         private System.Windows.Forms.Label labelSilentDownloadStatic;
+        private System.Windows.Forms.Button buttonRestore;
     }
 }

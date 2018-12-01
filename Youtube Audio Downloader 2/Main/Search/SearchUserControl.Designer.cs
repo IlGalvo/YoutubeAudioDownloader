@@ -30,11 +30,12 @@
         {
             this.buttonSearch = new System.Windows.Forms.Button();
             this.panelActionOffset = new System.Windows.Forms.Panel();
-            this.buttonTemp = new System.Windows.Forms.Button();
             this.panelAction = new System.Windows.Forms.Panel();
             this.panelContent = new System.Windows.Forms.Panel();
             this.optimizedTextBoxSearch = new YoutubeAudioDownloader2.Main.Search.OptimizedRichTextBox();
+            this.buttonTemp = new System.Windows.Forms.Button();
             this.panelActionOffset.SuspendLayout();
+            this.panelAction.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonSearch
@@ -58,7 +59,6 @@
             // panelActionOffset
             // 
             this.panelActionOffset.BackColor = System.Drawing.Color.Transparent;
-            this.panelActionOffset.Controls.Add(this.buttonTemp);
             this.panelActionOffset.Controls.Add(this.panelAction);
             this.panelActionOffset.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelActionOffset.Location = new System.Drawing.Point(0, 540);
@@ -66,25 +66,10 @@
             this.panelActionOffset.Size = new System.Drawing.Size(734, 63);
             this.panelActionOffset.TabIndex = 3;
             // 
-            // buttonTemp
-            // 
-            this.buttonTemp.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonTemp.BackColor = System.Drawing.Color.Honeydew;
-            this.buttonTemp.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
-            this.buttonTemp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
-            this.buttonTemp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
-            this.buttonTemp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTemp.Location = new System.Drawing.Point(293, 17);
-            this.buttonTemp.Name = "buttonTemp";
-            this.buttonTemp.Size = new System.Drawing.Size(148, 40);
-            this.buttonTemp.TabIndex = 5;
-            this.buttonTemp.Text = "Temp";
-            this.buttonTemp.UseVisualStyleBackColor = false;
-            this.buttonTemp.Visible = false;
-            // 
             // panelAction
             // 
             this.panelAction.BackColor = System.Drawing.Color.SeaGreen;
+            this.panelAction.Controls.Add(this.buttonTemp);
             this.panelAction.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelAction.Location = new System.Drawing.Point(0, 10);
             this.panelAction.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
@@ -118,6 +103,22 @@
             this.optimizedTextBoxSearch.Text = "";
             this.optimizedTextBoxSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.optimizedTextBoxSearch_KeyUp);
             // 
+            // buttonTemp
+            // 
+            this.buttonTemp.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonTemp.BackColor = System.Drawing.Color.Honeydew;
+            this.buttonTemp.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
+            this.buttonTemp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
+            this.buttonTemp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonTemp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTemp.Location = new System.Drawing.Point(293, 7);
+            this.buttonTemp.Name = "buttonTemp";
+            this.buttonTemp.Size = new System.Drawing.Size(148, 40);
+            this.buttonTemp.TabIndex = 5;
+            this.buttonTemp.Text = "Temp";
+            this.buttonTemp.UseVisualStyleBackColor = false;
+            this.buttonTemp.Visible = false;
+            // 
             // SearchUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -133,6 +134,7 @@
             this.Name = "SearchUserControl";
             this.Size = new System.Drawing.Size(734, 603);
             this.panelActionOffset.ResumeLayout(false);
+            this.panelAction.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -143,7 +145,7 @@
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Panel panelActionOffset;
         private System.Windows.Forms.Panel panelContent;
-        private System.Windows.Forms.Button buttonTemp;
         private System.Windows.Forms.Panel panelAction;
+        private System.Windows.Forms.Button buttonTemp;
     }
 }

@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.panelActionOffset = new System.Windows.Forms.Panel();
-            this.buttonShowAll = new System.Windows.Forms.Button();
             this.panelAction = new System.Windows.Forms.Panel();
             this.panelContent = new System.Windows.Forms.Panel();
+            this.buttonShowAll = new System.Windows.Forms.Button();
             this.panelActionOffset.SuspendLayout();
+            this.panelAction.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelActionOffset
             // 
             this.panelActionOffset.BackColor = System.Drawing.Color.Transparent;
-            this.panelActionOffset.Controls.Add(this.buttonShowAll);
             this.panelActionOffset.Controls.Add(this.panelAction);
             this.panelActionOffset.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelActionOffset.Location = new System.Drawing.Point(0, 557);
@@ -46,27 +46,10 @@
             this.panelActionOffset.Size = new System.Drawing.Size(734, 63);
             this.panelActionOffset.TabIndex = 1;
             // 
-            // buttonShowAll
-            // 
-            this.buttonShowAll.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonShowAll.BackColor = System.Drawing.Color.Honeydew;
-            this.buttonShowAll.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
-            this.buttonShowAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
-            this.buttonShowAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
-            this.buttonShowAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonShowAll.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonShowAll.ForeColor = System.Drawing.Color.DarkGreen;
-            this.buttonShowAll.Location = new System.Drawing.Point(293, 17);
-            this.buttonShowAll.Name = "buttonShowAll";
-            this.buttonShowAll.Size = new System.Drawing.Size(148, 40);
-            this.buttonShowAll.TabIndex = 3;
-            this.buttonShowAll.Text = "Mostra tutti";
-            this.buttonShowAll.UseVisualStyleBackColor = false;
-            this.buttonShowAll.Click += new System.EventHandler(this.buttonShowAll_Click);
-            // 
             // panelAction
             // 
             this.panelAction.BackColor = System.Drawing.Color.SeaGreen;
+            this.panelAction.Controls.Add(this.buttonShowAll);
             this.panelAction.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelAction.Location = new System.Drawing.Point(0, 10);
             this.panelAction.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
@@ -83,6 +66,23 @@
             this.panelContent.Size = new System.Drawing.Size(734, 557);
             this.panelContent.TabIndex = 0;
             // 
+            // buttonShowAll
+            // 
+            this.buttonShowAll.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonShowAll.BackColor = System.Drawing.Color.Honeydew;
+            this.buttonShowAll.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
+            this.buttonShowAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
+            this.buttonShowAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonShowAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonShowAll.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonShowAll.ForeColor = System.Drawing.Color.DarkGreen;
+            this.buttonShowAll.Location = new System.Drawing.Point(293, 7);
+            this.buttonShowAll.Name = "buttonShowAll";
+            this.buttonShowAll.Size = new System.Drawing.Size(148, 40);
+            this.buttonShowAll.TabIndex = 3;
+            this.buttonShowAll.Text = "Mostra tutti";
+            this.buttonShowAll.UseVisualStyleBackColor = false;
+            // 
             // ListUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -96,6 +96,7 @@
             this.Name = "ListUserControl";
             this.Size = new System.Drawing.Size(734, 620);
             this.panelActionOffset.ResumeLayout(false);
+            this.panelAction.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -103,7 +104,7 @@
         #endregion
         private System.Windows.Forms.Panel panelActionOffset;
         private System.Windows.Forms.Panel panelContent;
-        private System.Windows.Forms.Button buttonShowAll;
         private System.Windows.Forms.Panel panelAction;
+        private System.Windows.Forms.Button buttonShowAll;
     }
 }
