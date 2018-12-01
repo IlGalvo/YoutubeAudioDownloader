@@ -82,6 +82,7 @@
             this.buttonShowAll.TabIndex = 3;
             this.buttonShowAll.Text = "Mostra tutti";
             this.buttonShowAll.UseVisualStyleBackColor = false;
+            this.buttonShowAll.Click += new System.EventHandler(this.buttonShowAll_Click);
             // 
             // ListUserControl
             // 

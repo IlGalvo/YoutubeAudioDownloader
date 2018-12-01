@@ -82,6 +82,7 @@
             this.buttonRemoveAll.TabIndex = 3;
             this.buttonRemoveAll.Text = "Rimuovi tutti";
             this.buttonRemoveAll.UseVisualStyleBackColor = false;
+            this.buttonRemoveAll.Click += new System.EventHandler(this.buttonRemoveAll_Click);
             // 
             // DownloadUserControl
             // 

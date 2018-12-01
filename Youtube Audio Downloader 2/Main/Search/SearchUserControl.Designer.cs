@@ -32,8 +32,8 @@
             this.panelActionOffset = new System.Windows.Forms.Panel();
             this.panelAction = new System.Windows.Forms.Panel();
             this.panelContent = new System.Windows.Forms.Panel();
-            this.optimizedTextBoxSearch = new YoutubeAudioDownloader2.Main.Search.OptimizedRichTextBox();
             this.buttonTemp = new System.Windows.Forms.Button();
+            this.optimizedTextBoxSearch = new YoutubeAudioDownloader2.Main.Search.OptimizedRichTextBox();
             this.panelActionOffset.SuspendLayout();
             this.panelAction.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +86,23 @@
             this.panelContent.Size = new System.Drawing.Size(734, 540);
             this.panelContent.TabIndex = 0;
             // 
+            // buttonTemp
+            // 
+            this.buttonTemp.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonTemp.BackColor = System.Drawing.Color.Honeydew;
+            this.buttonTemp.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
+            this.buttonTemp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
+            this.buttonTemp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonTemp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTemp.Location = new System.Drawing.Point(293, 7);
+            this.buttonTemp.Name = "buttonTemp";
+            this.buttonTemp.Size = new System.Drawing.Size(148, 40);
+            this.buttonTemp.TabIndex = 5;
+            this.buttonTemp.Text = "Temp";
+            this.buttonTemp.UseVisualStyleBackColor = false;
+            this.buttonTemp.Visible = false;
+            this.buttonTemp.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
             // optimizedTextBoxSearch
             // 
             this.optimizedTextBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -102,22 +119,6 @@
             this.optimizedTextBoxSearch.TabIndex = 1;
             this.optimizedTextBoxSearch.Text = "";
             this.optimizedTextBoxSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.optimizedTextBoxSearch_KeyUp);
-            // 
-            // buttonTemp
-            // 
-            this.buttonTemp.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonTemp.BackColor = System.Drawing.Color.Honeydew;
-            this.buttonTemp.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
-            this.buttonTemp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
-            this.buttonTemp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
-            this.buttonTemp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTemp.Location = new System.Drawing.Point(293, 7);
-            this.buttonTemp.Name = "buttonTemp";
-            this.buttonTemp.Size = new System.Drawing.Size(148, 40);
-            this.buttonTemp.TabIndex = 5;
-            this.buttonTemp.Text = "Temp";
-            this.buttonTemp.UseVisualStyleBackColor = false;
-            this.buttonTemp.Visible = false;
             // 
             // SearchUserControl
             // 
