@@ -28,14 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchUserControl));
             this.buttonSearch = new System.Windows.Forms.Button();
             this.panelActionOffset = new System.Windows.Forms.Panel();
             this.panelAction = new System.Windows.Forms.Panel();
-            this.panelContent = new System.Windows.Forms.Panel();
             this.buttonTemp = new System.Windows.Forms.Button();
+            this.panelContent = new System.Windows.Forms.Panel();
             this.optimizedTextBoxSearch = new YoutubeAudioDownloader2.Main.Search.OptimizedRichTextBox();
+            this.pictureBoxLoadingImage = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLoadingText = new System.Windows.Forms.PictureBox();
+            this.panelLoading = new System.Windows.Forms.Panel();
             this.panelActionOffset.SuspendLayout();
             this.panelAction.SuspendLayout();
+            this.panelContent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadingImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadingText)).BeginInit();
+            this.panelLoading.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonSearch
@@ -77,15 +85,6 @@
             this.panelAction.Size = new System.Drawing.Size(734, 53);
             this.panelAction.TabIndex = 4;
             // 
-            // panelContent
-            // 
-            this.panelContent.AutoScroll = true;
-            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(0, 0);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(734, 540);
-            this.panelContent.TabIndex = 0;
-            // 
             // buttonTemp
             // 
             this.buttonTemp.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -102,6 +101,16 @@
             this.buttonTemp.UseVisualStyleBackColor = false;
             this.buttonTemp.Visible = false;
             this.buttonTemp.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
+            // panelContent
+            // 
+            this.panelContent.AutoScroll = true;
+            this.panelContent.Controls.Add(this.panelLoading);
+            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContent.Location = new System.Drawing.Point(0, 0);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(734, 540);
+            this.panelContent.TabIndex = 0;
             // 
             // optimizedTextBoxSearch
             // 
@@ -120,6 +129,36 @@
             this.optimizedTextBoxSearch.Text = "";
             this.optimizedTextBoxSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.optimizedTextBoxSearch_KeyUp);
             // 
+            // pictureBoxLoadingImage
+            // 
+            this.pictureBoxLoadingImage.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLoadingImage.Image")));
+            this.pictureBoxLoadingImage.Location = new System.Drawing.Point(41, 3);
+            this.pictureBoxLoadingImage.Name = "pictureBoxLoadingImage";
+            this.pictureBoxLoadingImage.Size = new System.Drawing.Size(60, 60);
+            this.pictureBoxLoadingImage.TabIndex = 0;
+            this.pictureBoxLoadingImage.TabStop = false;
+            // 
+            // pictureBoxLoadingText
+            // 
+            this.pictureBoxLoadingText.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLoadingText.Image")));
+            this.pictureBoxLoadingText.Location = new System.Drawing.Point(3, 57);
+            this.pictureBoxLoadingText.Name = "pictureBoxLoadingText";
+            this.pictureBoxLoadingText.Size = new System.Drawing.Size(142, 40);
+            this.pictureBoxLoadingText.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLoadingText.TabIndex = 1;
+            this.pictureBoxLoadingText.TabStop = false;
+            // 
+            // panelLoading
+            // 
+            this.panelLoading.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelLoading.Controls.Add(this.pictureBoxLoadingImage);
+            this.panelLoading.Controls.Add(this.pictureBoxLoadingText);
+            this.panelLoading.Location = new System.Drawing.Point(293, 282);
+            this.panelLoading.Name = "panelLoading";
+            this.panelLoading.Size = new System.Drawing.Size(148, 101);
+            this.panelLoading.TabIndex = 6;
+            this.panelLoading.Visible = false;
+            // 
             // SearchUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -136,6 +175,10 @@
             this.Size = new System.Drawing.Size(734, 603);
             this.panelActionOffset.ResumeLayout(false);
             this.panelAction.ResumeLayout(false);
+            this.panelContent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadingImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadingText)).EndInit();
+            this.panelLoading.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -148,5 +191,8 @@
         private System.Windows.Forms.Panel panelContent;
         private System.Windows.Forms.Panel panelAction;
         private System.Windows.Forms.Button buttonTemp;
+        private System.Windows.Forms.PictureBox pictureBoxLoadingImage;
+        private System.Windows.Forms.PictureBox pictureBoxLoadingText;
+        private System.Windows.Forms.Panel panelLoading;
     }
 }

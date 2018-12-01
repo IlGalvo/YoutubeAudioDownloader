@@ -26,6 +26,8 @@ namespace YoutubeAudioDownloader2.Main.Search
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Ricerca in corso...");
+
+            panelLoading.Visible = (!panelLoading.Visible);
         }
     }
 }
