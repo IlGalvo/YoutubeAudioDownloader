@@ -26,8 +26,6 @@ namespace YoutubeAudioDownloader2.Main.List
         public void AddVideo(VideoInfo videoInfo)
         {
             panelContent.Controls.Add(new EntryListUserControl(videoInfo));
-
-            panelContent.Controls[(panelContent.Controls.Count - 1)].BringToFront();
         }
 
         public void AddRangeVideo(VideoInfo[] videoInfos)
@@ -49,6 +47,8 @@ namespace YoutubeAudioDownloader2.Main.List
             foreach (VideoInfo videoInfo in videoInfos)
             {
                 panelContent.Controls.Add(new EntryListUserControl(videoInfo));
+
+                panelContent.Controls[(panelContent.Controls.Count - 1)].BringToFront();
             }
 
             buttonShowAll.Enabled = false;
