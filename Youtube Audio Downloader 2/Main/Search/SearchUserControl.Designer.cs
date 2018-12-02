@@ -34,16 +34,16 @@
             this.panelAction = new System.Windows.Forms.Panel();
             this.buttonTemp = new System.Windows.Forms.Button();
             this.panelContent = new System.Windows.Forms.Panel();
-            this.optimizedTextBoxSearch = new YoutubeAudioDownloader2.Main.Search.OptimizedRichTextBox();
+            this.panelLoading = new System.Windows.Forms.Panel();
             this.pictureBoxLoadingImage = new System.Windows.Forms.PictureBox();
             this.pictureBoxLoadingText = new System.Windows.Forms.PictureBox();
-            this.panelLoading = new System.Windows.Forms.Panel();
+            this.optimizedTextBoxSearch = new YoutubeAudioDownloader2.Main.Search.OptimizedRichTextBox();
             this.panelActionOffset.SuspendLayout();
             this.panelAction.SuspendLayout();
             this.panelContent.SuspendLayout();
+            this.panelLoading.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadingImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadingText)).BeginInit();
-            this.panelLoading.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonSearch
@@ -112,22 +112,16 @@
             this.panelContent.Size = new System.Drawing.Size(734, 540);
             this.panelContent.TabIndex = 0;
             // 
-            // optimizedTextBoxSearch
+            // panelLoading
             // 
-            this.optimizedTextBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.optimizedTextBoxSearch.AutoWordSelection = true;
-            this.optimizedTextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optimizedTextBoxSearch.Location = new System.Drawing.Point(3, 230);
-            this.optimizedTextBoxSearch.Multiline = false;
-            this.optimizedTextBoxSearch.Name = "optimizedTextBoxSearch";
-            this.optimizedTextBoxSearch.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.optimizedTextBoxSearch.PlaceholderText = "Cerca un video o incolla un link...";
-            this.optimizedTextBoxSearch.PlaceholerFont = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optimizedTextBoxSearch.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.optimizedTextBoxSearch.Size = new System.Drawing.Size(650, 43);
-            this.optimizedTextBoxSearch.TabIndex = 1;
-            this.optimizedTextBoxSearch.Text = "";
-            this.optimizedTextBoxSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.optimizedTextBoxSearch_KeyUp);
+            this.panelLoading.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelLoading.Controls.Add(this.pictureBoxLoadingImage);
+            this.panelLoading.Controls.Add(this.pictureBoxLoadingText);
+            this.panelLoading.Location = new System.Drawing.Point(293, 282);
+            this.panelLoading.Name = "panelLoading";
+            this.panelLoading.Size = new System.Drawing.Size(148, 101);
+            this.panelLoading.TabIndex = 6;
+            this.panelLoading.Visible = false;
             // 
             // pictureBoxLoadingImage
             // 
@@ -148,16 +142,22 @@
             this.pictureBoxLoadingText.TabIndex = 1;
             this.pictureBoxLoadingText.TabStop = false;
             // 
-            // panelLoading
+            // optimizedTextBoxSearch
             // 
-            this.panelLoading.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelLoading.Controls.Add(this.pictureBoxLoadingImage);
-            this.panelLoading.Controls.Add(this.pictureBoxLoadingText);
-            this.panelLoading.Location = new System.Drawing.Point(293, 282);
-            this.panelLoading.Name = "panelLoading";
-            this.panelLoading.Size = new System.Drawing.Size(148, 101);
-            this.panelLoading.TabIndex = 6;
-            this.panelLoading.Visible = false;
+            this.optimizedTextBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.optimizedTextBoxSearch.AutoWordSelection = true;
+            this.optimizedTextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optimizedTextBoxSearch.Location = new System.Drawing.Point(3, 230);
+            this.optimizedTextBoxSearch.Multiline = false;
+            this.optimizedTextBoxSearch.Name = "optimizedTextBoxSearch";
+            this.optimizedTextBoxSearch.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.optimizedTextBoxSearch.PlaceholderText = "Cerca un video o incolla un link...";
+            this.optimizedTextBoxSearch.PlaceholerFont = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optimizedTextBoxSearch.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.optimizedTextBoxSearch.Size = new System.Drawing.Size(650, 43);
+            this.optimizedTextBoxSearch.TabIndex = 1;
+            this.optimizedTextBoxSearch.Text = "";
+            this.optimizedTextBoxSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.optimizedTextBoxSearch_KeyUp);
             // 
             // SearchUserControl
             // 
@@ -176,9 +176,9 @@
             this.panelActionOffset.ResumeLayout(false);
             this.panelAction.ResumeLayout(false);
             this.panelContent.ResumeLayout(false);
+            this.panelLoading.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadingImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadingText)).EndInit();
-            this.panelLoading.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
