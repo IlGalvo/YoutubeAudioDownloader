@@ -61,6 +61,7 @@
             this.richTextBoxDescription.Size = new System.Drawing.Size(449, 287);
             this.richTextBoxDescription.TabIndex = 1;
             this.richTextBoxDescription.Text = "";
+            this.richTextBoxDescription.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBoxDescription_LinkClicked);
             // 
             // groupBoxDescription
             // 
@@ -220,6 +221,7 @@
             this.linkLabelVideo.TabIndex = 14;
             this.linkLabelVideo.TabStop = true;
             this.linkLabelVideo.Text = "Video Link";
+            this.linkLabelVideo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelVideo_LinkClicked);
             // 
             // InformationForm
             // 
@@ -237,6 +239,7 @@
             this.Name = "InformationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InformationForm";
+            this.Load += new System.EventHandler(this.InformationForm_Load);
             this.groupBoxDescription.ResumeLayout(false);
             this.groupBoxStatistics.ResumeLayout(false);
             this.tableLayoutPanelStatistics.ResumeLayout(false);

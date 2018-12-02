@@ -95,6 +95,7 @@
     <Compile Include="Main\Settings\SettingsUserControl.Designer.cs">
       <DependentUpon>SettingsUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="WebBrowserPrepare.cs" />
     <EmbeddedResource Include="Main\Download\Item\EntryDownloadUserControl.resx">
       <DependentUpon>EntryDownloadUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +147,12 @@
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Youtube Client Manager\Youtube Client Manager.csproj">
+      <Project>{E76479D4-F96C-4743-8054-15F4940778D0}</Project>
+      <Name>Youtube Client Manager</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

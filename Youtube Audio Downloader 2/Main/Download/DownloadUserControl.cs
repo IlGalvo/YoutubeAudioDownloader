@@ -1,12 +1,17 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using YoutubeAudioDownloader2.Main.Download.Item;
+using YoutubeClientManager.Audio;
+using YoutubeClientManager.Video;
 
 namespace YoutubeAudioDownloader2.Main.Download
 {
     public partial class DownloadUserControl : UserControl
     {
+        #region INSTANCE
         private static DownloadUserControl instance;
         public static DownloadUserControl Instance { get { if (instance == null) { instance = new DownloadUserControl(); } return instance; } }
+        #endregion
 
         public DownloadUserControl()
         {
@@ -15,12 +20,28 @@ namespace YoutubeAudioDownloader2.Main.Download
             Dock = DockStyle.Fill;
         }
 
-        private void buttonRemoveAll_Click(object sender, System.EventArgs e)
+        public void Add(VideoInfo videoInfo, AudioInfo audioInfo, Action actionToPerform)
         {
-            panelContent.Controls.Add(new EntryDownloadUserControl());
-            panelContent.Controls.Add(new EntryDownloadUserControl());
-            panelContent.Controls.Add(new EntryDownloadUserControl());
-            panelContent.Controls.Add(new EntryDownloadUserControl());
+            panelContent.Controls.Add(new EntryDownloadUserControl(videoInfo, audioInfo, actionToPerform));
+
+            buttonRemoveAll.Enabled = true;
+        }
+
+        private void buttonRemoveAll_Click(object sender, EventArgs e)
+        {
+            panelContent.Controls.Clear();
+
+            buttonRemoveAll.Enabled = false;
+        }
+
+        private void panelContent_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            e.Control.Dispose();
+
+            if (panelContent.Controls.Count == 0)
+            {
+                buttonRemoveAll.Enabled = false;
+            }
         }
     }
 }

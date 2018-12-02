@@ -1,25 +1,100 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Windows.Forms;
+using YoutubeAudioDownloader2.Main.Download;
+using YoutubeClientManager.Audio;
+using YoutubeClientManager.Video;
 
 namespace YoutubeAudioDownloader2.Main.List.Item
 {
     public partial class EntryListUserControl : UserControl
     {
-        public EntryListUserControl()
+        #region GLOBAL_VARIABLES
+        private VideoInfo videoInfo;
+
+        private AudioInfo audioInfo;
+        #endregion
+
+        #region CONSTRUCTOR
+        public EntryListUserControl(VideoInfo videoInfo)
         {
             InitializeComponent();
 
             Dock = DockStyle.Top;
 
-            webBrowserVideo.Navigate("https://www.google.it/");
-            optimizedLabelTitle.Text = "aaaaaaaaaAbbbbbbbbbBcccccccccCdddddddddDeeeeeeeeeE";
-        }
+            this.videoInfo = videoInfo;
+            audioInfo = null;
 
+            StartupAsync();
+        }
+        #endregion
+
+        #region STARTUP
+        private async void StartupAsync()
+        {
+            webBrowserVideo.Navigate(videoInfo.GetEmbedUrl());
+
+            labelAuthor.Text = videoInfo.Author;
+            optimizedLabelTitle.Text = videoInfo.Title;
+            labelDuration.Text = videoInfo.Duration.ToString();
+            labelDate.Text = videoInfo.UploadDate.ToString("dd/MM/yyyy");
+            labelRating.Text = (videoInfo.Statistics.AverageRating + "/5");
+
+            labelEncoding.Text = "Attendere...";
+            labelBitrate.Text = "Attendere...";
+            labelSize.Text = "Attendere...";
+
+            try
+            {
+                audioInfo = await videoInfo.GetAudioInfoAsync();
+
+                labelEncoding.Text = (audioInfo.Container + "/" + audioInfo.Encoding);
+                labelBitrate.Text = (Math.Round((audioInfo.Bitrate / 1000f), MidpointRounding.ToEven) + " Kb/s");
+                labelSize.Text = (Math.Round(((audioInfo.Size / 1024f) / 1024f), 2).ToString() + " Mb");
+
+                buttonDownload.Enabled = true;
+            }
+            catch (Exception)
+            {
+                labelEncoding.Text = "Errore ricezione informazioni.";
+                labelBitrate.Text = "Errore ricezione informazioni.";
+                labelSize.Text = "Errore ricezione informazioni.";
+            }
+        }
+        #endregion
+
+        #region WEBBROWSER_EVENT
+        private void webBrowserVideo_NewWindow(object sender, CancelEventArgs e)
+        {
+            e.Cancel = true;
+
+            Process.Start(videoInfo.GetRegularUrl()).Dispose();
+        }
+        #endregion
+
+        #region LINKLABEL_EVENT
         private void linkLabelShowExtra_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            using (InformationForm informationForm = new InformationForm())
+            using (InformationForm informationForm = new InformationForm(videoInfo))
             {
                 informationForm.ShowDialog();
             }
         }
+        #endregion
+
+        private void buttonDownload_Click(object sender, EventArgs e)
+        {
+            DownloadUserControl.Instance.Add(videoInfo, audioInfo, EnableDownloadButton);
+
+            buttonDownload.Enabled = false;
+        }
+
+        #region RESET
+        private void EnableDownloadButton()
+        {
+            buttonDownload.Enabled = true;
+        }
+        #endregion
     }
 }

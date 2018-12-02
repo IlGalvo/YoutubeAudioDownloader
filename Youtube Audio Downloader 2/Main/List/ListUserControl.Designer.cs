@@ -30,8 +30,8 @@
         {
             this.panelActionOffset = new System.Windows.Forms.Panel();
             this.panelAction = new System.Windows.Forms.Panel();
-            this.panelContent = new System.Windows.Forms.Panel();
             this.buttonShowAll = new System.Windows.Forms.Button();
+            this.panelContent = new System.Windows.Forms.Panel();
             this.panelActionOffset.SuspendLayout();
             this.panelAction.SuspendLayout();
             this.SuspendLayout();
@@ -57,19 +57,11 @@
             this.panelAction.Size = new System.Drawing.Size(734, 53);
             this.panelAction.TabIndex = 2;
             // 
-            // panelContent
-            // 
-            this.panelContent.AutoScroll = true;
-            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(0, 0);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(734, 557);
-            this.panelContent.TabIndex = 0;
-            // 
             // buttonShowAll
             // 
             this.buttonShowAll.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonShowAll.BackColor = System.Drawing.Color.Honeydew;
+            this.buttonShowAll.Enabled = false;
             this.buttonShowAll.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
             this.buttonShowAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
             this.buttonShowAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
@@ -83,6 +75,15 @@
             this.buttonShowAll.Text = "Mostra tutti";
             this.buttonShowAll.UseVisualStyleBackColor = false;
             this.buttonShowAll.Click += new System.EventHandler(this.buttonShowAll_Click);
+            // 
+            // panelContent
+            // 
+            this.panelContent.AutoScroll = true;
+            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContent.Location = new System.Drawing.Point(0, 0);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(734, 557);
+            this.panelContent.TabIndex = 0;
             // 
             // ListUserControl
             // 

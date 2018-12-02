@@ -1,4 +1,6 @@
-﻿namespace YoutubeAudioDownloader2.Main.Download.Item
+﻿using System.Threading;
+
+namespace YoutubeAudioDownloader2.Main.Download.Item
 {
     partial class EntryDownloadUserControl
     {
@@ -13,10 +15,29 @@
         /// <param name="disposing">ha valore true se le risorse gestite devono essere eliminate, false in caso contrario.</param>
         protected override void Dispose(bool disposing)
         {
+            if (IsRunning)
+            {
+                audioInfo.CancelAsync();
+                converterMp3.CancelAsync();
+
+                lock (lockObject)
+                {
+                    Monitor.Wait(lockObject);
+                }
+            }
+
+            converterMp3.Dispose();
+
             if (disposing && (components != null))
             {
                 components.Dispose();
             }
+
+            actionToPerform?.Invoke();
+
+            audioInfo.DownloadProgress -= AudioInfo_DownloadProgress;
+            audioInfo.DownloadFinished -= AudioInfo_DownloadFinished;
+
             base.Dispose(disposing);
         }
 
@@ -130,6 +151,7 @@
             this.buttonDownloadCancel.TabIndex = 6;
             this.buttonDownloadCancel.Text = "Scarica";
             this.buttonDownloadCancel.UseVisualStyleBackColor = false;
+            this.buttonDownloadCancel.Click += new System.EventHandler(this.buttonDownloadCancel_Click);
             // 
             // buttonRemove
             // 
@@ -146,6 +168,7 @@
             this.buttonRemove.Size = new System.Drawing.Size(25, 25);
             this.buttonRemove.TabIndex = 8;
             this.buttonRemove.UseVisualStyleBackColor = false;
+            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
             // coloredProgressBarDownload
             // 

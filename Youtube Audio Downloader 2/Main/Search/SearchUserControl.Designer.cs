@@ -62,7 +62,7 @@
             this.buttonSearch.TabIndex = 2;
             this.buttonSearch.Text = "Cerca";
             this.buttonSearch.UseVisualStyleBackColor = false;
-            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_ClickAsync);
             // 
             // panelActionOffset
             // 
@@ -100,7 +100,7 @@
             this.buttonTemp.Text = "Temp";
             this.buttonTemp.UseVisualStyleBackColor = false;
             this.buttonTemp.Visible = false;
-            this.buttonTemp.Click += new System.EventHandler(this.buttonSearch_Click);
+            this.buttonTemp.Click += new System.EventHandler(this.buttonSearch_ClickAsync);
             // 
             // panelContent
             // 

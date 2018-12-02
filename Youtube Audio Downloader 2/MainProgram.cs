@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Reflection;
+using System.Threading;
 using System.Windows.Forms;
 using YoutubeAudioDownloader2.Main;
 
@@ -14,7 +16,24 @@ namespace YoutubeAudioDownloader2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+
+            using (Mutex mutex = new Mutex(false, (Application.ProductName + "_" + Assembly.GetExecutingAssembly().GetType().GUID.ToString())))
+            {
+                if (mutex.WaitOne(0, false))
+                {
+                    //if (UpdateForm.CheckForUpdates(new Version(Application.ProductVersion), false) == DialogResult.OK)
+                    {
+                        WebBrowserPrepare.SetBrowserFeatureControl();
+
+                        Application.Run(new MainForm());
+                    }
+                }
+                else
+                {
+                    string text = "Non sono consentite istanze multiple, al momento.";
+                    MessageBox.Show(text, "Avviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
     }
 }

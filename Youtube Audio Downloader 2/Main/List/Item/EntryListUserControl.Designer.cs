@@ -60,6 +60,7 @@
             this.webBrowserVideo.Name = "webBrowserVideo";
             this.webBrowserVideo.Size = new System.Drawing.Size(290, 261);
             this.webBrowserVideo.TabIndex = 0;
+            this.webBrowserVideo.NewWindow += new System.ComponentModel.CancelEventHandler(this.webBrowserVideo_NewWindow);
             // 
             // groupBoxVideo
             // 
@@ -278,6 +279,7 @@
             // buttonDownload
             // 
             this.buttonDownload.BackColor = System.Drawing.Color.LightCyan;
+            this.buttonDownload.Enabled = false;
             this.buttonDownload.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
             this.buttonDownload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise;
             this.buttonDownload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
@@ -290,6 +292,7 @@
             this.buttonDownload.TabIndex = 20;
             this.buttonDownload.Text = "Scarica";
             this.buttonDownload.UseVisualStyleBackColor = false;
+            this.buttonDownload.Click += new System.EventHandler(this.buttonDownload_Click);
             // 
             // EntryListUserControl
             // 
