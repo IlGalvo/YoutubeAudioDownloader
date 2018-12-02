@@ -21,6 +21,8 @@ namespace YoutubeAudioDownloader2.Main
             panelContent.Controls.Add(ListUserControl.Instance);
             panelContent.Controls.Add(DownloadUserControl.Instance);
             panelContent.Controls.Add(SettingsUserControl.Instance);
+
+            buttonResearch.PerformClick();
         }
 
         private void buttonResearch_Click(object sender, EventArgs e)
@@ -57,6 +59,13 @@ namespace YoutubeAudioDownloader2.Main
             {
                 button.BackColor = ((button == ((Button)sender)) ? Color.LightGreen : Color.Honeydew);
             }
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string text = "Alcuni download/conversioni sono ancora in corso.\n\nVuoi chiudere comunque l'applicazione?";
+
+            e.Cancel = (!DownloadUserControl.Instance.ManageCancel(text));
         }
     }
 }

@@ -71,10 +71,14 @@ namespace YoutubeAudioDownloader2.Main.Search
                         }
                     }
                 }
-                catch (Exception exception)
+                catch (Exception)
                 {
                     //labelInformation.Text = ("Errore: " + exception.Message);
                 }
+            }
+            else
+            {
+                //labelInformation.Text = "Cerca qualcosa!";
             }
         }
         #endregion
