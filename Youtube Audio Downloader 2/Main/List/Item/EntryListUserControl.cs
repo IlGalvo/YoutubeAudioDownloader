@@ -85,7 +85,7 @@ namespace YoutubeAudioDownloader2.Main.List.Item
 
         private void buttonDownload_Click(object sender, EventArgs e)
         {
-            DownloadUserControl.Instance.Add(videoInfo, audioInfo, EnableDownloadButton);
+            DownloadUserControl.Instance.AddToDownload(videoInfo, audioInfo, EnableDownloadButton);
 
             buttonDownload.Enabled = false;
         }

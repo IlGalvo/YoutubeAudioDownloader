@@ -20,9 +20,10 @@ namespace YoutubeAudioDownloader2.Main.Download
             Dock = DockStyle.Fill;
         }
 
-        public void Add(VideoInfo videoInfo, AudioInfo audioInfo, Action actionToPerform)
+        public void AddToDownload(VideoInfo videoInfo, AudioInfo audioInfo, Action actionToPerform)
         {
             panelContent.Controls.Add(new EntryDownloadUserControl(videoInfo, audioInfo, actionToPerform));
+            panelContent.Controls[(panelContent.Controls.Count - 1)].BringToFront();
 
             buttonRemoveAll.Enabled = true;
         }

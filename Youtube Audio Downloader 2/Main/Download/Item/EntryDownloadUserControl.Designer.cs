@@ -69,6 +69,7 @@ namespace YoutubeAudioDownloader2.Main.Download.Item
             this.pictureBoxImage.Location = new System.Drawing.Point(9, 8);
             this.pictureBoxImage.Name = "pictureBoxImage";
             this.pictureBoxImage.Size = new System.Drawing.Size(155, 122);
+            this.pictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxImage.TabIndex = 0;
             this.pictureBoxImage.TabStop = false;
             // 
