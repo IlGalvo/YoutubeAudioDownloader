@@ -9,6 +9,10 @@ namespace YoutubeAudioDownloader.Main.Settings
     internal class ToggleButton : Control
     {
         #region GLOBAL_VARIABLES
+        public delegate void ToggledChangedEventHandler(object sender, EventArgs e);
+        [Category("Toggle"), DisplayName("ToggleChanged")]
+        public event ToggledChangedEventHandler ToggleChanged;
+
         private GraphicsPath BackGraphicPath;
         private GraphicsPath ForeGraphicsPath;
 
@@ -126,6 +130,8 @@ namespace YoutubeAudioDownloader.Main.Settings
         protected override void OnClick(EventArgs e)
         {
             ToggleState = (!ToggleState);
+
+            ToggleChanged?.Invoke(this, e);
 
             base.OnClick(e);
         }

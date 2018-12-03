@@ -13,10 +13,13 @@
         /// <param name="disposing">ha valore true se le risorse gestite devono essere eliminate, false in caso contrario.</param>
         protected override void Dispose(bool disposing)
         {
+            Settings.SaveSettings();
+
             if (disposing && (components != null))
             {
                 components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
@@ -30,17 +33,18 @@
         {
             this.panelActionOffset = new System.Windows.Forms.Panel();
             this.panelAction = new System.Windows.Forms.Panel();
+            this.buttonRestore = new System.Windows.Forms.Button();
             this.tableLayoutPanelSettings = new System.Windows.Forms.TableLayoutPanel();
             this.groupBoxGeneral = new System.Windows.Forms.GroupBox();
             this.labelSilentDownloadStatic = new System.Windows.Forms.Label();
+            this.toggleButtonSilentDownload = new YoutubeAudioDownloader.Main.Settings.ToggleButton();
             this.groupBoxDownload = new System.Windows.Forms.GroupBox();
             this.buttonDownloadPath = new System.Windows.Forms.Button();
             this.richTextBoxDownloadPath = new System.Windows.Forms.RichTextBox();
             this.groupBoxSearch = new System.Windows.Forms.GroupBox();
             this.labelSearchResultsStatic = new System.Windows.Forms.Label();
             this.numericUpDownSearchResults = new System.Windows.Forms.NumericUpDown();
-            this.toggleButtonSilentDownload = new YoutubeAudioDownloader.Main.Settings.ToggleButton();
-            this.buttonRestore = new System.Windows.Forms.Button();
+            this.folderBrowserDialogPath = new System.Windows.Forms.FolderBrowserDialog();
             this.panelActionOffset.SuspendLayout();
             this.panelAction.SuspendLayout();
             this.tableLayoutPanelSettings.SuspendLayout();
@@ -70,6 +74,23 @@
             this.panelAction.Name = "panelAction";
             this.panelAction.Size = new System.Drawing.Size(734, 53);
             this.panelAction.TabIndex = 11;
+            // 
+            // buttonRestore
+            // 
+            this.buttonRestore.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonRestore.BackColor = System.Drawing.Color.Honeydew;
+            this.buttonRestore.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
+            this.buttonRestore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
+            this.buttonRestore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRestore.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRestore.ForeColor = System.Drawing.Color.DarkGreen;
+            this.buttonRestore.Location = new System.Drawing.Point(293, 7);
+            this.buttonRestore.Name = "buttonRestore";
+            this.buttonRestore.Size = new System.Drawing.Size(148, 40);
+            this.buttonRestore.TabIndex = 12;
+            this.buttonRestore.Text = "Ripristina";
+            this.buttonRestore.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanelSettings
             // 
@@ -112,6 +133,20 @@
             this.labelSilentDownloadStatic.TabIndex = 8;
             this.labelSilentDownloadStatic.Text = "Attiva download silenzioso:";
             // 
+            // toggleButtonSilentDownload
+            // 
+            this.toggleButtonSilentDownload.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.toggleButtonSilentDownload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.toggleButtonSilentDownload.Location = new System.Drawing.Point(660, 81);
+            this.toggleButtonSilentDownload.Name = "toggleButtonSilentDownload";
+            this.toggleButtonSilentDownload.OffColor = System.Drawing.Color.Red;
+            this.toggleButtonSilentDownload.OnColor = System.Drawing.Color.DodgerBlue;
+            this.toggleButtonSilentDownload.Size = new System.Drawing.Size(50, 25);
+            this.toggleButtonSilentDownload.TabIndex = 9;
+            this.toggleButtonSilentDownload.ToggleColor = System.Drawing.Color.White;
+            this.toggleButtonSilentDownload.ToggleState = false;
+            this.toggleButtonSilentDownload.ToggleChanged += new YoutubeAudioDownloader.Main.Settings.ToggleButton.ToggledChangedEventHandler(this.toggleButtonSilentDownload_ToggleChanged);
+            // 
             // groupBoxDownload
             // 
             this.groupBoxDownload.Controls.Add(this.buttonDownloadPath);
@@ -140,6 +175,7 @@
             this.buttonDownloadPath.TabIndex = 6;
             this.buttonDownloadPath.Text = ". . .";
             this.buttonDownloadPath.UseVisualStyleBackColor = false;
+            this.buttonDownloadPath.Click += new System.EventHandler(this.buttonDownloadPath_Click);
             // 
             // richTextBoxDownloadPath
             // 
@@ -204,36 +240,7 @@
             0,
             0,
             0});
-            // 
-            // toggleButtonSilentDownload
-            // 
-            this.toggleButtonSilentDownload.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.toggleButtonSilentDownload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.toggleButtonSilentDownload.Location = new System.Drawing.Point(660, 81);
-            this.toggleButtonSilentDownload.Name = "toggleButtonSilentDownload";
-            this.toggleButtonSilentDownload.OffColor = System.Drawing.Color.Red;
-            this.toggleButtonSilentDownload.OnColor = System.Drawing.Color.DodgerBlue;
-            this.toggleButtonSilentDownload.Size = new System.Drawing.Size(50, 25);
-            this.toggleButtonSilentDownload.TabIndex = 9;
-            this.toggleButtonSilentDownload.ToggleColor = System.Drawing.Color.White;
-            this.toggleButtonSilentDownload.ToggleState = false;
-            // 
-            // buttonRestore
-            // 
-            this.buttonRestore.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonRestore.BackColor = System.Drawing.Color.Honeydew;
-            this.buttonRestore.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
-            this.buttonRestore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
-            this.buttonRestore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
-            this.buttonRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRestore.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRestore.ForeColor = System.Drawing.Color.DarkGreen;
-            this.buttonRestore.Location = new System.Drawing.Point(293, 7);
-            this.buttonRestore.Name = "buttonRestore";
-            this.buttonRestore.Size = new System.Drawing.Size(148, 40);
-            this.buttonRestore.TabIndex = 12;
-            this.buttonRestore.Text = "Ripristina";
-            this.buttonRestore.UseVisualStyleBackColor = false;
+            this.numericUpDownSearchResults.ValueChanged += new System.EventHandler(this.numericUpDownSearchResults_ValueChanged);
             // 
             // SettingsUserControl
             // 
@@ -274,5 +281,6 @@
         private System.Windows.Forms.Label labelSearchResultsStatic;
         private System.Windows.Forms.Label labelSilentDownloadStatic;
         private System.Windows.Forms.Button buttonRestore;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialogPath;
     }
 }

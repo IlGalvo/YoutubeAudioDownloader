@@ -53,6 +53,8 @@ namespace YoutubeAudioDownloader2.Main.Search
                         {
                             ListUserControl.Instance.AddVideo(await youtubeClient.GetVideoInfoAsync(videoIds[0]));
 
+                            ((MainForm)FindForm()).buttonList_Click(sender, e);
+
                             Task<VideoInfo>[] tasks = new Task<VideoInfo>[videoIds.Length - 1];
 
                             for (int i = 0; i != tasks.Length; i++)

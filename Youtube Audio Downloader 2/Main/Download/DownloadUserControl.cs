@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using YoutubeAudioDownloader2.Main.Download.Item;
+using YoutubeAudioDownloader2.Main.Settings;
 using YoutubeClientManager.Audio;
 using YoutubeClientManager.Video;
 
@@ -29,6 +30,11 @@ namespace YoutubeAudioDownloader2.Main.Download
             panelContent.Controls[(panelContent.Controls.Count - 1)].BringToFront();
 
             buttonRemoveAll.Enabled = true;
+
+            if (!SettingsUserControl.Instance.Settings.AutoDownload)
+            {
+                ((MainForm)FindForm()).buttonDownload_Click(this, new EventArgs());
+            }
         }
         #endregion
 

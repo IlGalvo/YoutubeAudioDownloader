@@ -63,6 +63,7 @@
     <Compile Include="Main\OptimizedLabel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Main\Settings\SettingsManager.cs" />
     <Compile Include="Main\Settings\ToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -147,6 +148,7 @@
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Youtube Client Manager\Youtube Client Manager.csproj">

@@ -32,16 +32,16 @@ namespace YoutubeAudioDownloader2.Main
             SearchUserControl.Instance.BringToFront();
         }
 
-        private void buttonList_Click(object sender, EventArgs e)
+        public void buttonList_Click(object sender, EventArgs e)
         {
-            ManageButtonMenuColor(sender);
+            ManageButtonMenuColor(buttonList);
 
             ListUserControl.Instance.BringToFront();
         }
 
-        private void buttonDownload_Click(object sender, EventArgs e)
+        public void buttonDownload_Click(object sender, EventArgs e)
         {
-            ManageButtonMenuColor(sender);
+            ManageButtonMenuColor(buttonDownload);
 
             DownloadUserControl.Instance.BringToFront();
         }
