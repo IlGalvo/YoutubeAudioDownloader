@@ -31,9 +31,9 @@ namespace YoutubeAudioDownloader2.Main.Download
 
             buttonRemoveAll.Enabled = true;
 
-            if (!SettingsUserControl.Instance.Settings.AutoDownload)
+            if (!SettingsManager.Instance.AutoDownload)
             {
-                ((MainForm)FindForm()).buttonDownload_Click(this, new EventArgs());
+                ((MainForm)FindForm()).PerformButtonListClick();
             }
         }
         #endregion

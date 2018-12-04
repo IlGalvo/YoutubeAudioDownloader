@@ -8,6 +8,9 @@ namespace YoutubeAudioDownloader2.Main.Settings
     public sealed class SettingsManager
     {
         #region GLOBAL_VARIABLES
+        private static SettingsManager instance;
+        public static SettingsManager Instance { get { if (instance == null) { instance = new SettingsManager(); } return instance; } }
+
         public static readonly int MinSearchResults = 1;
         public static readonly int DefaultSearchResults = 5;
         public static readonly int MaxSearchResults = 20;
@@ -73,17 +76,15 @@ namespace YoutubeAudioDownloader2.Main.Settings
         private static readonly string SettingsPath = Path.Combine(Directorypath, "Settings.xml");
 
         public bool AutoDownload { get { return settings.AutoDownload; } set { settings.AutoDownload = value; } }
-        public string DownloadDirectory { get { return settings.DownloadDirectory; } set { settings.DownloadDirectory = value; SaveSettings(); } }
-        public int SearchResults { get { return settings.SearchResults; } set { settings.SearchResults = value; SaveSettings(); } }
+        public string DownloadDirectory { get { return settings.DownloadDirectory; } set { settings.DownloadDirectory = value; } }
+        public int SearchResults { get { return settings.SearchResults; } set { settings.SearchResults = value; } }
 
         private Settings settings;
         #endregion
 
-        #region STATIC
-        public static SettingsManager CreateOrLoadSettings()
+        #region CONSTRUCTOR
+        private SettingsManager()
         {
-            SettingsManager settingsManager = new SettingsManager();
-
             try
             {
                 if (!Directory.Exists(Directorypath))
@@ -93,7 +94,9 @@ namespace YoutubeAudioDownloader2.Main.Settings
 
                 if (!File.Exists(SettingsPath))
                 {
-                    settingsManager.SaveSettings();
+                    settings = new Settings();
+
+                    SaveSettings();
                 }
                 else
                 {
@@ -101,32 +104,18 @@ namespace YoutubeAudioDownloader2.Main.Settings
                     {
                         XmlSerializer xmlSerializer = new XmlSerializer(typeof(Settings));
 
-                        settingsManager.settings = ((Settings)xmlSerializer.Deserialize(streamReader));
-                    }
-
-                    string downloadDirectory = settingsManager.DownloadDirectory;
-
-                    if (!Directory.Exists(downloadDirectory))
-                    {
-                        Directory.CreateDirectory(downloadDirectory);
+                        settings = ((Settings)xmlSerializer.Deserialize(streamReader));
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                settingsManager.settings = new Settings();
+                /*settings = new Settings();
 
-                settingsManager.SaveSettings();
+                SaveSettings();*/
+
+                Console.WriteLine("----------> Errore: " + ex.ToString());
             }
-
-            return settingsManager;
-        }
-        #endregion
-
-        #region CONSTRUCTOR
-        private SettingsManager()
-        {
-            settings = new Settings();
         }
         #endregion
 

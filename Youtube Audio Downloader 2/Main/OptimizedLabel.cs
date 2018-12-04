@@ -34,12 +34,7 @@ namespace YoutubeAudioDownloader2.Main
 
         private void Parent_SizeChanged(object sender, EventArgs e)
         {
-            Form form = FindForm();
-
-            if ((form != null) && (form.WindowState != FormWindowState.Minimized))
-            {
-                WidthTrim();
-            }
+            WidthTrim();
         }
         #endregion
 
@@ -53,7 +48,7 @@ namespace YoutubeAudioDownloader2.Main
                 int currentWidth = TextRenderer.MeasureText(tmpText, Font).Width;
                 double widthRatio = ((((double)(Parent.Width - Offset))) / currentWidth);
 
-                while (widthRatio < 1.0)
+                while (widthRatio < -1.0)
                 {
                     tmpText = (tmpText.Substring(0, (((int)(tmpText.Length * widthRatio)) - 3)) + "...");
 

@@ -50,8 +50,8 @@ namespace YoutubeAudioDownloader2.Main.List.Item
                 audioInfo = await videoInfo.GetAudioInfoAsync();
 
                 labelEncoding.Text = (audioInfo.Container + "/" + audioInfo.Encoding);
-                labelBitrate.Text = (Math.Round((audioInfo.Bitrate / 1000f), MidpointRounding.ToEven) + " Kb/s");
-                labelSize.Text = (Math.Round(((audioInfo.Size / 1024f) / 1024f), 2).ToString() + " Mb");
+                labelBitrate.Text = (Math.Round((audioInfo.Bitrate / 1000f), MidpointRounding.ToEven) + " Kbps");
+                labelSize.Text = ((((audioInfo.Size * 2.5) / 1024f) / 1024f).ToString("00.00") + " MB");
 
                 buttonDownload.Enabled = true;
             }

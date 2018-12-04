@@ -13,7 +13,7 @@
         /// <param name="disposing">ha valore true se le risorse gestite devono essere eliminate, false in caso contrario.</param>
         protected override void Dispose(bool disposing)
         {
-            Settings.SaveSettings();
+            SettingsManager.Instance.SaveSettings();
 
             if (disposing && (components != null))
             {

@@ -10,6 +10,7 @@ namespace YoutubeAudioDownloader2.Main
 {
     public partial class MainForm : Form
     {
+        #region FORM_EVENTS
         public MainForm()
         {
             InitializeComponent();
@@ -25,6 +26,15 @@ namespace YoutubeAudioDownloader2.Main
             buttonResearch.PerformClick();
         }
 
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string text = "Alcuni download/conversioni sono ancora in corso.\n\nVuoi chiudere comunque l'applicazione?";
+
+            e.Cancel = (!DownloadUserControl.Instance.ManageCancel(text));
+        }
+        #endregion
+
+        #region BUTTONS_EVENTS
         private void buttonResearch_Click(object sender, EventArgs e)
         {
             ManageButtonMenuColor(sender);
@@ -32,16 +42,16 @@ namespace YoutubeAudioDownloader2.Main
             SearchUserControl.Instance.BringToFront();
         }
 
-        public void buttonList_Click(object sender, EventArgs e)
+        private void buttonList_Click(object sender, EventArgs e)
         {
-            ManageButtonMenuColor(buttonList);
+            ManageButtonMenuColor(sender);
 
             ListUserControl.Instance.BringToFront();
         }
 
-        public void buttonDownload_Click(object sender, EventArgs e)
+        private void buttonDownload_Click(object sender, EventArgs e)
         {
-            ManageButtonMenuColor(buttonDownload);
+            ManageButtonMenuColor(sender);
 
             DownloadUserControl.Instance.BringToFront();
         }
@@ -52,7 +62,9 @@ namespace YoutubeAudioDownloader2.Main
 
             SettingsUserControl.Instance.BringToFront();
         }
+        #endregion
 
+        #region BUTTONS_MANAGER
         private void ManageButtonMenuColor(object sender)
         {
             foreach (Button button in tableLayoutPanelMenu.Controls)
@@ -60,12 +72,16 @@ namespace YoutubeAudioDownloader2.Main
                 button.BackColor = ((button == ((Button)sender)) ? Color.LightGreen : Color.Honeydew);
             }
         }
+        #endregion
 
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        public void PerformButtonListClick()
         {
-            string text = "Alcuni download/conversioni sono ancora in corso.\n\nVuoi chiudere comunque l'applicazione?";
+            buttonList.PerformClick();
+        }
 
-            e.Cancel = (!DownloadUserControl.Instance.ManageCancel(text));
+        public void PerformButtonDownloadClick()
+        {
+            buttonDownload.PerformClick();
         }
     }
 }

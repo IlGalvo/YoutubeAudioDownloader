@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using YoutubeAudioDownloader2.Main.List.Item;
 using YoutubeClientManager.Video;
 
@@ -22,7 +23,7 @@ namespace YoutubeAudioDownloader2.Main.List
         }
         #endregion
 
-        #region VIDEO_MANAGER
+        #region VIDEO_MANAGERS
         public void AddVideo(VideoInfo videoInfo)
         {
             panelContent.Controls.Add(new EntryListUserControl(videoInfo));
@@ -42,7 +43,7 @@ namespace YoutubeAudioDownloader2.Main.List
         #endregion
 
         #region BUTTON_EVENT
-        private void buttonShowAll_Click(object sender, System.EventArgs e)
+        private void buttonShowAll_Click(object sender, EventArgs e)
         {
             foreach (VideoInfo videoInfo in videoInfos)
             {

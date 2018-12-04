@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using YoutubeAudioDownloader2.Main.List;
+using YoutubeAudioDownloader2.Main.Settings;
 using YoutubeClientManager;
 using YoutubeClientManager.Video;
 
@@ -47,13 +48,13 @@ namespace YoutubeAudioDownloader2.Main.Search
                 {
                     using (YoutubeClient youtubeClient = new YoutubeClient())
                     {
-                        string[] videoIds = await youtubeClient.SearchVideoIdAsync(optimizedTextBoxSearch.Text, 5);
+                        string[] videoIds = await youtubeClient.SearchVideoIdAsync(optimizedTextBoxSearch.Text, SettingsManager.Instance.SearchResults);
 
                         if (videoIds.Length > 0)
                         {
                             ListUserControl.Instance.AddVideo(await youtubeClient.GetVideoInfoAsync(videoIds[0]));
 
-                            ((MainForm)FindForm()).buttonList_Click(sender, e);
+                            ((MainForm)FindForm()).PerformButtonListClick();
 
                             Task<VideoInfo>[] tasks = new Task<VideoInfo>[videoIds.Length - 1];
 

@@ -117,7 +117,7 @@
             this.panelLoading.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelLoading.Controls.Add(this.pictureBoxLoadingImage);
             this.panelLoading.Controls.Add(this.pictureBoxLoadingText);
-            this.panelLoading.Location = new System.Drawing.Point(293, 282);
+            this.panelLoading.Location = new System.Drawing.Point(290, 282);
             this.panelLoading.Name = "panelLoading";
             this.panelLoading.Size = new System.Drawing.Size(148, 101);
             this.panelLoading.TabIndex = 6;

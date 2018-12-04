@@ -39,7 +39,7 @@ namespace YoutubeAudioDownloader2.Main.Download.Item
             lockObject = new object();
 
             downloadPath = (string.Join("-", videoInfo.Title.Split(Path.GetInvalidFileNameChars())) + audioInfo.GetContainerFileExtension());
-            downloadPath = Path.Combine(SettingsUserControl.Instance.Settings.DownloadDirectory, downloadPath);
+            downloadPath = Path.Combine(SettingsManager.Instance.DownloadDirectory, downloadPath);
 
             IsRunning = false;
 
@@ -57,7 +57,7 @@ namespace YoutubeAudioDownloader2.Main.Download.Item
             pictureBoxImage.LoadAsync(videoInfo.Thumbnails.HighResolutionUrl);
 
             optimizedLabelTitle.Text = videoInfo.Title;
-            labelBitrateSize.Text = ("320 Kbs / " + (((audioInfo.Size * 2.5) / 1024f) / 1024f).ToString("00.00") + " Mb~");
+            labelBitrateSize.Text = ("320 Kbps / " + (((audioInfo.Size * 2.5) / 1024f) / 1024f).ToString("00.00") + " MB~");
             labelInformation.Text = "Pronto";
 
             buttonDownloadCancel.PerformClick();
