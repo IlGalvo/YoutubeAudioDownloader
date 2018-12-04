@@ -37,6 +37,7 @@
             this.panelLoading = new System.Windows.Forms.Panel();
             this.pictureBoxLoadingImage = new System.Windows.Forms.PictureBox();
             this.pictureBoxLoadingText = new System.Windows.Forms.PictureBox();
+            this.labelInformation = new System.Windows.Forms.Label();
             this.optimizedTextBoxSearch = new YoutubeAudioDownloader2.Main.Search.OptimizedRichTextBox();
             this.panelActionOffset.SuspendLayout();
             this.panelAction.SuspendLayout();
@@ -105,6 +106,7 @@
             // panelContent
             // 
             this.panelContent.AutoScroll = true;
+            this.panelContent.Controls.Add(this.labelInformation);
             this.panelContent.Controls.Add(this.panelLoading);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(0, 0);
@@ -142,6 +144,18 @@
             this.pictureBoxLoadingText.TabIndex = 1;
             this.pictureBoxLoadingText.TabStop = false;
             // 
+            // labelInformation
+            // 
+            this.labelInformation.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelInformation.AutoSize = true;
+            this.labelInformation.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInformation.ForeColor = System.Drawing.Color.DarkGreen;
+            this.labelInformation.Location = new System.Drawing.Point(288, 196);
+            this.labelInformation.Name = "labelInformation";
+            this.labelInformation.Size = new System.Drawing.Size(115, 25);
+            this.labelInformation.TabIndex = 7;
+            this.labelInformation.Text = "Information";
+            // 
             // optimizedTextBoxSearch
             // 
             this.optimizedTextBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -176,6 +190,7 @@
             this.panelActionOffset.ResumeLayout(false);
             this.panelAction.ResumeLayout(false);
             this.panelContent.ResumeLayout(false);
+            this.panelContent.PerformLayout();
             this.panelLoading.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadingImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadingText)).EndInit();
@@ -194,5 +209,6 @@
         private System.Windows.Forms.PictureBox pictureBoxLoadingImage;
         private System.Windows.Forms.PictureBox pictureBoxLoadingText;
         private System.Windows.Forms.Panel panelLoading;
+        private System.Windows.Forms.Label labelInformation;
     }
 }

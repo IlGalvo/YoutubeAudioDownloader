@@ -21,6 +21,8 @@ namespace YoutubeAudioDownloader2.Main.Search
             InitializeComponent();
 
             Dock = DockStyle.Fill;
+
+            labelInformation.Text = string.Empty;
         }
         #endregion
 
@@ -37,6 +39,8 @@ namespace YoutubeAudioDownloader2.Main.Search
         #region BUTTON_EVENT
         private async void buttonSearch_ClickAsync(object sender, EventArgs e)
         {
+            labelInformation.Text = string.Empty;
+
             if (!string.IsNullOrEmpty(optimizedTextBoxSearch.Text))
             {
                 ListUserControl.Instance.ClearAllVideo();
@@ -64,24 +68,22 @@ namespace YoutubeAudioDownloader2.Main.Search
                             }
 
                             ListUserControl.Instance.AddRangeVideo(await Task.WhenAll(tasks));
-
-                            panelLoading.Visible = false;
-                            buttonSearch.Enabled = true;
                         }
                         else
                         {
-                            //labelInformation.Text = "Nessun risultato.";
+                            labelInformation.Text = "Nessun risultato.";
                         }
                     }
                 }
-                catch (Exception)
+                catch (Exception exception)
                 {
-                    //labelInformation.Text = ("Errore: " + exception.Message);
+                    labelInformation.Text = ("Errore: " + exception.Message);
                 }
-            }
-            else
-            {
-                //labelInformation.Text = "Cerca qualcosa!";
+                finally
+                {
+                    panelLoading.Visible = false;
+                    buttonSearch.Enabled = true;
+                }
             }
         }
         #endregion
