@@ -7,7 +7,7 @@ namespace YoutubeAudioDownloader2.Main
     internal sealed class OptimizedLabel : Label
     {
         #region GLOBAL_VARIABLES
-        private static readonly int Offset = 110;
+        private static readonly int Offset = 100;
 
         private string text;
         [DefaultValue("optimizedLabel")]
@@ -46,14 +46,14 @@ namespace YoutubeAudioDownloader2.Main
             if (Parent != null)
             {
                 int currentWidth = TextRenderer.MeasureText(tmpText, Font).Width;
-                double widthRatio = ((((double)(Parent.Width - Offset))) / currentWidth);
+                double widthRatio = Math.Abs((((double)(Parent.Width - Offset))) / currentWidth);
 
-                while (widthRatio < -1.0)
+                while (widthRatio < 1.0)
                 {
                     tmpText = (tmpText.Substring(0, (((int)(tmpText.Length * widthRatio)) - 3)) + "...");
 
                     currentWidth = TextRenderer.MeasureText(tmpText, Font).Width;
-                    widthRatio = ((((double)(Parent.Width - Offset))) / currentWidth);
+                    widthRatio = Math.Abs((((double)(Parent.Width - Offset))) / currentWidth);
                 }
             }
 
