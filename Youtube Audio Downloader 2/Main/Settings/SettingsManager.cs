@@ -85,36 +85,25 @@ namespace YoutubeAudioDownloader2.Main.Settings
         #region CONSTRUCTOR
         private SettingsManager()
         {
-            try
+            if (!Directory.Exists(Directorypath))
             {
-                if (!Directory.Exists(Directorypath))
-                {
-                    Directory.CreateDirectory(Directorypath);
-                }
-
-                if (!File.Exists(SettingsPath))
-                {
-                    settings = new Settings();
-
-                    SaveSettings();
-                }
-                else
-                {
-                    using (StreamReader streamReader = new StreamReader(SettingsPath))
-                    {
-                        XmlSerializer xmlSerializer = new XmlSerializer(typeof(Settings));
-
-                        settings = ((Settings)xmlSerializer.Deserialize(streamReader));
-                    }
-                }
+                Directory.CreateDirectory(Directorypath);
             }
-            catch (Exception ex)
+
+            if (!File.Exists(SettingsPath))
             {
-                /*settings = new Settings();
+                settings = new Settings();
 
-                SaveSettings();*/
+                SaveSettings();
+            }
+            else
+            {
+                using (StreamReader streamReader = new StreamReader(SettingsPath))
+                {
+                    XmlSerializer xmlSerializer = new XmlSerializer(typeof(Settings));
 
-                Console.WriteLine("----------> Errore: " + ex.ToString());
+                    settings = ((Settings)xmlSerializer.Deserialize(streamReader));
+                }
             }
         }
         #endregion
@@ -130,5 +119,10 @@ namespace YoutubeAudioDownloader2.Main.Settings
             }
         }
         #endregion
+
+        public void ResetSettings()
+        {
+            settings = new Settings();
+        }
     }
 }

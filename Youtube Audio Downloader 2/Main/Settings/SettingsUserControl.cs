@@ -42,5 +42,14 @@ namespace YoutubeAudioDownloader2.Main.Settings
         {
             SettingsManager.Instance.AutoDownload = toggleButtonSilentDownload.ToggleState;
         }
+
+        private void buttonRestore_Click(object sender, EventArgs e)
+        {
+            SettingsManager.Instance.ResetSettings();
+
+            numericUpDownSearchResults.Value = SettingsManager.Instance.SearchResults;
+            richTextBoxDownloadPath.Text = SettingsManager.Instance.DownloadDirectory;
+            toggleButtonSilentDownload.ToggleState = SettingsManager.Instance.AutoDownload;
+        }
     }
 }

@@ -91,6 +91,7 @@
             this.buttonRestore.TabIndex = 12;
             this.buttonRestore.Text = "Ripristina";
             this.buttonRestore.UseVisualStyleBackColor = false;
+            this.buttonRestore.Click += new System.EventHandler(this.buttonRestore_Click);
             // 
             // tableLayoutPanelSettings
             // 
