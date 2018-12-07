@@ -37,7 +37,7 @@
             this.tableLayoutPanelSettings = new System.Windows.Forms.TableLayoutPanel();
             this.groupBoxGeneral = new System.Windows.Forms.GroupBox();
             this.labelSilentDownloadStatic = new System.Windows.Forms.Label();
-            this.toggleButtonSilentDownload = new YoutubeAudioDownloader.Main.Settings.ToggleButton();
+            this.toggleButtonSilentDownload = new ToggleButton();
             this.groupBoxDownload = new System.Windows.Forms.GroupBox();
             this.buttonDownloadPath = new System.Windows.Forms.Button();
             this.richTextBoxDownloadPath = new System.Windows.Forms.RichTextBox();
@@ -146,7 +146,7 @@
             this.toggleButtonSilentDownload.TabIndex = 9;
             this.toggleButtonSilentDownload.ToggleColor = System.Drawing.Color.White;
             this.toggleButtonSilentDownload.ToggleState = false;
-            this.toggleButtonSilentDownload.ToggleChanged += new YoutubeAudioDownloader.Main.Settings.ToggleButton.ToggledChangedEventHandler(this.toggleButtonSilentDownload_ToggleChanged);
+            this.toggleButtonSilentDownload.ToggleChanged += new ToggleButton.ToggledChangedEventHandler(this.toggleButtonSilentDownload_ToggleChanged);
             // 
             // groupBoxDownload
             // 
@@ -275,7 +275,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDownSearchResults;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelSettings;
         private System.Windows.Forms.GroupBox groupBoxGeneral;
-        private YoutubeAudioDownloader.Main.Settings.ToggleButton toggleButtonSilentDownload;
+        private ToggleButton toggleButtonSilentDownload;
         private System.Windows.Forms.GroupBox groupBoxDownload;
         private System.Windows.Forms.Button buttonDownloadPath;
         private System.Windows.Forms.RichTextBox richTextBoxDownloadPath;

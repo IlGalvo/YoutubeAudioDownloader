@@ -167,6 +167,7 @@
             this.Controls.Add(this.tableLayoutPanelMenu);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = Properties.Resources.Icon;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(750, 377);
             this.Name = "MainForm";

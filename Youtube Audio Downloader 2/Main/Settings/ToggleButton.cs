@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace YoutubeAudioDownloader.Main.Settings
+namespace YoutubeAudioDownloader2.Main.Settings
 {
     internal class ToggleButton : Control
     {
