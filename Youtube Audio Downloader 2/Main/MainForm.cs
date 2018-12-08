@@ -1,15 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using YoutubeAudioDownloader2.Main.Download;
-using YoutubeAudioDownloader2.Main.List;
-using YoutubeAudioDownloader2.Main.Search;
-using YoutubeAudioDownloader2.Main.Settings;
 
 namespace YoutubeAudioDownloader2.Main
 {
     public partial class MainForm : Form
     {
+        #region GLOBAL_VARIABLE
+        private static readonly Dictionary<Button, UserControl> dictionary = new Dictionary<Button, UserControl>();
+        #endregion
+
         #region FORM_EVENTS
         public MainForm()
         {
@@ -18,10 +20,10 @@ namespace YoutubeAudioDownloader2.Main
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            panelContent.Controls.Add(SearchUserControl.Instance);
-            panelContent.Controls.Add(ListUserControl.Instance);
-            panelContent.Controls.Add(DownloadUserControl.Instance);
-            panelContent.Controls.Add(SettingsUserControl.Instance);
+            for (int i = 0; i != tableLayoutPanelMenu.RowCount; i++)
+            {
+                dictionary.Add(((Button)tableLayoutPanelMenu.Controls[i]), ((UserControl)panelContent.Controls[i]));
+            }
 
             buttonResearch.PerformClick();
         }
@@ -34,42 +36,20 @@ namespace YoutubeAudioDownloader2.Main
         }
         #endregion
 
-        #region BUTTONS_EVENTS
-        private void buttonResearch_Click(object sender, EventArgs e)
+        #region BUTTONS_EVENT
+        private void menuButtons_Click(object sender, EventArgs e)
         {
-            ManageButtonMenuColor(sender);
-
-            SearchUserControl.Instance.BringToFront();
-        }
-
-        private void buttonList_Click(object sender, EventArgs e)
-        {
-            ManageButtonMenuColor(sender);
-
-            ListUserControl.Instance.BringToFront();
-        }
-
-        private void buttonDownload_Click(object sender, EventArgs e)
-        {
-            ManageButtonMenuColor(sender);
-
-            DownloadUserControl.Instance.BringToFront();
-        }
-
-        private void buttonSettings_Click(object sender, EventArgs e)
-        {
-            ManageButtonMenuColor(sender);
-
-            SettingsUserControl.Instance.BringToFront();
-        }
-        #endregion
-
-        #region BUTTONS_MANAGER
-        private void ManageButtonMenuColor(object sender)
-        {
+            // Try use KeyValuePair and fix and optimize
             foreach (Button button in tableLayoutPanelMenu.Controls)
             {
                 button.BackColor = ((button == ((Button)sender)) ? Color.LightGreen : Color.Honeydew);
+
+                dictionary[button].Visible = (button == ((Button)sender));
+
+                if (dictionary[button].Visible)
+                {
+                    dictionary[button].BringToFront();
+                }
             }
         }
         #endregion

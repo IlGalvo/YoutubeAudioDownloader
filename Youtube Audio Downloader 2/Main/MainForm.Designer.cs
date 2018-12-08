@@ -36,6 +36,7 @@
             this.buttonSettings = new System.Windows.Forms.Button();
             this.panelContent = new System.Windows.Forms.Panel();
             this.tableLayoutPanelMenu.SuspendLayout();
+            this.panelContent.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanelMenu
@@ -43,9 +44,9 @@
             this.tableLayoutPanelMenu.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.tableLayoutPanelMenu.ColumnCount = 1;
             this.tableLayoutPanelMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelMenu.Controls.Add(this.buttonDownload, 0, 2);
             this.tableLayoutPanelMenu.Controls.Add(this.buttonResearch, 0, 0);
             this.tableLayoutPanelMenu.Controls.Add(this.buttonList, 0, 1);
+            this.tableLayoutPanelMenu.Controls.Add(this.buttonDownload, 0, 2);       
             this.tableLayoutPanelMenu.Controls.Add(this.buttonSettings, 0, 3);
             this.tableLayoutPanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanelMenu.Location = new System.Drawing.Point(0, 0);
@@ -79,7 +80,7 @@
             this.buttonDownload.Text = "Download";
             this.buttonDownload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonDownload.UseVisualStyleBackColor = false;
-            this.buttonDownload.Click += new System.EventHandler(this.buttonDownload_Click);
+            this.buttonDownload.Click += new System.EventHandler(this.menuButtons_Click);
             // 
             // buttonResearch
             // 
@@ -101,7 +102,7 @@
             this.buttonResearch.Text = "Ricerca";
             this.buttonResearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonResearch.UseVisualStyleBackColor = false;
-            this.buttonResearch.Click += new System.EventHandler(this.buttonResearch_Click);
+            this.buttonResearch.Click += new System.EventHandler(this.menuButtons_Click);
             // 
             // buttonList
             // 
@@ -124,7 +125,7 @@
             this.buttonList.Text = "Lista";
             this.buttonList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonList.UseVisualStyleBackColor = false;
-            this.buttonList.Click += new System.EventHandler(this.buttonList_Click);
+            this.buttonList.Click += new System.EventHandler(this.menuButtons_Click);
             // 
             // buttonSettings
             // 
@@ -147,10 +148,14 @@
             this.buttonSettings.Text = "Opzioni";
             this.buttonSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonSettings.UseVisualStyleBackColor = false;
-            this.buttonSettings.Click += new System.EventHandler(this.buttonSettings_Click);
+            this.buttonSettings.Click += new System.EventHandler(this.menuButtons_Click);
             // 
             // panelContent
             // 
+            this.panelContent.Controls.Add(Search.SearchUserControl.Instance);
+            this.panelContent.Controls.Add(List.ListUserControl.Instance);
+            this.panelContent.Controls.Add(Download.DownloadUserControl.Instance);
+            this.panelContent.Controls.Add(Settings.SettingsUserControl.Instance);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(97, 0);
             this.panelContent.Name = "panelContent";
@@ -167,7 +172,7 @@
             this.Controls.Add(this.tableLayoutPanelMenu);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Icon = Properties.Resources.Icon;
+            this.Icon = global::YoutubeAudioDownloader2.Properties.Resources.Icon;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(750, 377);
             this.Name = "MainForm";
@@ -176,6 +181,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tableLayoutPanelMenu.ResumeLayout(false);
+            this.panelContent.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

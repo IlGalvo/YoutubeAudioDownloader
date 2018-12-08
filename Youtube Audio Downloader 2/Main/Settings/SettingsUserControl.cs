@@ -10,7 +10,7 @@ namespace YoutubeAudioDownloader2.Main.Settings
         public static SettingsUserControl Instance { get { if (instance == null) { instance = new SettingsUserControl(); } return instance; } }
         #endregion
 
-        public SettingsUserControl()
+        private SettingsUserControl()
         {
             InitializeComponent();
 

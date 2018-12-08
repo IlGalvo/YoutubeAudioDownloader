@@ -15,7 +15,7 @@ namespace YoutubeAudioDownloader2.Main.List
         #endregion
 
         #region CONSTRUCTOR
-        public ListUserControl()
+        private ListUserControl()
         {
             InitializeComponent();
 
