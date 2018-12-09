@@ -11,13 +11,14 @@ namespace YoutubeAudioDownloader2.Main.List.Item
         private VideoInfo videoInfo;
         #endregion
 
+        #region FORM_EVENTS
         public InformationForm(VideoInfo videoInfo)
         {
             InitializeComponent();
 
             this.videoInfo = videoInfo;
         }
-
+        
         private void InformationForm_Load(object sender, EventArgs e)
         {
             richTextBoxDescription.Text = videoInfo.Description;
@@ -30,6 +31,7 @@ namespace YoutubeAudioDownloader2.Main.List.Item
 
             linkLabelVideo.Text = videoInfo.GetRegularUrl();
         }
+        #endregion
 
         #region RICHTEXTBOX_EVENT
         private void richTextBoxDescription_LinkClicked(object sender, LinkClickedEventArgs e)

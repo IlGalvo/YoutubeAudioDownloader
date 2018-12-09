@@ -120,9 +120,11 @@ namespace YoutubeAudioDownloader2.Main.Settings
         }
         #endregion
 
+        #region RESET
         public void ResetSettings()
         {
             settings = new Settings();
         }
+        #endregion
     }
 }

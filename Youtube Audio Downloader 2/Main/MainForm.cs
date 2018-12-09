@@ -3,28 +3,31 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using YoutubeAudioDownloader2.Main.Download;
+using YoutubeAudioDownloader2.Main.List;
+using YoutubeAudioDownloader2.Main.Search;
+using YoutubeAudioDownloader2.Main.Settings;
 
 namespace YoutubeAudioDownloader2.Main
 {
     public partial class MainForm : Form
     {
         #region GLOBAL_VARIABLE
-        private static readonly Dictionary<Button, UserControl> dictionary = new Dictionary<Button, UserControl>();
+        private static readonly Dictionary<Button, UserControl> controlsDictionary = new Dictionary<Button, UserControl>();
         #endregion
 
         #region FORM_EVENTS
         public MainForm()
         {
             InitializeComponent();
+
+            controlsDictionary.Add(buttonResearch, SearchUserControl.Instance);
+            controlsDictionary.Add(buttonList, ListUserControl.Instance);
+            controlsDictionary.Add(buttonDownload, DownloadUserControl.Instance);
+            controlsDictionary.Add(buttonSettings, SettingsUserControl.Instance);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i != tableLayoutPanelMenu.RowCount; i++)
-            {
-                dictionary.Add(((Button)tableLayoutPanelMenu.Controls[i]), ((UserControl)panelContent.Controls[i]));
-            }
-
             buttonResearch.PerformClick();
         }
 
@@ -39,21 +42,17 @@ namespace YoutubeAudioDownloader2.Main
         #region BUTTONS_EVENT
         private void menuButtons_Click(object sender, EventArgs e)
         {
-            // Try use KeyValuePair and fix and optimize
-            foreach (Button button in tableLayoutPanelMenu.Controls)
+            foreach (KeyValuePair<Button, UserControl> keyValuePair in controlsDictionary)
             {
-                button.BackColor = ((button == ((Button)sender)) ? Color.LightGreen : Color.Honeydew);
+                bool clickedButton = (keyValuePair.Key == ((Button)sender));
 
-                dictionary[button].Visible = (button == ((Button)sender));
-
-                if (dictionary[button].Visible)
-                {
-                    dictionary[button].BringToFront();
-                }
+                keyValuePair.Key.BackColor = (clickedButton ? Color.LightGreen : Color.Honeydew);
+                keyValuePair.Value.Visible = clickedButton;
             }
         }
         #endregion
 
+        #region PERFORMCLICK_MANAGERS
         public void PerformButtonListClick()
         {
             buttonList.PerformClick();
@@ -63,5 +62,6 @@ namespace YoutubeAudioDownloader2.Main
         {
             buttonDownload.PerformClick();
         }
+        #endregion
     }
 }
