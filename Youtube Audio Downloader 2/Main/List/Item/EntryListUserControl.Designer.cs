@@ -30,7 +30,7 @@
         {
             this.webBrowserVideo = new System.Windows.Forms.WebBrowser();
             this.groupBoxVideo = new System.Windows.Forms.GroupBox();
-            this.optimizedLabelTitle = new YoutubeAudioDownloader2.Main.OptimizedLabel();
+            this.resizableLabelTitle = new CustomControlCollection.ResizableLabel();
             this.labelAuthor = new System.Windows.Forms.Label();
             this.labelRating = new System.Windows.Forms.Label();
             this.labelDuration = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             this.groupBoxVideo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxVideo.BackColor = System.Drawing.Color.Transparent;
-            this.groupBoxVideo.Controls.Add(this.optimizedLabelTitle);
+            this.groupBoxVideo.Controls.Add(this.resizableLabelTitle);
             this.groupBoxVideo.Controls.Add(this.labelAuthor);
             this.groupBoxVideo.Controls.Add(this.labelRating);
             this.groupBoxVideo.Controls.Add(this.labelDuration);
@@ -87,13 +87,13 @@
             // 
             // optimizedLabelTitle
             // 
-            this.optimizedLabelTitle.AutoSize = true;
-            this.optimizedLabelTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optimizedLabelTitle.Location = new System.Drawing.Point(94, 40);
-            this.optimizedLabelTitle.Name = "optimizedLabelTitle";
-            this.optimizedLabelTitle.Size = new System.Drawing.Size(41, 17);
-            this.optimizedLabelTitle.TabIndex = 5;
-            this.optimizedLabelTitle.Text = "Titolo";
+            this.resizableLabelTitle.AutoSize = true;
+            this.resizableLabelTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resizableLabelTitle.Location = new System.Drawing.Point(94, 40);
+            this.resizableLabelTitle.Name = "optimizedLabelTitle";
+            this.resizableLabelTitle.Size = new System.Drawing.Size(41, 17);
+            this.resizableLabelTitle.TabIndex = 5;
+            this.resizableLabelTitle.Text = "Titolo";
             // 
             // labelAuthor
             // 
@@ -337,7 +337,7 @@
         private System.Windows.Forms.Label labelEncoding;
         private System.Windows.Forms.Label labelBitrate;
         private System.Windows.Forms.Label labelSize;
-        private OptimizedLabel optimizedLabelTitle;
+        private CustomControlCollection.ResizableLabel resizableLabelTitle;
         private System.Windows.Forms.Label labelAuthor;
         private System.Windows.Forms.LinkLabel linkLabelShowExtra;
     }

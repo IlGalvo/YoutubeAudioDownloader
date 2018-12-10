@@ -56,7 +56,7 @@ namespace YoutubeAudioDownloader2.Main.Download.Item
 
             pictureBoxImage.LoadAsync(videoInfo.Thumbnails.HighResolutionUrl);
 
-            optimizedLabelTitle.Text = videoInfo.Title;
+            resizableLabelTitle.Text = videoInfo.Title;
             labelBitrateSize.Text = ("320 Kbps / " + (((audioInfo.Size * 2.5) / 1024f) / 1024f).ToString("00.00") + " MB~");
             labelInformation.Text = "Pronto";
 

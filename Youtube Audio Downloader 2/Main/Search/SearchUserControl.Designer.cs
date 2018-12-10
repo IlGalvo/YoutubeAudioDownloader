@@ -38,7 +38,7 @@
             this.panelLoading = new System.Windows.Forms.Panel();
             this.pictureBoxLoadingImage = new System.Windows.Forms.PictureBox();
             this.pictureBoxLoadingText = new System.Windows.Forms.PictureBox();
-            this.optimizedTextBoxSearch = new YoutubeAudioDownloader2.Main.Search.OptimizedRichTextBox();
+            this.placeholderRichTextBoxSearch = new CustomControlCollection.RichTextBoxes.PlaceholderRichTextBox();
             this.panelActionOffset.SuspendLayout();
             this.panelAction.SuspendLayout();
             this.panelContent.SuspendLayout();
@@ -158,20 +158,20 @@
             // 
             // optimizedTextBoxSearch
             // 
-            this.optimizedTextBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.optimizedTextBoxSearch.AutoWordSelection = true;
-            this.optimizedTextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optimizedTextBoxSearch.Location = new System.Drawing.Point(3, 230);
-            this.optimizedTextBoxSearch.Multiline = false;
-            this.optimizedTextBoxSearch.Name = "optimizedTextBoxSearch";
-            this.optimizedTextBoxSearch.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.optimizedTextBoxSearch.PlaceholderText = "Cerca un video o incolla un link...";
-            this.optimizedTextBoxSearch.PlaceholerFont = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optimizedTextBoxSearch.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.optimizedTextBoxSearch.Size = new System.Drawing.Size(650, 43);
-            this.optimizedTextBoxSearch.TabIndex = 1;
-            this.optimizedTextBoxSearch.Text = "";
-            this.optimizedTextBoxSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.optimizedTextBoxSearch_KeyUp);
+            this.placeholderRichTextBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.placeholderRichTextBoxSearch.AutoWordSelection = true;
+            this.placeholderRichTextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.placeholderRichTextBoxSearch.Location = new System.Drawing.Point(3, 230);
+            this.placeholderRichTextBoxSearch.Multiline = false;
+            this.placeholderRichTextBoxSearch.Name = "optimizedTextBoxSearch";
+            this.placeholderRichTextBoxSearch.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.placeholderRichTextBoxSearch.PlaceholderText = "Cerca un video o incolla un link...";
+            this.placeholderRichTextBoxSearch.PlaceholerFont = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.placeholderRichTextBoxSearch.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.placeholderRichTextBoxSearch.Size = new System.Drawing.Size(650, 43);
+            this.placeholderRichTextBoxSearch.TabIndex = 1;
+            this.placeholderRichTextBoxSearch.Text = "";
+            this.placeholderRichTextBoxSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.optimizedTextBoxSearch_KeyUp);
             // 
             // SearchUserControl
             // 
@@ -179,7 +179,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.buttonSearch);
-            this.Controls.Add(this.optimizedTextBoxSearch);
+            this.Controls.Add(this.placeholderRichTextBoxSearch);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelActionOffset);
             this.DoubleBuffered = true;
@@ -200,7 +200,7 @@
 
         #endregion
 
-        private OptimizedRichTextBox optimizedTextBoxSearch;
+        private CustomControlCollection.RichTextBoxes.PlaceholderRichTextBox placeholderRichTextBoxSearch;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Panel panelActionOffset;
         private System.Windows.Forms.Panel panelContent;

@@ -36,9 +36,6 @@
     <ApplicationIcon>Resources\Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ColoredProgressBar.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Main\Download\Item\EntryDownloadUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -63,16 +60,7 @@
     <Compile Include="Main\List\Item\InformationForm.Designer.cs">
       <DependentUpon>InformationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main\OptimizedLabel.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Main\Settings\SettingsManager.cs" />
-    <Compile Include="Main\Settings\ToggleButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Main\Search\OptimizedRichTextBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Main\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +142,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Custom Control Collection\Custom Control Collection\Custom Control Collection.csproj">
+      <Project>{a0ece02e-31d0-4e8b-a355-bfe61df97cae}</Project>
+      <Name>Custom Control Collection</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Youtube Client Manager\Youtube Client Manager.csproj">
       <Project>{E76479D4-F96C-4743-8054-15F4940778D0}</Project>
       <Name>Youtube Client Manager</Name>

@@ -55,11 +55,11 @@ namespace YoutubeAudioDownloader2.Main.Download.Item
             this.labelInformation = new System.Windows.Forms.Label();
             this.labelBitrateSize = new System.Windows.Forms.Label();
             this.labelTitleStatic = new System.Windows.Forms.Label();
-            this.optimizedLabelTitle = new YoutubeAudioDownloader2.Main.OptimizedLabel();
+            this.resizableLabelTitle = new CustomControlCollection.ResizableLabel();
             this.labelBitrateSizeStatic = new System.Windows.Forms.Label();
             this.buttonDownloadCancel = new System.Windows.Forms.Button();
             this.buttonRemove = new System.Windows.Forms.Button();
-            this.coloredProgressBarDownload = new YoutubeAudioDownloader2.ColoredProgressBar();
+            this.coloredProgressBarDownload = new CustomControlCollection.ColoredProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.groupBoxDownload.SuspendLayout();
             this.SuspendLayout();
@@ -79,7 +79,7 @@ namespace YoutubeAudioDownloader2.Main.Download.Item
             this.groupBoxDownload.Controls.Add(this.labelInformation);
             this.groupBoxDownload.Controls.Add(this.labelBitrateSize);
             this.groupBoxDownload.Controls.Add(this.labelTitleStatic);
-            this.groupBoxDownload.Controls.Add(this.optimizedLabelTitle);
+            this.groupBoxDownload.Controls.Add(this.resizableLabelTitle);
             this.groupBoxDownload.Controls.Add(this.labelBitrateSizeStatic);
             this.groupBoxDownload.Location = new System.Drawing.Point(170, 8);
             this.groupBoxDownload.Name = "groupBoxDownload";
@@ -120,13 +120,13 @@ namespace YoutubeAudioDownloader2.Main.Download.Item
             // 
             // optimizedLabelTitle
             // 
-            this.optimizedLabelTitle.AutoSize = true;
-            this.optimizedLabelTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optimizedLabelTitle.Location = new System.Drawing.Point(91, 26);
-            this.optimizedLabelTitle.Name = "optimizedLabelTitle";
-            this.optimizedLabelTitle.Size = new System.Drawing.Size(41, 17);
-            this.optimizedLabelTitle.TabIndex = 2;
-            this.optimizedLabelTitle.Text = "Titolo";
+            this.resizableLabelTitle.AutoSize = true;
+            this.resizableLabelTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resizableLabelTitle.Location = new System.Drawing.Point(91, 26);
+            this.resizableLabelTitle.Name = "optimizedLabelTitle";
+            this.resizableLabelTitle.Size = new System.Drawing.Size(41, 17);
+            this.resizableLabelTitle.TabIndex = 2;
+            this.resizableLabelTitle.Text = "Titolo";
             // 
             // labelBitrateSizeStatic
             // 
@@ -211,10 +211,10 @@ namespace YoutubeAudioDownloader2.Main.Download.Item
         private System.Windows.Forms.GroupBox groupBoxDownload;
         private System.Windows.Forms.Label labelBitrateSize;
         private System.Windows.Forms.Label labelTitleStatic;
-        private OptimizedLabel optimizedLabelTitle;
+        private CustomControlCollection.ResizableLabel resizableLabelTitle;
         private System.Windows.Forms.Label labelBitrateSizeStatic;
         private System.Windows.Forms.Button buttonDownloadCancel;
-        private ColoredProgressBar coloredProgressBarDownload;
+        private CustomControlCollection.ColoredProgressBar coloredProgressBarDownload;
         private System.Windows.Forms.Button buttonRemove;
         private System.Windows.Forms.Label labelInformation;
     }

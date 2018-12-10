@@ -36,7 +36,7 @@ namespace YoutubeAudioDownloader2.Main.List.Item
             webBrowserVideo.Navigate(videoInfo.GetEmbedUrl());
 
             labelAuthor.Text = videoInfo.Author;
-            optimizedLabelTitle.Text = videoInfo.Title;
+            resizableLabelTitle.Text = videoInfo.Title;
             labelDuration.Text = videoInfo.Duration.ToString();
             labelDate.Text = videoInfo.UploadDate.ToString("dd/MM/yyyy");
             labelRating.Text = (videoInfo.Statistics.AverageRating + "/5");

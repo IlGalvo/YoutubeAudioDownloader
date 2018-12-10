@@ -41,7 +41,7 @@ namespace YoutubeAudioDownloader2.Main.Search
         {
             labelInformation.Text = string.Empty;
 
-            if (!string.IsNullOrEmpty(optimizedTextBoxSearch.Text))
+            if (!string.IsNullOrEmpty(placeholderRichTextBoxSearch.Text))
             {
                 ListUserControl.Instance.ClearAllVideo();
 
@@ -52,7 +52,7 @@ namespace YoutubeAudioDownloader2.Main.Search
                 {
                     using (YoutubeClient youtubeClient = new YoutubeClient())
                     {
-                        string[] videoIds = await youtubeClient.SearchVideoIdAsync(optimizedTextBoxSearch.Text, SettingsManager.Instance.SearchResults);
+                        string[] videoIds = await youtubeClient.SearchVideoIdAsync(placeholderRichTextBoxSearch.Text, SettingsManager.Instance.SearchResults);
 
                         if (videoIds.Length > 0)
                         {
