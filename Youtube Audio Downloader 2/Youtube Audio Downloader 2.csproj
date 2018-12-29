@@ -146,6 +146,10 @@
       <Project>{a0ece02e-31d0-4e8b-a355-bfe61df97cae}</Project>
       <Name>Custom Control Collection</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Updater Manager Library\Updater Manager Library\Updater Manager Library.csproj">
+      <Project>{E6EB5FCA-0778-4914-A0BE-8D2397132528}</Project>
+      <Name>Updater Manager Library</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Youtube Client Manager\Youtube Client Manager.csproj">
       <Project>{E76479D4-F96C-4743-8054-15F4940778D0}</Project>
       <Name>Youtube Client Manager</Name>
