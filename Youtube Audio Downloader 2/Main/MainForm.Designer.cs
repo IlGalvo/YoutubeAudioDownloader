@@ -30,13 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tableLayoutPanelMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonDownload = new System.Windows.Forms.Button();
             this.buttonResearch = new System.Windows.Forms.Button();
             this.buttonList = new System.Windows.Forms.Button();
+            this.buttonDownload = new System.Windows.Forms.Button();
             this.buttonSettings = new System.Windows.Forms.Button();
             this.panelContent = new System.Windows.Forms.Panel();
             this.tableLayoutPanelMenu.SuspendLayout();
-            this.panelContent.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanelMenu
@@ -46,7 +45,7 @@
             this.tableLayoutPanelMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelMenu.Controls.Add(this.buttonResearch, 0, 0);
             this.tableLayoutPanelMenu.Controls.Add(this.buttonList, 0, 1);
-            this.tableLayoutPanelMenu.Controls.Add(this.buttonDownload, 0, 2);       
+            this.tableLayoutPanelMenu.Controls.Add(this.buttonDownload, 0, 2);
             this.tableLayoutPanelMenu.Controls.Add(this.buttonSettings, 0, 3);
             this.tableLayoutPanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanelMenu.Location = new System.Drawing.Point(0, 0);
@@ -58,29 +57,6 @@
             this.tableLayoutPanelMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelMenu.Size = new System.Drawing.Size(97, 620);
             this.tableLayoutPanelMenu.TabIndex = 0;
-            // 
-            // buttonDownload
-            // 
-            this.buttonDownload.BackColor = System.Drawing.Color.Honeydew;
-            this.buttonDownload.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonDownload.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
-            this.buttonDownload.FlatAppearance.CheckedBackColor = System.Drawing.Color.PaleGreen;
-            this.buttonDownload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
-            this.buttonDownload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
-            this.buttonDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDownload.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDownload.ForeColor = System.Drawing.Color.DarkGreen;
-            this.buttonDownload.Image = ((System.Drawing.Image)(resources.GetObject("buttonDownload.Image")));
-            this.buttonDownload.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonDownload.Location = new System.Drawing.Point(3, 310);
-            this.buttonDownload.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.buttonDownload.Name = "buttonDownload";
-            this.buttonDownload.Size = new System.Drawing.Size(91, 152);
-            this.buttonDownload.TabIndex = 7;
-            this.buttonDownload.Text = "Download";
-            this.buttonDownload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonDownload.UseVisualStyleBackColor = false;
-            this.buttonDownload.Click += new System.EventHandler(this.menuButtons_Click);
             // 
             // buttonResearch
             // 
@@ -127,6 +103,29 @@
             this.buttonList.UseVisualStyleBackColor = false;
             this.buttonList.Click += new System.EventHandler(this.menuButtons_Click);
             // 
+            // buttonDownload
+            // 
+            this.buttonDownload.BackColor = System.Drawing.Color.Honeydew;
+            this.buttonDownload.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonDownload.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
+            this.buttonDownload.FlatAppearance.CheckedBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonDownload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
+            this.buttonDownload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDownload.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDownload.ForeColor = System.Drawing.Color.DarkGreen;
+            this.buttonDownload.Image = ((System.Drawing.Image)(resources.GetObject("buttonDownload.Image")));
+            this.buttonDownload.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonDownload.Location = new System.Drawing.Point(3, 310);
+            this.buttonDownload.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.buttonDownload.Name = "buttonDownload";
+            this.buttonDownload.Size = new System.Drawing.Size(91, 152);
+            this.buttonDownload.TabIndex = 7;
+            this.buttonDownload.Text = "Download";
+            this.buttonDownload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonDownload.UseVisualStyleBackColor = false;
+            this.buttonDownload.Click += new System.EventHandler(this.menuButtons_Click);
+            // 
             // buttonSettings
             // 
             this.buttonSettings.BackColor = System.Drawing.Color.Honeydew;
@@ -152,10 +151,6 @@
             // 
             // panelContent
             // 
-            this.panelContent.Controls.Add(Search.SearchUserControl.Instance);
-            this.panelContent.Controls.Add(List.ListUserControl.Instance);
-            this.panelContent.Controls.Add(Download.DownloadUserControl.Instance);
-            this.panelContent.Controls.Add(Settings.SettingsUserControl.Instance);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(97, 0);
             this.panelContent.Name = "panelContent";
@@ -177,11 +172,10 @@
             this.MinimumSize = new System.Drawing.Size(750, 377);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainForm";
+            this.Text = "Youtube Audio Downloader 2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tableLayoutPanelMenu.ResumeLayout(false);
-            this.panelContent.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
