@@ -36,6 +36,7 @@
             this.buttonSettings = new System.Windows.Forms.Button();
             this.panelContent = new System.Windows.Forms.Panel();
             this.tableLayoutPanelMenu.SuspendLayout();
+            this.panelContent.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanelMenu
@@ -151,6 +152,10 @@
             // 
             // panelContent
             // 
+            this.panelContent.Controls.Add(Search.SearchUserControl.Instance);
+            this.panelContent.Controls.Add(List.ListUserControl.Instance);
+            this.panelContent.Controls.Add(Download.DownloadUserControl.Instance);
+            this.panelContent.Controls.Add(Settings.SettingsUserControl.Instance);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(97, 0);
             this.panelContent.Name = "panelContent";
@@ -176,6 +181,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tableLayoutPanelMenu.ResumeLayout(false);
+            this.panelContent.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
