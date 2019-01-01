@@ -1,4 +1,4 @@
-﻿namespace YoutubeAudioDownloader2.Main.List.Item
+﻿namespace YoutubeAudioDownloader.Main.List.Item
 {
     partial class EntryListUserControl
     {

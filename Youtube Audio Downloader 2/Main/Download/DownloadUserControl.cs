@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
-using YoutubeAudioDownloader2.Main.Download.Item;
-using YoutubeAudioDownloader2.Main.Settings;
+using YoutubeAudioDownloader.Main.Download.Item;
+using YoutubeAudioDownloader.Main.Settings;
 using YoutubeClientManager.Audio;
 using YoutubeClientManager.Video;
 
-namespace YoutubeAudioDownloader2.Main.Download
+namespace YoutubeAudioDownloader.Main.Download
 {
     public partial class DownloadUserControl : UserControl
     {

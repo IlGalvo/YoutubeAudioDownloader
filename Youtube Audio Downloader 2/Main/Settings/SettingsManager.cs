@@ -3,7 +3,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
-namespace YoutubeAudioDownloader2.Main.Settings
+namespace YoutubeAudioDownloader.Main.Settings
 {
     public sealed class SettingsManager
     {

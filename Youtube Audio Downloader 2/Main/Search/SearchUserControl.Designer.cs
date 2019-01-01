@@ -1,4 +1,4 @@
-﻿namespace YoutubeAudioDownloader2.Main.Search
+﻿namespace YoutubeAudioDownloader.Main.Search
 {
     partial class SearchUserControl
     {

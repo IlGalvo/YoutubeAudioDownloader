@@ -3,9 +3,9 @@ using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
 using UpdaterManagerLibrary;
-using YoutubeAudioDownloader2.Main;
+using YoutubeAudioDownloader.Main;
 
-namespace YoutubeAudioDownloader2
+namespace YoutubeAudioDownloader
 {
     static class MainProgram
     {

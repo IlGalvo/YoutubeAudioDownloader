@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using YoutubeAudioDownloader2.Main.List;
-using YoutubeAudioDownloader2.Main.Settings;
+using YoutubeAudioDownloader.Main.List;
+using YoutubeAudioDownloader.Main.Settings;
 using YoutubeClientManager;
 using YoutubeClientManager.Video;
 
-namespace YoutubeAudioDownloader2.Main.Search
+namespace YoutubeAudioDownloader.Main.Search
 {
     public partial class SearchUserControl : UserControl
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
-using YoutubeAudioDownloader2.Main.List.Item;
+using YoutubeAudioDownloader.Main.List.Item;
 using YoutubeClientManager.Video;
 
-namespace YoutubeAudioDownloader2.Main.List
+namespace YoutubeAudioDownloader.Main.List
 {
     public partial class ListUserControl : UserControl
     {

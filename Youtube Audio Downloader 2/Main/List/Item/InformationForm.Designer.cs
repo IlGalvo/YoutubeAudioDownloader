@@ -1,4 +1,4 @@
-﻿namespace YoutubeAudioDownloader2.Main.List.Item
+﻿namespace YoutubeAudioDownloader.Main.List.Item
 {
     partial class InformationForm
     {
@@ -234,7 +234,7 @@
             this.Controls.Add(this.groupBoxDescription);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Icon = global::YoutubeAudioDownloader2.Properties.Resources.Icon;
+            this.Icon = global::YoutubeAudioDownloader.Properties.Resources.Icon;
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.MinimumSize = new System.Drawing.Size(470, 377);
             this.Name = "InformationForm";

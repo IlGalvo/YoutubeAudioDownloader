@@ -2,11 +2,11 @@
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Windows.Forms;
-using YoutubeAudioDownloader2.Main.Download;
+using YoutubeAudioDownloader.Main.Download;
 using YoutubeClientManager.Audio;
 using YoutubeClientManager.Video;
 
-namespace YoutubeAudioDownloader2.Main.List.Item
+namespace YoutubeAudioDownloader.Main.List.Item
 {
     public partial class EntryListUserControl : UserControl
     {

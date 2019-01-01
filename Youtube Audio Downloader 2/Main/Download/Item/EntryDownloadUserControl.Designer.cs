@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 
-namespace YoutubeAudioDownloader2.Main.Download.Item
+namespace YoutubeAudioDownloader.Main.Download.Item
 {
     partial class EntryDownloadUserControl
     {

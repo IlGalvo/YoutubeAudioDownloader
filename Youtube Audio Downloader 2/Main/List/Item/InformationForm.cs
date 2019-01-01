@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using YoutubeClientManager.Video;
 
-namespace YoutubeAudioDownloader2.Main.List.Item
+namespace YoutubeAudioDownloader.Main.List.Item
 {
     public partial class InformationForm : Form
     {

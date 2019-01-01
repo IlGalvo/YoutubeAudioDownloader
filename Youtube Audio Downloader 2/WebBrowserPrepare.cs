@@ -1,7 +1,7 @@
 ﻿using Microsoft.Win32;
 using System.Windows.Forms;
 
-namespace YoutubeAudioDownloader2
+namespace YoutubeAudioDownloader
 {
     internal static class WebBrowserPrepare
     {

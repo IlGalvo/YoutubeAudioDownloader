@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace YoutubeAudioDownloader2.Main.Settings
+namespace YoutubeAudioDownloader.Main.Settings
 {
     public partial class SettingsUserControl : UserControl
     {

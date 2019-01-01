@@ -3,12 +3,12 @@ using System.ComponentModel;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
-using YoutubeAudioDownloader2.Main.Settings;
+using YoutubeAudioDownloader.Main.Settings;
 using YoutubeClientManager.Audio;
 using YoutubeClientManager.Converter;
 using YoutubeClientManager.Video;
 
-namespace YoutubeAudioDownloader2.Main.Download.Item
+namespace YoutubeAudioDownloader.Main.Download.Item
 {
     public partial class EntryDownloadUserControl : UserControl
     {

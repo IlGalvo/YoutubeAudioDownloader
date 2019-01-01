@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using YoutubeAudioDownloader2.Main.Download;
-using YoutubeAudioDownloader2.Main.List;
-using YoutubeAudioDownloader2.Main.Search;
-using YoutubeAudioDownloader2.Main.Settings;
+using YoutubeAudioDownloader.Main.Download;
+using YoutubeAudioDownloader.Main.List;
+using YoutubeAudioDownloader.Main.Search;
+using YoutubeAudioDownloader.Main.Settings;
 
-namespace YoutubeAudioDownloader2.Main
+namespace YoutubeAudioDownloader.Main
 {
     public partial class MainForm : Form
     {
