@@ -1,6 +1,0 @@
-[submodule "Custom Control Collection"]
-	path = Custom Control Collection
-	url = https://github.com/Terminator24/CustomControlCollection
-[submodule "Updater Manager Library"]
-	path = Updater Manager Library
-	url = https://github.com/Terminator24/UpdaterManagerLibrary

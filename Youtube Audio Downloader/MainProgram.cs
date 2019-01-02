@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
-using UpdaterManagerLibrary;
+using UpdateManagerLibrary;
 using YoutubeAudioDownloader.Main;
 
 namespace YoutubeAudioDownloader
@@ -24,7 +24,7 @@ namespace YoutubeAudioDownloader
                 {
                     string updateCheckUrl = ("https://onedrive.live.com/download?resid=7D7FF9DFDA23C644!1341&authkey=!AAPfdJrVo5UeVkE");
 
-                    if (!UpdaterManager.CheckForUpdates(updateCheckUrl))
+                    if (!UpdateManager.CheckForUpdates(updateCheckUrl))
                     {
                         WebBrowserPrepare.SetBrowserFeatureControl();
 
