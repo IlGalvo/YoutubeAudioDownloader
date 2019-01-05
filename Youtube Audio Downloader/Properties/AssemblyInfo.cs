@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Andrea Galvani")]
-[assembly: AssemblyProduct("")]
+[assembly: AssemblyProduct("Youtube Audio Downloader")]
 [assembly: AssemblyCopyright("Copyright ©  2018 Andrea Galvani")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
