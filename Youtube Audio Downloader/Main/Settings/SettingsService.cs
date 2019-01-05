@@ -8,52 +8,24 @@ namespace YoutubeAudioDownloader.Main.Settings
     public class SettingsService : SettingsManager<SettingsService>
     {
         #region GLOBAL_VARIABLES
-        private static readonly string AppDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-        private static readonly string DirectoryPath = Path.Combine(AppDataPath, Application.ProductName);
-        public static string SettingsPath { get { return Path.Combine(DirectoryPath, (nameof(SettingsService) + ".xml")); } }
+        public static string DefaultSettingsPath
+        {
+            get
+            {
+                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                    Path.Combine(Application.ProductName, (nameof(SettingsService) + ".xml")));
+            }
+        }
 
-        public static int MinSearchResults { get { return 1; } }
+        public static int MinimumSearchResults { get { return 1; } }
+        public static int MaximumSearchResults { get { return 20; } }
+
         public static int DefaultSearchResults { get { return 5; } }
-        public static int MaxSearchResults { get { return 20; } }
+        public static string DefaultDownloadDirectoryPath { get { return Environment.GetFolderPath(Environment.SpecialFolder.MyMusic); } }
+        public static bool DefaultAutoDownload { get { return false; } }
 
-        private int searchResults;
-        public int SearchResults
-        {
-            get
-            {
-                return searchResults;
-            }
-            set
-            {
-                if ((value < MinSearchResults) && (value > MaxSearchResults))
-                {
-                    string message = ("Value must be between " + MinSearchResults + " and " + MaxSearchResults + ".");
-
-                    throw (new ArgumentOutOfRangeException(nameof(SearchResults), message));
-                }
-
-                searchResults = value;
-            }
-        }
-
-        private string downloadDirectory;
-        public string DownloadDirectory
-        {
-            get
-            {
-                return downloadDirectory;
-            }
-            set
-            {
-                if ((new Uri(value)).IsWellFormedOriginalString())
-                {
-                    throw (new ArgumentException(nameof(DownloadDirectory), "Invalid directory path."));
-                }
-
-                downloadDirectory = value;
-            }
-        }
-
+        public int SearchResults { get; set; }
+        public string DownloadDirectoryPath { get; set; }
         public bool AutoDownload { get; set; }
         #endregion
 
@@ -64,12 +36,26 @@ namespace YoutubeAudioDownloader.Main.Settings
         }
         #endregion
 
+        #region CREATELOAD
+        public static SettingsService CreateOrLoad()
+        {
+            return CreateOrLoad(DefaultSettingsPath);
+        }
+        #endregion
+
+        #region SAVE
+        public void Save()
+        {
+            Save(DefaultSettingsPath);
+        }
+        #endregion
+
         #region RESET
         public void Reset()
         {
             SearchResults = DefaultSearchResults;
-            DownloadDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
-            AutoDownload = true;
+            DownloadDirectoryPath = DefaultDownloadDirectoryPath;
+            AutoDownload = DefaultAutoDownload;
         }
         #endregion
     }

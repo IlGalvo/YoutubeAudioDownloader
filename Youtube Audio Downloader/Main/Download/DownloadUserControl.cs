@@ -33,7 +33,7 @@ namespace YoutubeAudioDownloader.Main.Download
 
             if (!SettingsUserControl.Instance.Settings.AutoDownload)
             {
-                ((MainForm)FindForm()).PerformButtonListClick();
+                ((MainForm)FindForm()).PerformButtonDownloadClick();
             }
         }
         #endregion

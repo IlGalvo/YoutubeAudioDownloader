@@ -13,7 +13,7 @@
         /// <param name="disposing">ha valore true se le risorse gestite devono essere eliminate, false in caso contrario.</param>
         protected override void Dispose(bool disposing)
         {
-            Settings.Save(SettingsService.SettingsPath);
+            Settings.Save();
 
             if (disposing && (components != null))
             {
@@ -145,7 +145,7 @@
             this.toggleButtonSilentDownload.Size = new System.Drawing.Size(50, 25);
             this.toggleButtonSilentDownload.TabIndex = 9;
             this.toggleButtonSilentDownload.ToggleColor = System.Drawing.Color.White;
-            this.toggleButtonSilentDownload.ToggleState = false;
+            this.toggleButtonSilentDownload.ToggleState = SettingsService.DefaultAutoDownload;
             this.toggleButtonSilentDownload.ToggleChanged += new CustomControlCollection.Buttons.ToggleButton.ToggledChangedEventHandler(this.toggleButtonSilentDownload_ToggleChanged);
             // 
             // groupBoxDownload
@@ -190,7 +190,7 @@
             this.richTextBoxDownloadPath.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.richTextBoxDownloadPath.Size = new System.Drawing.Size(652, 36);
             this.richTextBoxDownloadPath.TabIndex = 5;
-            this.richTextBoxDownloadPath.Text = "C:\\Users\\Andre\\Music";
+            this.richTextBoxDownloadPath.Text = SettingsService.DefaultDownloadDirectoryPath;
             // 
             // groupBoxSearch
             // 
@@ -222,12 +222,12 @@
             this.numericUpDownSearchResults.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownSearchResults.Location = new System.Drawing.Point(660, 77);
             this.numericUpDownSearchResults.Maximum = new decimal(new int[] {
-            20,
+            SettingsService.MaximumSearchResults,
             0,
             0,
             0});
             this.numericUpDownSearchResults.Minimum = new decimal(new int[] {
-            1,
+            SettingsService.MinimumSearchResults,
             0,
             0,
             0});
@@ -237,7 +237,7 @@
             this.numericUpDownSearchResults.TabIndex = 3;
             this.numericUpDownSearchResults.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDownSearchResults.Value = new decimal(new int[] {
-            5,
+            SettingsService.DefaultSearchResults,
             0,
             0,
             0});

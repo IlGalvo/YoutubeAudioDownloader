@@ -39,7 +39,7 @@ namespace YoutubeAudioDownloader.Main.Download.Item
             lockObject = new object();
 
             downloadPath = (string.Join("-", videoInfo.Title.Split(Path.GetInvalidFileNameChars())) + audioInfo.GetContainerFileExtension());
-            downloadPath = Path.Combine(SettingsUserControl.Instance.Settings.DownloadDirectory, downloadPath);
+            downloadPath = Path.Combine(SettingsUserControl.Instance.Settings.DownloadDirectoryPath, downloadPath);
 
             IsRunning = false;
 

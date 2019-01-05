@@ -18,7 +18,7 @@ namespace YoutubeAudioDownloader.Main.Settings
             InitializeComponent();
 
             Dock = DockStyle.Fill;
-            Settings = SettingsService.CreateOrLoad(SettingsService.SettingsPath);
+            Settings = SettingsService.CreateOrLoad();
 
             Startup();
         }
@@ -28,7 +28,7 @@ namespace YoutubeAudioDownloader.Main.Settings
         private void Startup()
         {
             numericUpDownSearchResults.Value = Settings.SearchResults;
-            richTextBoxDownloadPath.Text = Settings.DownloadDirectory;
+            richTextBoxDownloadPath.Text = Settings.DownloadDirectoryPath;
             toggleButtonSilentDownload.ToggleState = Settings.AutoDownload;
 
             folderBrowserDialogPath.SelectedPath = richTextBoxDownloadPath.Text;
@@ -50,7 +50,7 @@ namespace YoutubeAudioDownloader.Main.Settings
                 richTextBoxDownloadPath.Text = folderBrowserDialogPath.SelectedPath;
             }
 
-            Settings.DownloadDirectory = richTextBoxDownloadPath.Text;
+            Settings.DownloadDirectoryPath = richTextBoxDownloadPath.Text;
         }
         #endregion
 
