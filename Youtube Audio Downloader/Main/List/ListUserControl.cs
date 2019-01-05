@@ -9,7 +9,7 @@ namespace YoutubeAudioDownloader.Main.List
     {
         #region GLOBAL_VARIABLES
         private static ListUserControl instance;
-        public static ListUserControl Instance { get { if (instance == null) { instance = new ListUserControl(); } return instance; } }
+        public static ListUserControl Instance { get { instance = (instance ?? new ListUserControl()); return instance; } }
 
         private VideoInfo[] videoInfos;
         #endregion
@@ -26,7 +26,7 @@ namespace YoutubeAudioDownloader.Main.List
         #region VIDEO_MANAGERS
         public void AddVideo(VideoInfo videoInfo)
         {
-            panelContent.Controls.Add(new EntryListUserControl(videoInfo));
+            panelContent.Controls.Add(new ItemListUserControl(videoInfo));
         }
 
         public void AddRangeVideo(VideoInfo[] videoInfos)
@@ -47,7 +47,7 @@ namespace YoutubeAudioDownloader.Main.List
         {
             foreach (VideoInfo videoInfo in videoInfos)
             {
-                panelContent.Controls.Add(new EntryListUserControl(videoInfo));
+                panelContent.Controls.Add(new ItemListUserControl(videoInfo));
 
                 panelContent.Controls[(panelContent.Controls.Count - 1)].BringToFront();
             }

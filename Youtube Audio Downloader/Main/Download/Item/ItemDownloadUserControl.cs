@@ -10,7 +10,7 @@ using YoutubeClientManager.Video;
 
 namespace YoutubeAudioDownloader.Main.Download.Item
 {
-    public partial class EntryDownloadUserControl : UserControl
+    public partial class ItemDownloadUserControl : UserControl
     {
         #region GLOBAL_VARIABLES
         public bool IsRunning { get; private set; }
@@ -25,7 +25,7 @@ namespace YoutubeAudioDownloader.Main.Download.Item
         #endregion
 
         #region USERCONTROL_EVENTS
-        public EntryDownloadUserControl(VideoInfo videoInfo, AudioInfo audioInfo, Action actionToPerform)
+        public ItemDownloadUserControl(VideoInfo videoInfo, AudioInfo audioInfo, Action actionToPerform)
         {
             InitializeComponent();
 
@@ -39,7 +39,7 @@ namespace YoutubeAudioDownloader.Main.Download.Item
             lockObject = new object();
 
             downloadPath = (string.Join("-", videoInfo.Title.Split(Path.GetInvalidFileNameChars())) + audioInfo.GetContainerFileExtension());
-            downloadPath = Path.Combine(SettingsManager.Instance.DownloadDirectory, downloadPath);
+            downloadPath = Path.Combine(SettingsUserControl.Instance.Settings.DownloadDirectory, downloadPath);
 
             IsRunning = false;
 

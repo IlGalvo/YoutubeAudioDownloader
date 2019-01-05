@@ -2,7 +2,7 @@
 
 namespace YoutubeAudioDownloader.Main.Download.Item
 {
-    partial class EntryDownloadUserControl
+    partial class ItemDownloadUserControl
     {
         /// <summary> 
         /// Variabile di progettazione necessaria.
@@ -49,7 +49,7 @@ namespace YoutubeAudioDownloader.Main.Download.Item
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EntryDownloadUserControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemDownloadUserControl));
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.groupBoxDownload = new System.Windows.Forms.GroupBox();
             this.labelInformation = new System.Windows.Forms.Label();

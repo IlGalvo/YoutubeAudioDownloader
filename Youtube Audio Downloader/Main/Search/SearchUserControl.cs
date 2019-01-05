@@ -12,7 +12,7 @@ namespace YoutubeAudioDownloader.Main.Search
     {
         #region INSTANCE
         private static SearchUserControl instance;
-        public static SearchUserControl Instance { get { if (instance == null) { instance = new SearchUserControl(); } return instance; } }
+        public static SearchUserControl Instance { get { instance = (instance ?? new SearchUserControl()); return instance; } }
         #endregion
 
         #region CONSTRUCTOR
@@ -52,7 +52,8 @@ namespace YoutubeAudioDownloader.Main.Search
                 {
                     using (YoutubeClient youtubeClient = new YoutubeClient())
                     {
-                        string[] videoIds = await youtubeClient.SearchVideoIdAsync(placeholderRichTextBoxSearch.Text, SettingsManager.Instance.SearchResults);
+                        string[] videoIds = await youtubeClient.SearchVideoIdAsync(placeholderRichTextBoxSearch.Text,
+                            SettingsUserControl.Instance.Settings.SearchResults);
 
                         if (videoIds.Length > 0)
                         {

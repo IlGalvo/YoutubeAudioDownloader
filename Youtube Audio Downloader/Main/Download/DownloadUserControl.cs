@@ -11,7 +11,7 @@ namespace YoutubeAudioDownloader.Main.Download
     {
         #region INSTANCE
         private static DownloadUserControl instance;
-        public static DownloadUserControl Instance { get { if (instance == null) { instance = new DownloadUserControl(); } return instance; } }
+        public static DownloadUserControl Instance { get { instance = (instance ?? new DownloadUserControl()); return instance; } }
         #endregion
 
         #region CONSTRUCTOR
@@ -26,12 +26,12 @@ namespace YoutubeAudioDownloader.Main.Download
         #region DOWNLOAD
         public void AddToDownload(VideoInfo videoInfo, AudioInfo audioInfo, Action actionToPerform)
         {
-            panelContent.Controls.Add(new EntryDownloadUserControl(videoInfo, audioInfo, actionToPerform));
+            panelContent.Controls.Add(new ItemDownloadUserControl(videoInfo, audioInfo, actionToPerform));
             panelContent.Controls[(panelContent.Controls.Count - 1)].BringToFront();
 
             buttonRemoveAll.Enabled = true;
 
-            if (!SettingsManager.Instance.AutoDownload)
+            if (!SettingsUserControl.Instance.Settings.AutoDownload)
             {
                 ((MainForm)FindForm()).PerformButtonListClick();
             }
@@ -53,7 +53,7 @@ namespace YoutubeAudioDownloader.Main.Download
         {
             bool cancelRequired = true;
 
-            foreach (EntryDownloadUserControl entryDownloadUserControl in panelContent.Controls)
+            foreach (ItemDownloadUserControl entryDownloadUserControl in panelContent.Controls)
             {
                 if (entryDownloadUserControl.IsRunning)
                 {

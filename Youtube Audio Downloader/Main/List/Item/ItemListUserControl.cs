@@ -8,7 +8,7 @@ using YoutubeClientManager.Video;
 
 namespace YoutubeAudioDownloader.Main.List.Item
 {
-    public partial class EntryListUserControl : UserControl
+    public partial class ItemListUserControl : UserControl
     {
         #region GLOBAL_VARIABLES
         private VideoInfo videoInfo;
@@ -17,7 +17,7 @@ namespace YoutubeAudioDownloader.Main.List.Item
         #endregion
 
         #region CONSTRUCTOR
-        public EntryListUserControl(VideoInfo videoInfo)
+        public ItemListUserControl(VideoInfo videoInfo)
         {
             InitializeComponent();
 

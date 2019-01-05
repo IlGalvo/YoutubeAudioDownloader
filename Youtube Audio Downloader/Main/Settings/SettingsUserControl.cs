@@ -7,7 +7,9 @@ namespace YoutubeAudioDownloader.Main.Settings
     {
         #region INSTANCE
         private static SettingsUserControl instance;
-        public static SettingsUserControl Instance { get { if (instance == null) { instance = new SettingsUserControl(); } return instance; } }
+        public static SettingsUserControl Instance { get { instance = (instance ?? new SettingsUserControl()); return instance; } }
+
+        public SettingsService Settings { get; private set; }
         #endregion
 
         #region CONSTRUCTOR
@@ -16,6 +18,7 @@ namespace YoutubeAudioDownloader.Main.Settings
             InitializeComponent();
 
             Dock = DockStyle.Fill;
+            Settings = SettingsService.CreateOrLoad(SettingsService.SettingsPath);
 
             Startup();
         }
@@ -24,9 +27,9 @@ namespace YoutubeAudioDownloader.Main.Settings
         #region STARTUP
         private void Startup()
         {
-            numericUpDownSearchResults.Value = SettingsManager.Instance.SearchResults;
-            richTextBoxDownloadPath.Text = SettingsManager.Instance.DownloadDirectory;
-            toggleButtonSilentDownload.ToggleState = SettingsManager.Instance.AutoDownload;
+            numericUpDownSearchResults.Value = Settings.SearchResults;
+            richTextBoxDownloadPath.Text = Settings.DownloadDirectory;
+            toggleButtonSilentDownload.ToggleState = Settings.AutoDownload;
 
             folderBrowserDialogPath.SelectedPath = richTextBoxDownloadPath.Text;
         }
@@ -35,7 +38,7 @@ namespace YoutubeAudioDownloader.Main.Settings
         #region NUMERICUPDOWN_EVENT
         private void numericUpDownSearchResults_ValueChanged(object sender, EventArgs e)
         {
-            SettingsManager.Instance.SearchResults = ((int)numericUpDownSearchResults.Value);
+            Settings.SearchResults = ((int)numericUpDownSearchResults.Value);
         }
         #endregion
 
@@ -47,21 +50,21 @@ namespace YoutubeAudioDownloader.Main.Settings
                 richTextBoxDownloadPath.Text = folderBrowserDialogPath.SelectedPath;
             }
 
-            SettingsManager.Instance.DownloadDirectory = richTextBoxDownloadPath.Text;
+            Settings.DownloadDirectory = richTextBoxDownloadPath.Text;
         }
         #endregion
 
         #region TOGGLEBUTTON_EVENT
         private void toggleButtonSilentDownload_ToggleChanged(object sender, EventArgs e)
         {
-            SettingsManager.Instance.AutoDownload = toggleButtonSilentDownload.ToggleState;
+            Settings.AutoDownload = toggleButtonSilentDownload.ToggleState;
         }
         #endregion
 
         #region BUTTONRESTORE_EVENT
         private void buttonRestore_Click(object sender, EventArgs e)
         {
-            SettingsManager.Instance.ResetSettings();
+            Settings.Reset();
 
             Startup();
         }

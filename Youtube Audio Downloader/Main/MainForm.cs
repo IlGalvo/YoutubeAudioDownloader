@@ -28,6 +28,11 @@ namespace YoutubeAudioDownloader.Main
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            foreach (UserControl userControl in controlsDictionary.Values)
+            {
+                panelContent.Controls.Add(userControl);
+            }
+
             buttonResearch.PerformClick();
         }
 
