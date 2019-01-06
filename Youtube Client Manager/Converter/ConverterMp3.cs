@@ -10,12 +10,12 @@ namespace YoutubeClientManager.Converter
     public sealed class ConverterMp3 : IDisposable
     {
         #region GLOBAL_VARIABLES
-        private static readonly string FfmpegPath = (Path.GetTempPath() + nameof(Resources.ffmpeg) + ".exe");
+        private static readonly string FfmpegPath = (Path.Combine(Path.GetTempPath(), nameof(Resources.ffmpeg) + ".exe"));
         private static readonly object LockObject = new object();
 
         private Process ffmpegProcess;
-        private ConverterStatus converterStatus;
 
+        private ConverterStatus converterStatus;
         private TimeSpan totalDuration;
 
         public event ConvertionProgressEventHandler ConvertionProgress;
