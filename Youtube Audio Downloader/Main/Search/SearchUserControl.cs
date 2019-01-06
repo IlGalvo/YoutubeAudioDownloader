@@ -52,20 +52,20 @@ namespace YoutubeAudioDownloader.Main.Search
                 {
                     using (YoutubeClient youtubeClient = new YoutubeClient())
                     {
-                        string[] videoIds = await youtubeClient.SearchVideoIdAsync(placeholderRichTextBoxSearch.Text,
+                        string[] videosId = await youtubeClient.SearchVideoIdAsync(placeholderRichTextBoxSearch.Text,
                             SettingsUserControl.Instance.Settings.SearchResults);
 
-                        if (videoIds.Length > 0)
+                        if (videosId.Length > 0)
                         {
-                            ListUserControl.Instance.AddVideo(await youtubeClient.GetVideoInfoAsync(videoIds[0]));
+                            ListUserControl.Instance.AddVideo(await youtubeClient.GetVideoInfoAsync(videosId[0]));
 
                             ((MainForm)FindForm()).PerformButtonListClick();
 
-                            Task<VideoInfo>[] tasks = new Task<VideoInfo>[videoIds.Length - 1];
+                            Task<VideoInfo>[] tasks = new Task<VideoInfo>[videosId.Length - 1];
 
                             for (int i = 0; i != tasks.Length; i++)
                             {
-                                tasks[i] = youtubeClient.GetVideoInfoAsync(videoIds[i + 1]);
+                                tasks[i] = youtubeClient.GetVideoInfoAsync(videosId[i + 1]);
                             }
 
                             ListUserControl.Instance.AddRangeVideo(await Task.WhenAll(tasks));

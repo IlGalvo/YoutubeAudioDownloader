@@ -18,6 +18,7 @@ namespace YoutubeAudioDownloader.Main.Settings
             InitializeComponent();
 
             Dock = DockStyle.Fill;
+
             Settings = SettingsService.CreateOrLoad();
 
             Startup();

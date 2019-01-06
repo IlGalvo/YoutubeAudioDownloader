@@ -57,7 +57,7 @@ namespace YoutubeAudioDownloader.Main
         }
         #endregion
 
-        #region PERFORMCLICK_MANAGERS
+        #region CLICK_PERFORMERS
         public void PerformButtonListClick()
         {
             buttonList.PerformClick();
