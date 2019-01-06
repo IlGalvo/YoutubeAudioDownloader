@@ -62,14 +62,13 @@ namespace YoutubeClientManager.Converter
         public void ConvertToMp3Async(string sourceFileName, string destinationFileName, object userToken)
         {
             sourceFileName = Utilities.ValidateGenericField(sourceFileName, nameof(sourceFileName));
-            destinationFileName = Utilities.ValidateGenericField(destinationFileName, nameof(destinationFileName));
 
             if (!File.Exists(sourceFileName))
             {
                 throw (new FileNotFoundException());
             }
 
-            converterStatus = new ConverterStatus(userToken);
+            destinationFileName = Utilities.ValidateGenericField(destinationFileName, nameof(destinationFileName));
 
             lock (LockObject)
             {
@@ -84,9 +83,11 @@ namespace YoutubeClientManager.Converter
                 }
             }
 
-            ffmpegProcess.StartInfo.Arguments = ("-hide_banner -v info -y -i \"" + sourceFileName + "\" -f mp3 -b:a 320k \"" + destinationFileName + "\"");
+            converterStatus = new ConverterStatus(userToken);
 
+            ffmpegProcess.StartInfo.Arguments = ("-hide_banner -v info -y -i \"" + sourceFileName + "\" -f mp3 -b:a 320k \"" + destinationFileName + "\"");
             ffmpegProcess.Start();
+
             ffmpegProcess.BeginErrorReadLine();
         }
         #endregion
@@ -127,9 +128,9 @@ namespace YoutubeClientManager.Converter
         {
             if (converterStatus != null)
             {
-                ffmpegProcess.StandardInput.WriteLine("q");
-
                 converterStatus.Cancelled = true;
+
+                ffmpegProcess.StandardInput.WriteLine("q");
             }
         }
         #endregion
