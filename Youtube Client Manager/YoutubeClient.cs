@@ -121,12 +121,12 @@ namespace YoutubeClientManager
         private async Task<Dictionary<string, string>> GetVideoInfoADictonaryAsync(string videoId)
         {
             Dictionary<string, string> dictionary = Utilities.SplitUrlQuery((await GetVideoInfoRawAsync(videoId, "embedded").ConfigureAwait(false)));
-            dictionary.Add("verified", "False");
+            dictionary.Add("is_official", "False");
 
             if ((dictionary.ContainsKey("errorcode")) && (dictionary["errorcode"] == "150"))
             {
                 dictionary = Utilities.SplitUrlQuery((await GetVideoInfoRawAsync(videoId, "detailpage").ConfigureAwait(false)));
-                dictionary.Add("verified", "True");
+                dictionary.Add("is_official", "True");
             }
 
             return dictionary;
@@ -222,7 +222,7 @@ namespace YoutubeClientManager
                 Statistics = GetStatistics(videoWatchPageRaw, videoInfoDictonary["player_response"], videoInfoDictonary["avg_rating"]),
                 Thumbnails = new ThumbnailSet(videoId),
                 Keywords = Utilities.ExtractValue(videoInfoDictonary["player_response"], "keywords\":[", "]").Replace("\"", "").Split(','),
-                IsVerified = bool.Parse(videoInfoDictonary["verified"]),
+                IsOfficial = bool.Parse(videoInfoDictonary["is_official"]),
                 StreamFormat = GetStreamFormats(videoInfoDictonary)
             };
 

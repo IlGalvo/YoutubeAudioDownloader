@@ -27,7 +27,7 @@ namespace YoutubeAudioDownloader.Main.List.Item
             labelDislikes.Text = videoInfo.Statistics.DislikeCount.ToString();
 
             labelViews.Text = videoInfo.Statistics.ViewCount.ToString();
-            labelVerified.Text = (videoInfo.IsVerified ? "Si" : "No");
+            labelOfficial.Text = (videoInfo.IsOfficial ? "Si" : "No");
 
             linkLabelVideo.Text = videoInfo.GetRegularUrl();
         }

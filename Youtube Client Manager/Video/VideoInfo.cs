@@ -20,7 +20,7 @@ namespace YoutubeClientManager.Video
         public Statistics Statistics { get; internal set; }
         public ThumbnailSet Thumbnails { get; internal set; }
         public string[] Keywords { get; internal set; }
-        public bool IsVerified { get; internal set; }
+        public bool IsOfficial { get; internal set; }
         internal StreamFormat StreamFormat { get; set; }
         #endregion
 
@@ -36,7 +36,7 @@ namespace YoutubeClientManager.Video
             Statistics = new Statistics();
             Thumbnails = new ThumbnailSet(id);
             Keywords = new string[] { };
-            IsVerified = false;
+            IsOfficial = false;
             StreamFormat = new StreamFormat();
         }
         #endregion

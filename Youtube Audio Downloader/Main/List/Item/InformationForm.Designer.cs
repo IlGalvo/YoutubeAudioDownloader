@@ -34,8 +34,8 @@
             this.tableLayoutPanelStatistics = new System.Windows.Forms.TableLayoutPanel();
             this.panelViewsVerified = new System.Windows.Forms.Panel();
             this.labelViews = new System.Windows.Forms.Label();
-            this.labelVerified = new System.Windows.Forms.Label();
-            this.labelVerifiedStatic = new System.Windows.Forms.Label();
+            this.labelOfficial = new System.Windows.Forms.Label();
+            this.labelOfficialStatic = new System.Windows.Forms.Label();
             this.labelViewsStatic = new System.Windows.Forms.Label();
             this.panelLikesDislikes = new System.Windows.Forms.Panel();
             this.labelDislikes = new System.Windows.Forms.Label();
@@ -108,8 +108,8 @@
             // 
             this.panelViewsVerified.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelViewsVerified.Controls.Add(this.labelViews);
-            this.panelViewsVerified.Controls.Add(this.labelVerified);
-            this.panelViewsVerified.Controls.Add(this.labelVerifiedStatic);
+            this.panelViewsVerified.Controls.Add(this.labelOfficial);
+            this.panelViewsVerified.Controls.Add(this.labelOfficialStatic);
             this.panelViewsVerified.Controls.Add(this.labelViewsStatic);
             this.panelViewsVerified.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelViewsVerified.Location = new System.Drawing.Point(226, 3);
@@ -127,25 +127,25 @@
             this.labelViews.TabIndex = 11;
             this.labelViews.Text = "Visualizzazioni";
             // 
-            // labelVerified
+            // labelOfficial
             // 
-            this.labelVerified.AutoSize = true;
-            this.labelVerified.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVerified.Location = new System.Drawing.Point(105, 31);
-            this.labelVerified.Name = "labelVerified";
-            this.labelVerified.Size = new System.Drawing.Size(62, 17);
-            this.labelVerified.TabIndex = 13;
-            this.labelVerified.Text = "Verificato";
+            this.labelOfficial.AutoSize = true;
+            this.labelOfficial.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOfficial.Location = new System.Drawing.Point(105, 31);
+            this.labelOfficial.Name = "labelOfficial";
+            this.labelOfficial.Size = new System.Drawing.Size(54, 17);
+            this.labelOfficial.TabIndex = 13;
+            this.labelOfficial.Text = "Ufficiale";
             // 
-            // labelVerifiedStatic
+            // labelOfficialStatic
             // 
-            this.labelVerifiedStatic.AutoSize = true;
-            this.labelVerifiedStatic.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVerifiedStatic.Location = new System.Drawing.Point(3, 31);
-            this.labelVerifiedStatic.Name = "labelVerifiedStatic";
-            this.labelVerifiedStatic.Size = new System.Drawing.Size(66, 17);
-            this.labelVerifiedStatic.TabIndex = 12;
-            this.labelVerifiedStatic.Text = "Verificato:";
+            this.labelOfficialStatic.AutoSize = true;
+            this.labelOfficialStatic.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOfficialStatic.Location = new System.Drawing.Point(3, 31);
+            this.labelOfficialStatic.Name = "labelOfficialStatic";
+            this.labelOfficialStatic.Size = new System.Drawing.Size(57, 17);
+            this.labelOfficialStatic.TabIndex = 12;
+            this.labelOfficialStatic.Text = "Ufficiale:";
             // 
             // labelViewsStatic
             // 
@@ -262,8 +262,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelStatistics;
         private System.Windows.Forms.Panel panelViewsVerified;
         private System.Windows.Forms.Label labelViews;
-        private System.Windows.Forms.Label labelVerified;
-        private System.Windows.Forms.Label labelVerifiedStatic;
+        private System.Windows.Forms.Label labelOfficial;
+        private System.Windows.Forms.Label labelOfficialStatic;
         private System.Windows.Forms.Label labelViewsStatic;
         private System.Windows.Forms.Panel panelLikesDislikes;
         private System.Windows.Forms.Label labelDislikes;
