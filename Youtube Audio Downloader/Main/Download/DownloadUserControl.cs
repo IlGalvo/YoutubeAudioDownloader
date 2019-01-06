@@ -9,7 +9,7 @@ namespace YoutubeAudioDownloader.Main.Download
 {
     public partial class DownloadUserControl : UserControl
     {
-        #region INSTANCE
+        #region GLOBAL_VARIABLES
         private static DownloadUserControl instance;
         public static DownloadUserControl Instance { get { instance = (instance ?? new DownloadUserControl()); return instance; } }
         #endregion
@@ -29,7 +29,10 @@ namespace YoutubeAudioDownloader.Main.Download
             panelContent.Controls.Add(new ItemDownloadUserControl(videoInfo, audioInfo, actionToPerform));
             panelContent.Controls[(panelContent.Controls.Count - 1)].BringToFront();
 
-            buttonRemoveAll.Enabled = true;
+            if (panelContent.Controls.Count == 1)
+            {
+                buttonRemoveAll.Enabled = true;
+            }
 
             if (!SettingsUserControl.Instance.Settings.AutoDownload)
             {

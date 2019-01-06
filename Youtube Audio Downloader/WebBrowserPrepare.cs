@@ -5,8 +5,9 @@ namespace YoutubeAudioDownloader
 {
     internal static class WebBrowserPrepare
     {
-        #region GLOBAL_VARIABLE
+        #region GLOBAL_VARIABLES
         private static readonly string ApplicationName = (Application.ProductName + ".exe");
+
         private static readonly string RegistryKeyPath = (@"Software\Microsoft\Internet Explorer\Main\FeatureControl\");
         #endregion
 

@@ -5,7 +5,7 @@ namespace YoutubeAudioDownloader.Main.Settings
 {
     public partial class SettingsUserControl : UserControl
     {
-        #region INSTANCE
+        #region GLOBAL_VARIABLES
         private static SettingsUserControl instance;
         public static SettingsUserControl Instance { get { instance = (instance ?? new SettingsUserControl()); return instance; } }
 

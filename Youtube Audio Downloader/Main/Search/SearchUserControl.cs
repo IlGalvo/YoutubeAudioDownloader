@@ -10,7 +10,7 @@ namespace YoutubeAudioDownloader.Main.Search
 {
     public partial class SearchUserControl : UserControl
     {
-        #region INSTANCE
+        #region GLOBAL_VARIABLES
         private static SearchUserControl instance;
         public static SearchUserControl Instance { get { instance = (instance ?? new SearchUserControl()); return instance; } }
         #endregion
@@ -61,14 +61,14 @@ namespace YoutubeAudioDownloader.Main.Search
 
                             ((MainForm)FindForm()).PerformButtonListClick();
 
-                            Task<VideoInfo>[] tasks = new Task<VideoInfo>[videosId.Length - 1];
+                            Task<VideoInfo>[] videoInfoTasks = new Task<VideoInfo>[videosId.Length - 1];
 
-                            for (int i = 0; i != tasks.Length; i++)
+                            for (int i = 0; i != videoInfoTasks.Length; i++)
                             {
-                                tasks[i] = youtubeClient.GetVideoInfoAsync(videosId[i + 1]);
+                                videoInfoTasks[i] = youtubeClient.GetVideoInfoAsync(videosId[i + 1]);
                             }
 
-                            ListUserControl.Instance.AddRangeVideo(await Task.WhenAll(tasks));
+                            ListUserControl.Instance.AddRangeVideo(await Task.WhenAll(videoInfoTasks));
                         }
                         else
                         {
