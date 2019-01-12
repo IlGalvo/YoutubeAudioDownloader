@@ -6,7 +6,20 @@
         public long ViewCount { get; internal set; }
         public long LikeCount { get; internal set; }
         public long DislikeCount { get; internal set; }
-        public double AverageRating { get; internal set; }
+        public double AverageRating
+        {
+            get
+            {
+                double averageRatings = 0;
+
+                if ((LikeCount + DislikeCount) > 0)
+                {
+                    averageRatings = (((4.0 * LikeCount) / (LikeCount + DislikeCount)) + 1);
+                }
+
+                return averageRatings;
+            }
+        }
         #endregion
 
         #region CONSTRUCTOR
@@ -15,7 +28,6 @@
             ViewCount = 0;
             LikeCount = 0;
             DislikeCount = 0;
-            AverageRating = 0;
         }
         #endregion
     }

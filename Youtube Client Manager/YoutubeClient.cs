@@ -170,14 +170,13 @@ namespace YoutubeClientManager
             return countValue;
         }
 
-        private Statistics GetStatistics(string watchPage, string playerResponseRaw, string averageRatingRaw)
+        private Statistics GetStatistics(string watchPage, string playerResponseRaw)
         {
             Statistics statistics = new Statistics
             {
                 ViewCount = long.Parse(Utilities.ExtractValue(playerResponseRaw, "viewCount\":\"", "\"")),
                 LikeCount = GetStatisticsCount(Utilities.ExtractValue(watchPage, "like-button-renderer-like-button", "</button>")),
                 DislikeCount = GetStatisticsCount(Utilities.ExtractValue(watchPage, "like-button-renderer-dislike-button", "</button>")),
-                AverageRating = Math.Round(double.Parse(averageRatingRaw.Replace(".", ",")), 1)
             };
 
             return statistics;
@@ -219,7 +218,7 @@ namespace YoutubeClientManager
                 Description = GetDescription(videoWatchPageRaw),
                 Duration = TimeSpan.FromSeconds(double.Parse(videoInfoDictonary["length_seconds"])),
                 UploadDate = DateTime.Parse(Utilities.ExtractValue(videoWatchPageRaw, "<meta itemprop=\"datePublished\" content=\"", "\">")),
-                Statistics = GetStatistics(videoWatchPageRaw, videoInfoDictonary["player_response"], videoInfoDictonary["avg_rating"]),
+                Statistics = GetStatistics(videoWatchPageRaw, videoInfoDictonary["player_response"]),
                 Thumbnails = new ThumbnailSet(videoId),
                 Keywords = Utilities.ExtractValue(videoInfoDictonary["player_response"], "keywords\":[", "]").Replace("\"", "").Split(','),
                 IsOfficial = bool.Parse(videoInfoDictonary["is_official"]),
