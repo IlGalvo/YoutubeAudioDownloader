@@ -51,7 +51,7 @@ namespace YoutubeAudioDownloader.Main.Download
             {
                 panelContent.Controls.Clear();
 
-                panelContent.BackgroundImage = Resources.PerformResearch;
+                panelContent.BackgroundImage = Resources.PerformDownload;
             }
         }
         #endregion

@@ -79,7 +79,7 @@
             // panelContent
             // 
             this.panelContent.AutoScroll = true;
-            this.panelContent.BackgroundImage = global::YoutubeAudioDownloader.Properties.Resources.PerformResearch;
+            this.panelContent.BackgroundImage = global::YoutubeAudioDownloader.Properties.Resources.PerformDownload;
             this.panelContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(0, 0);
