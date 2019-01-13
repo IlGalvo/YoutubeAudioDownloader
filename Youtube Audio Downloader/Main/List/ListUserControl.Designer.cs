@@ -79,11 +79,14 @@
             // panelContent
             // 
             this.panelContent.AutoScroll = true;
+            this.panelContent.BackgroundImage = global::YoutubeAudioDownloader.Properties.Resources.PerformResearch;
+            this.panelContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(0, 0);
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(734, 557);
             this.panelContent.TabIndex = 0;
+            this.panelContent.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.panelContent_ControlAdded);
             // 
             // ListUserControl
             // 

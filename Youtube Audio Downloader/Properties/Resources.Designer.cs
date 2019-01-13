@@ -69,5 +69,15 @@ namespace YoutubeAudioDownloader.Properties {
                 return ((System.Drawing.Icon)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PerformResearch {
+            get {
+                object obj = ResourceManager.GetObject("PerformResearch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

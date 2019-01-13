@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using YoutubeAudioDownloader.Main.Download.Item;
 using YoutubeAudioDownloader.Main.Settings;
+using YoutubeAudioDownloader.Properties;
 using YoutubeClientManager.Audio;
 using YoutubeClientManager.Video;
 
@@ -31,6 +32,8 @@ namespace YoutubeAudioDownloader.Main.Download
 
             if (panelContent.Controls.Count == 1)
             {
+                panelContent.BackgroundImage = null;
+
                 buttonRemoveAll.Enabled = true;
             }
 
@@ -47,6 +50,8 @@ namespace YoutubeAudioDownloader.Main.Download
             if (ManageCancel("Alcuni download/conversioni sono ancora in corso.\n\nVuoi ripristinare comunque la lista?"))
             {
                 panelContent.Controls.Clear();
+
+                panelContent.BackgroundImage = Resources.PerformResearch;
             }
         }
         #endregion

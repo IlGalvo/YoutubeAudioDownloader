@@ -131,7 +131,7 @@
             this.panelLoading.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelLoading.Controls.Add(this.pictureBoxLoadingImage);
             this.panelLoading.Controls.Add(this.pictureBoxLoadingText);
-            this.panelLoading.Location = new System.Drawing.Point(290, 282);
+            this.panelLoading.Location = new System.Drawing.Point(287, 282);
             this.panelLoading.Name = "panelLoading";
             this.panelLoading.Size = new System.Drawing.Size(148, 101);
             this.panelLoading.TabIndex = 6;
@@ -156,14 +156,14 @@
             this.pictureBoxLoadingText.TabIndex = 1;
             this.pictureBoxLoadingText.TabStop = false;
             // 
-            // optimizedTextBoxSearch
+            // placeholderRichTextBoxSearch
             // 
             this.placeholderRichTextBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.placeholderRichTextBoxSearch.AutoWordSelection = true;
             this.placeholderRichTextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.placeholderRichTextBoxSearch.Location = new System.Drawing.Point(3, 230);
             this.placeholderRichTextBoxSearch.Multiline = false;
-            this.placeholderRichTextBoxSearch.Name = "optimizedTextBoxSearch";
+            this.placeholderRichTextBoxSearch.Name = "placeholderRichTextBoxSearch";
             this.placeholderRichTextBoxSearch.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.placeholderRichTextBoxSearch.PlaceholderText = "Cerca un video o incolla un link...";
             this.placeholderRichTextBoxSearch.PlaceholerFont = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

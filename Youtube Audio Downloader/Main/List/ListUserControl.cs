@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using YoutubeAudioDownloader.Main.List.Item;
+using YoutubeAudioDownloader.Properties;
 using YoutubeClientManager.Video;
 
 namespace YoutubeAudioDownloader.Main.List
@@ -39,6 +40,18 @@ namespace YoutubeAudioDownloader.Main.List
         public void ClearAllVideo()
         {
             panelContent.Controls.Clear();
+
+            panelContent.BackgroundImage = Resources.PerformResearch;
+        }
+        #endregion
+
+        #region PANELCONTENT_EVENT
+        private void panelContent_ControlAdded(object sender, ControlEventArgs e)
+        {
+            if (panelContent.Controls.Count == 1)
+            {
+                panelContent.BackgroundImage = null;
+            }
         }
         #endregion
 
