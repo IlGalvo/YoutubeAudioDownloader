@@ -29,7 +29,7 @@ namespace YoutubeAudioDownloader.Main.Search
         #region OPTIMIZEDTEXTBOX_EVENT
         private void optimizedTextBoxSearch_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if ((buttonSearch.Enabled) && (e.KeyCode == Keys.Enter))
             {
                 buttonSearch.PerformClick();
             }
