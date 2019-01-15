@@ -50,8 +50,6 @@ namespace YoutubeAudioDownloader.Main.Download
             if (ManageCancel("Alcuni download/conversioni sono ancora in corso.\n\nVuoi ripristinare comunque la lista?"))
             {
                 panelContent.Controls.Clear();
-
-                panelContent.BackgroundImage = Resources.PerformDownload;
             }
         }
         #endregion
@@ -85,6 +83,8 @@ namespace YoutubeAudioDownloader.Main.Download
 
             if (panelContent.Controls.Count == 0)
             {
+                panelContent.BackgroundImage = Resources.PerformDownload;
+
                 buttonRemoveAll.Enabled = false;
             }
         }
