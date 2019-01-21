@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace YoutubeClientManager.Audio.Itag
+namespace YoutubeClientManager.Video.Audio.Itag
 {
     internal static class ItagInfo
     {

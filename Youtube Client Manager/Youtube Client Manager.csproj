@@ -31,14 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Audio\AudioContainer.cs" />
-    <Compile Include="Audio\AudioEncoding.cs" />
-    <Compile Include="Audio\AudioInfo.cs" />
-    <Compile Include="Audio\AudioInfoStatus.cs" />
-    <Compile Include="Audio\DownloadEventHandlers.cs" />
-    <Compile Include="Audio\DownloadProgressEventArgs.cs" />
-    <Compile Include="Audio\Itag\ItagDescriptor.cs" />
-    <Compile Include="Audio\Itag\ItagInfo.cs" />
+    <Compile Include="Video\Audio\AudioContainer.cs" />
+    <Compile Include="Video\Audio\AudioEncoding.cs" />
+    <Compile Include="Video\Audio\AudioInfo.cs" />
+    <Compile Include="Video\Audio\AudioInfoStatus.cs" />
+    <Compile Include="Video\Audio\DownloadEventHandlers.cs" />
+    <Compile Include="Video\Audio\DownloadProgressEventArgs.cs" />
+    <Compile Include="Video\Audio\Itag\ItagDescriptor.cs" />
+    <Compile Include="Video\Audio\Itag\ItagInfo.cs" />
     <Compile Include="Converter\ConversionEventHandlers.cs" />
     <Compile Include="Converter\ConversionProgressEventArgs.cs" />
     <Compile Include="Converter\ConverterMp3.cs" />
@@ -50,18 +50,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Utilities.cs" />
-    <Compile Include="Video\Cipher\ICipherOperation.cs" />
-    <Compile Include="Video\Cipher\PlayerSource.cs" />
-    <Compile Include="Video\Cipher\ReverseCipherOperation.cs" />
-    <Compile Include="Video\Cipher\SliceCipherOperation.cs" />
-    <Compile Include="Video\Cipher\SwapCipherOperation.cs" />
     <Compile Include="Video\Statistics.cs" />
-    <Compile Include="Video\StreamFormats.cs" />
     <Compile Include="Video\ThumbnailSet.cs" />
     <Compile Include="Video\VideoInfo.cs" />
     <Compile Include="YoutubeClient.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
@@ -74,6 +71,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\ffmpeg.zip" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

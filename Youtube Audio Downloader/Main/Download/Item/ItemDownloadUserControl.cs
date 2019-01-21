@@ -4,9 +4,9 @@ using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 using YoutubeAudioDownloader.Main.Settings;
-using YoutubeClientManager.Audio;
 using YoutubeClientManager.Converter;
 using YoutubeClientManager.Video;
+using YoutubeClientManager.Video.Audio;
 
 namespace YoutubeAudioDownloader.Main.Download.Item
 {
@@ -17,7 +17,7 @@ namespace YoutubeAudioDownloader.Main.Download.Item
 
         private ConverterMp3 converterMp3;
 
-        private AudioInfo audioInfo;
+        private VideoInfo videoInfo;
         private string downloadPath;
         private Action actionToPerform;
 
@@ -25,7 +25,7 @@ namespace YoutubeAudioDownloader.Main.Download.Item
         #endregion
 
         #region USERCONTROL_EVENTS
-        public ItemDownloadUserControl(VideoInfo videoInfo, AudioInfo audioInfo, Action actionToPerform)
+        public ItemDownloadUserControl(VideoInfo videoInfo, Action actionToPerform)
         {
             InitializeComponent();
 
@@ -33,31 +33,31 @@ namespace YoutubeAudioDownloader.Main.Download.Item
 
             converterMp3 = new ConverterMp3();
 
-            this.audioInfo = audioInfo;
+            this.videoInfo = videoInfo;
             this.actionToPerform = actionToPerform;
 
             lockObject = new object();
 
-            downloadPath = (string.Join("-", videoInfo.Title.Split(Path.GetInvalidFileNameChars())) + audioInfo.GetContainerFileExtension());
+            downloadPath = (string.Join("-", videoInfo.Title.Split(Path.GetInvalidFileNameChars())) + videoInfo.AudioInfo.GetContainerFileExtension());
             downloadPath = Path.Combine(SettingsUserControl.Instance.Settings.DownloadDirectoryPath, downloadPath);
 
             IsRunning = false;
 
-            Startup(videoInfo);
+            Startup();
         }
 
-        private void Startup(VideoInfo videoInfo)
+        private void Startup()
         {
             converterMp3.ConvertionProgress += ConverterMp3_ConvertionProgress;
             converterMp3.ConvertionFinished += ConverterMp3_ConvertionFinished;
 
-            audioInfo.DownloadProgress += AudioInfo_DownloadProgress;
-            audioInfo.DownloadFinished += AudioInfo_DownloadFinished;
+            videoInfo.AudioInfo.DownloadProgress += AudioInfo_DownloadProgress;
+            videoInfo.AudioInfo.DownloadFinished += AudioInfo_DownloadFinished;
 
             pictureBoxImage.LoadAsync(videoInfo.Thumbnails.HighResolutionUrl);
 
             resizableLabelTitle.Text = videoInfo.Title;
-            labelBitrateSize.Text = ("320 Kbps / " + (((audioInfo.Size * 2.5) / 1024f) / 1024f).ToString("00.00") + " MB~");
+            labelBitrateSize.Text = ("320 Kbps / " + (((videoInfo.AudioInfo.Size * 2.5) / 1024f) / 1024f).ToString("00.00") + " MB~");
             labelInformation.Text = "Pronto";
 
             buttonDownloadCancel.PerformClick();
@@ -69,7 +69,7 @@ namespace YoutubeAudioDownloader.Main.Download.Item
         {
             if (buttonDownloadCancel.Text == "Scarica")
             {
-                audioInfo.DownloadAsync(downloadPath, Path.ChangeExtension(downloadPath, ".mp3"));
+                videoInfo.AudioInfo.DownloadAsync(downloadPath, Path.ChangeExtension(downloadPath, ".mp3"));
 
                 SetLabelText("Download in corso...");
                 SetButtonDownloadCancelText("Annulla");
@@ -79,7 +79,7 @@ namespace YoutubeAudioDownloader.Main.Download.Item
             }
             else
             {
-                audioInfo.CancelAsync();
+                videoInfo.AudioInfo.CancelAsync();
                 converterMp3.CancelAsync();
             }
         }

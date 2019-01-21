@@ -5,9 +5,9 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
-using YoutubeClientManager.Audio.Itag;
+using YoutubeClientManager.Video.Audio.Itag;
 
-namespace YoutubeClientManager.Audio
+namespace YoutubeClientManager.Video.Audio
 {
     public sealed class AudioInfo
     {

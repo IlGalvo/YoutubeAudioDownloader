@@ -17,7 +17,7 @@ namespace YoutubeAudioDownloader.Main.Download.Item
         {
             if (IsRunning)
             {
-                audioInfo.CancelAsync();
+                videoInfo.AudioInfo.CancelAsync();
                 converterMp3.CancelAsync();
 
                 lock (lockObject)
@@ -35,8 +35,8 @@ namespace YoutubeAudioDownloader.Main.Download.Item
 
             actionToPerform?.Invoke();
 
-            audioInfo.DownloadProgress -= AudioInfo_DownloadProgress;
-            audioInfo.DownloadFinished -= AudioInfo_DownloadFinished;
+            videoInfo.AudioInfo.DownloadProgress -= AudioInfo_DownloadProgress;
+            videoInfo.AudioInfo.DownloadFinished -= AudioInfo_DownloadFinished;
 
             base.Dispose(disposing);
         }

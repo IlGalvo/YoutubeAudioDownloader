@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace YoutubeClientManager.Audio
+namespace YoutubeClientManager.Video.Audio
 {
     internal sealed class AudioInfoStatus
     {

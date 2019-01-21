@@ -1,4 +1,4 @@
-﻿namespace YoutubeClientManager.Audio
+﻿namespace YoutubeClientManager.Video.Audio
 {
     public enum AudioEncoding
     {

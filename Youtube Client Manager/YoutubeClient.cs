@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using YoutubeClientManager.Video;
+using YoutubeClientManager.Video.Audio;
 
 namespace YoutubeClientManager
 {
@@ -113,7 +116,8 @@ namespace YoutubeClientManager
         #region VIDEO
         private async Task<string> GetVideoInfoRawAsync(string videoId, string el)
         {
-            string requestUri = ($"https://www.youtube.com/get_video_info?video_id={videoId}&el={el}");
+            string requestEurl = WebUtility.UrlEncode($"https://youtube.googleapis.com/v/{videoId}");
+            string requestUri = ($"https://www.youtube.com/get_video_info?video_id={videoId}&el={el}&eurl={requestEurl}");
 
             return (await httpClient.GetStringAsync(requestUri).ConfigureAwait(false));
         }
@@ -182,21 +186,40 @@ namespace YoutubeClientManager
             return statistics;
         }
 
-        private StreamFormat GetStreamFormats(Dictionary<string, string> dictonary)
+        private AudioInfo GetAudioInfo(JToken playerResponse)
         {
-            StreamFormat streamFormat = new StreamFormat();
+            AudioInfo audioInfo = new AudioInfo();
 
-            if (dictonary.ContainsKey("adaptive_fmts"))
+            var dash = playerResponse.SelectToken("streamingData.dashManifestUrl")?.Value<string>();
+            Console.WriteLine("IsDash: " + dash);
+            if (!string.IsNullOrEmpty(dash))
             {
-                streamFormat.IsAdaptive = true;
-                streamFormat.Url = dictonary["adaptive_fmts"];
-            }
-            else
-            {
-                streamFormat.Url = dictonary["dashmpd"];
+                var j = dash;
             }
 
-            return streamFormat;
+            if (true)
+            {
+                foreach (JToken adaptiveFormat in playerResponse.SelectToken("streamingData.adaptiveFormats"))
+                {
+                    if (adaptiveFormat["mimeType"].Value<string>().StartsWith("audio"))
+                    {
+                        AudioInfo tmpAudioInfo = new AudioInfo
+                        {
+                            Itag = adaptiveFormat["itag"].Value<int>(),
+                            Size = adaptiveFormat["contentLength"].Value<long>(),
+                            Bitrate = adaptiveFormat["bitrate"].Value<long>(),
+                            Url = adaptiveFormat["url"].Value<string>()
+                        };
+
+                        if (audioInfo.Bitrate < tmpAudioInfo.Bitrate)
+                        {
+                            audioInfo = tmpAudioInfo;
+                        }
+                    }
+                }
+            }
+
+            return audioInfo;
         }
 
         public async Task<VideoInfo> GetVideoInfoAsync(string videoId)
@@ -219,10 +242,9 @@ namespace YoutubeClientManager
                 Duration = TimeSpan.FromSeconds(double.Parse(videoInfoDictonary["length_seconds"])),
                 UploadDate = DateTime.Parse(Utilities.ExtractValue(videoWatchPageRaw, "<meta itemprop=\"datePublished\" content=\"", "\">")),
                 Statistics = GetStatistics(videoWatchPageRaw, videoInfoDictonary["player_response"]),
-                Thumbnails = new ThumbnailSet(videoId),
                 Keywords = Utilities.ExtractValue(videoInfoDictonary["player_response"], "keywords\":[", "]").Replace("\"", "").Split(','),
                 IsOfficial = bool.Parse(videoInfoDictonary["is_official"]),
-                StreamFormat = GetStreamFormats(videoInfoDictonary)
+                AudioInfo = GetAudioInfo(JToken.Parse(videoInfoDictonary["player_response"]))
             };
 
             return videoInfo;

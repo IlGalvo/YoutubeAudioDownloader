@@ -3,7 +3,6 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Windows.Forms;
 using YoutubeAudioDownloader.Main.Download;
-using YoutubeClientManager.Audio;
 using YoutubeClientManager.Video;
 
 namespace YoutubeAudioDownloader.Main.List.Item
@@ -12,8 +11,6 @@ namespace YoutubeAudioDownloader.Main.List.Item
     {
         #region GLOBAL_VARIABLES
         private VideoInfo videoInfo;
-
-        private AudioInfo audioInfo;
         #endregion
 
         #region CONSTRUCTOR
@@ -24,14 +21,13 @@ namespace YoutubeAudioDownloader.Main.List.Item
             Dock = DockStyle.Top;
 
             this.videoInfo = videoInfo;
-            audioInfo = null;
 
-            StartupAsync();
+            Startup();
         }
         #endregion
 
         #region STARTUP
-        private async void StartupAsync()
+        private void Startup()
         {
             webBrowserVideo.Navigate(videoInfo.GetEmbedUrl());
 
@@ -41,26 +37,11 @@ namespace YoutubeAudioDownloader.Main.List.Item
             labelDate.Text = videoInfo.UploadDate.ToString("dd/MM/yyyy");
             labelRating.Text = (videoInfo.Statistics.AverageRating + "/5");
 
-            labelEncoding.Text = "Attendere...";
-            labelBitrate.Text = "Attendere...";
-            labelSize.Text = "Attendere...";
+            labelEncoding.Text = (videoInfo.AudioInfo.Container + "/" + videoInfo.AudioInfo.Encoding);
+            labelBitrate.Text = (Math.Round((videoInfo.AudioInfo.Bitrate / 1000f), MidpointRounding.ToEven) + " Kbps");
+            labelSize.Text = ((((videoInfo.AudioInfo.Size * 2.5) / 1024f) / 1024f).ToString("00.00") + " MB");
 
-            try
-            {
-                audioInfo = await videoInfo.GetAudioInfoAsync();
-
-                labelEncoding.Text = (audioInfo.Container + "/" + audioInfo.Encoding);
-                labelBitrate.Text = (Math.Round((audioInfo.Bitrate / 1000f), MidpointRounding.ToEven) + " Kbps");
-                labelSize.Text = ((((audioInfo.Size * 2.5) / 1024f) / 1024f).ToString("00.00") + " MB");
-
-                buttonDownload.Enabled = true;
-            }
-            catch (Exception)
-            {
-                labelEncoding.Text = "Errore ricezione informazioni.";
-                labelBitrate.Text = "Errore ricezione informazioni.";
-                labelSize.Text = "Errore ricezione informazioni.";
-            }
+            buttonDownload.Enabled = true;
         }
         #endregion
 
@@ -86,7 +67,7 @@ namespace YoutubeAudioDownloader.Main.List.Item
         #region BUTTON_EVENT
         private void buttonDownload_Click(object sender, EventArgs e)
         {
-            DownloadUserControl.Instance.AddToDownload(videoInfo, audioInfo, EnableDownloadButton);
+            DownloadUserControl.Instance.AddToDownload(videoInfo, EnableDownloadButton);
 
             buttonDownload.Enabled = false;
         }

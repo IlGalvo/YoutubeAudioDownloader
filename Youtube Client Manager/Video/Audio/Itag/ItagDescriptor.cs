@@ -1,4 +1,4 @@
-﻿namespace YoutubeClientManager.Audio.Itag
+﻿namespace YoutubeClientManager.Video.Audio.Itag
 {
     internal sealed class ItagDescriptor
     {

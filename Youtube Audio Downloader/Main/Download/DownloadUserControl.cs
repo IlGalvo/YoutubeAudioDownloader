@@ -3,7 +3,6 @@ using System.Windows.Forms;
 using YoutubeAudioDownloader.Main.Download.Item;
 using YoutubeAudioDownloader.Main.Settings;
 using YoutubeAudioDownloader.Properties;
-using YoutubeClientManager.Audio;
 using YoutubeClientManager.Video;
 
 namespace YoutubeAudioDownloader.Main.Download
@@ -25,9 +24,9 @@ namespace YoutubeAudioDownloader.Main.Download
         #endregion
 
         #region DOWNLOAD
-        public void AddToDownload(VideoInfo videoInfo, AudioInfo audioInfo, Action actionToPerform)
+        public void AddToDownload(VideoInfo videoInfo, Action actionToPerform)
         {
-            panelContent.Controls.Add(new ItemDownloadUserControl(videoInfo, audioInfo, actionToPerform));
+            panelContent.Controls.Add(new ItemDownloadUserControl(videoInfo, actionToPerform));
             panelContent.Controls[(panelContent.Controls.Count - 1)].BringToFront();
 
             if (panelContent.Controls.Count == 1)

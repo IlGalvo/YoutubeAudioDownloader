@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace YoutubeClientManager.Audio
+namespace YoutubeClientManager.Video.Audio
 {
     public sealed class DownloadProgressEventArgs : ProgressChangedEventArgs
     {
