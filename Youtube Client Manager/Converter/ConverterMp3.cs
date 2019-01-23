@@ -126,7 +126,6 @@ namespace YoutubeClientManager.Converter
         #region CANCEL
         public void CancelAsync()
         {
-            // Temp fix
             if ((converterStatus != null) && (!converterStatus.Cancelled))
             {
                 converterStatus.Cancelled = true;

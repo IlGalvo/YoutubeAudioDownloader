@@ -122,14 +122,29 @@ namespace YoutubeClientManager
             return (await httpClient.GetStringAsync(requestUri).ConfigureAwait(false));
         }
 
+        private Dictionary<string, string> SplitUrlQuery(string urlQuery)
+        {
+            Dictionary<string, string> dictionary = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+
+            foreach (string rawParam in urlQuery.Split('&'))
+            {
+                string paramValue = WebUtility.UrlDecode(rawParam);
+                int paramIndex = paramValue.IndexOf('=');
+
+                dictionary[paramValue.Substring(0, paramIndex)] = paramValue.Substring((paramIndex + 1));
+            }
+
+            return dictionary;
+        }
+
         private async Task<Dictionary<string, string>> GetVideoInfoADictonaryAsync(string videoId)
         {
-            Dictionary<string, string> dictionary = Utilities.SplitUrlQuery((await GetVideoInfoRawAsync(videoId, "embedded").ConfigureAwait(false)));
+            Dictionary<string, string> dictionary = SplitUrlQuery((await GetVideoInfoRawAsync(videoId, "embedded").ConfigureAwait(false)));
             dictionary.Add("is_official", "False");
 
             if ((dictionary.ContainsKey("errorcode")) && (dictionary["errorcode"] == "150"))
             {
-                dictionary = Utilities.SplitUrlQuery((await GetVideoInfoRawAsync(videoId, "detailpage").ConfigureAwait(false)));
+                dictionary = SplitUrlQuery((await GetVideoInfoRawAsync(videoId, "detailpage").ConfigureAwait(false)));
                 dictionary.Add("is_official", "True");
             }
 
