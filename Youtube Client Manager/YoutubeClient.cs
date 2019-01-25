@@ -201,18 +201,11 @@ namespace YoutubeClientManager
             return statistics;
         }
 
-        private AudioInfo GetAudioInfo(JToken playerResponse)
+        private async Task<AudioInfo> GetAudioInfoAsync(JToken playerResponse)
         {
             AudioInfo audioInfo = new AudioInfo();
 
-            var dash = playerResponse.SelectToken("streamingData.dashManifestUrl")?.Value<string>();
-            Console.WriteLine("IsDash: " + dash);
-            if (!string.IsNullOrEmpty(dash))
-            {
-                var j = dash;
-            }
-
-            if (true)
+            if (playerResponse.SelectToken("streamingData.dashManifestUrl") == null)
             {
                 foreach (JToken adaptiveFormat in playerResponse.SelectToken("streamingData.adaptiveFormats"))
                 {
@@ -224,6 +217,32 @@ namespace YoutubeClientManager
                             Size = adaptiveFormat["contentLength"].Value<long>(),
                             Bitrate = adaptiveFormat["bitrate"].Value<long>(),
                             Url = adaptiveFormat["url"].Value<string>()
+                        };
+
+                        if (audioInfo.Bitrate < tmpAudioInfo.Bitrate)
+                        {
+                            audioInfo = tmpAudioInfo;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                string dashManifestUrl = playerResponse.SelectToken("streamingData.dashManifestUrl")?.Value<string>();
+
+                string dashManifest = (await httpClient.GetStringAsync(dashManifestUrl).ConfigureAwait(false));
+                string[] dashManifestEntries = dashManifest.Split(new string[] { "<Representation " }, StringSplitOptions.RemoveEmptyEntries);
+
+                for (int i = 1; i != dashManifestEntries.Length; i++)
+                {
+                    if (dashManifestEntries[i].Contains("AudioChannelConfiguration"))
+                    {
+                        AudioInfo tmpAudioInfo = new AudioInfo
+                        {
+                            Itag = int.Parse(Utilities.ExtractValue(dashManifestEntries[i], "id=\"", "\"")),
+                            Size = long.Parse(Utilities.ExtractValue(dashManifestEntries[i], "clen/", "/")),
+                            Bitrate = long.Parse(Utilities.ExtractValue(dashManifestEntries[i], "bandwidth=\"", "\"")),
+                            Url = Utilities.ExtractValue(dashManifestEntries[i], "<BaseURL>", "</BaseURL>")
                         };
 
                         if (audioInfo.Bitrate < tmpAudioInfo.Bitrate)
@@ -259,7 +278,7 @@ namespace YoutubeClientManager
                 Statistics = GetStatistics(videoWatchPageRaw, videoInfoDictonary["player_response"]),
                 Keywords = Utilities.ExtractValue(videoInfoDictonary["player_response"], "keywords\":[", "]").Replace("\"", "").Split(','),
                 IsOfficial = bool.Parse(videoInfoDictonary["is_official"]),
-                AudioInfo = GetAudioInfo(JToken.Parse(videoInfoDictonary["player_response"]))
+                AudioInfo = (await GetAudioInfoAsync(JToken.Parse(videoInfoDictonary["player_response"])).ConfigureAwait(false))
             };
 
             return videoInfo;
