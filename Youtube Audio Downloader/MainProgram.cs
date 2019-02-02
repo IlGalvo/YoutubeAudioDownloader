@@ -22,7 +22,7 @@ namespace YoutubeAudioDownloader
             {
                 if (mutex.WaitOne(0, false))
                 {
-                    string updateCheckUrl = ("https://onedrive.live.com/download?resid=7D7FF9DFDA23C644!1341&authkey=!AAPfdJrVo5UeVkE");
+                    string updateCheckUrl = ("https://onedrive.live.com/download?resid=7D7FF9DFDA23C644!2368&authkey=!AFcY04VNisbcdlE");
 
                     if (!UpdateManager.CheckForUpdates(updateCheckUrl))
                     {
