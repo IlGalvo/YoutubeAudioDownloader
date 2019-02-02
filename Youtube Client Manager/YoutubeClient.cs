@@ -205,30 +205,9 @@ namespace YoutubeClientManager
         {
             AudioInfo audioInfo = new AudioInfo();
 
-            if (playerResponse.SelectToken("streamingData.dashManifestUrl") == null)
+            if (playerResponse.SelectToken("streamingData.dashManifestUrl") != null)
             {
-                foreach (JToken adaptiveFormat in playerResponse.SelectToken("streamingData.adaptiveFormats"))
-                {
-                    if (adaptiveFormat["mimeType"].Value<string>().StartsWith("audio"))
-                    {
-                        AudioInfo tmpAudioInfo = new AudioInfo
-                        {
-                            Itag = adaptiveFormat["itag"].Value<int>(),
-                            Size = adaptiveFormat["contentLength"].Value<long>(),
-                            Bitrate = adaptiveFormat["bitrate"].Value<long>(),
-                            Url = adaptiveFormat["url"].Value<string>()
-                        };
-
-                        if (audioInfo.Bitrate < tmpAudioInfo.Bitrate)
-                        {
-                            audioInfo = tmpAudioInfo;
-                        }
-                    }
-                }
-            }
-            else
-            {
-                string dashManifestUrl = playerResponse.SelectToken("streamingData.dashManifestUrl")?.Value<string>();
+                string dashManifestUrl = playerResponse.SelectToken("streamingData.dashManifestUrl").Value<string>();
 
                 string dashManifest = (await httpClient.GetStringAsync(dashManifestUrl).ConfigureAwait(false));
                 string[] dashManifestEntries = dashManifest.Split(new string[] { "<Representation " }, StringSplitOptions.RemoveEmptyEntries);
@@ -243,6 +222,27 @@ namespace YoutubeClientManager
                             Size = long.Parse(Utilities.ExtractValue(dashManifestEntries[i], "clen/", "/")),
                             Bitrate = long.Parse(Utilities.ExtractValue(dashManifestEntries[i], "bandwidth=\"", "\"")),
                             Url = Utilities.ExtractValue(dashManifestEntries[i], "<BaseURL>", "</BaseURL>")
+                        };
+
+                        if (audioInfo.Bitrate < tmpAudioInfo.Bitrate)
+                        {
+                            audioInfo = tmpAudioInfo;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                foreach (JToken adaptiveFormat in playerResponse.SelectToken("streamingData.adaptiveFormats"))
+                {
+                    if (adaptiveFormat["mimeType"].Value<string>().StartsWith("audio"))
+                    {
+                        AudioInfo tmpAudioInfo = new AudioInfo
+                        {
+                            Itag = adaptiveFormat["itag"].Value<int>(),
+                            Size = adaptiveFormat["contentLength"].Value<long>(),
+                            Bitrate = adaptiveFormat["bitrate"].Value<long>(),
+                            Url = adaptiveFormat["url"].Value<string>()
                         };
 
                         if (audioInfo.Bitrate < tmpAudioInfo.Bitrate)

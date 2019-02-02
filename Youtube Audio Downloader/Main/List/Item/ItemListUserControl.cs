@@ -35,11 +35,11 @@ namespace YoutubeAudioDownloader.Main.List.Item
             resizableLabelTitle.Text = videoInfo.Title;
             labelDuration.Text = videoInfo.Duration.ToString();
             labelDate.Text = videoInfo.UploadDate.ToString("dd/MM/yyyy");
-            labelRating.Text = (videoInfo.Statistics.AverageRating + "/5");
+            labelRating.Text = (videoInfo.Statistics.AverageRating.ToString("0.0") + "/5");
 
             labelEncoding.Text = (videoInfo.AudioInfo.Container + "/" + videoInfo.AudioInfo.Encoding);
             labelBitrate.Text = (Math.Round((videoInfo.AudioInfo.Bitrate / 1000f), MidpointRounding.ToEven) + " Kbps");
-            labelSize.Text = ((((videoInfo.AudioInfo.Size * 2.5) / 1024f) / 1024f).ToString("00.00") + " MB");
+            labelSize.Text = (((videoInfo.AudioInfo.Size / 1024f) / 1024f).ToString("00.00") + " MB");
 
             buttonDownload.Enabled = true;
         }
