@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
@@ -77,10 +78,14 @@ namespace YoutubeAudioDownloader.Main.Download.Item
 
                 IsRunning = true;
             }
-            else
+            else if (buttonDownloadCancel.Text == "Annulla")
             {
                 videoInfo.AudioInfo.CancelAsync();
                 converterMp3.CancelAsync();
+            }
+            else
+            {
+                Process.Start("explorer.exe", ("/select, \"" + Path.ChangeExtension(downloadPath, ".mp3") + "\""));
             }
         }
         #endregion
@@ -165,11 +170,16 @@ namespace YoutubeAudioDownloader.Main.Download.Item
         {
             if (fileName != string.Empty)
             {
+                SetButtonDownloadCancelText("Scarica");
+
                 File.Delete(fileName);
+            }
+            else
+            {
+                SetButtonDownloadCancelText("Apri");
             }
 
             SetLabelText(message);
-            SetButtonDownloadCancelText("Scarica");
 
             EnableButtonRemove(true);
             SetProgressBarPercentage(percentage);
