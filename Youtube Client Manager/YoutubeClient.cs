@@ -30,7 +30,7 @@ namespace YoutubeClientManager
 
             if (videoId.Length == 11)
             {
-                isValid = (!Regex.IsMatch(videoId, @"[^0-9a-zA-Z_\-]"));
+                isValid = (!Regex.IsMatch(videoId, (@"[^0-9a-zA-Z_\-]")));
             }
 
             return isValid;
@@ -40,21 +40,21 @@ namespace YoutubeClientManager
         {
             videoId = string.Empty;
 
-            string regularMatch = Regex.Match(videoUrl, @"youtube\..+?/watch.*?v=(.*?)(?:&|/|$)").Groups[1].Value;
+            string regularMatch = Regex.Match(videoUrl, (@"youtube\..+?/watch.*?v=(.*?)(?:&|/|$)")).Groups[1].Value;
             if ((regularMatch != string.Empty) && (ValidateVideoId(regularMatch)))
             {
                 videoId = regularMatch;
                 return true;
             }
 
-            string shortMatch = Regex.Match(videoUrl, @"youtu\.be/(.*?)(?:\?|&|/|$)").Groups[1].Value;
+            string shortMatch = Regex.Match(videoUrl, (@"youtu\.be/(.*?)(?:\?|&|/|$)")).Groups[1].Value;
             if ((shortMatch != string.Empty) && (ValidateVideoId(shortMatch)))
             {
                 videoId = shortMatch;
                 return true;
             }
 
-            string embedMatch = Regex.Match(videoUrl, @"youtube\..+?/embed/(.*?)(?:\?|&|/|$)").Groups[1].Value;
+            string embedMatch = Regex.Match(videoUrl, (@"youtube\..+?/embed/(.*?)(?:\?|&|/|$)")).Groups[1].Value;
             if ((embedMatch != string.Empty) && (ValidateVideoId(embedMatch)))
             {
                 videoId = embedMatch;
@@ -97,7 +97,7 @@ namespace YoutubeClientManager
                     {
                         videoIdList.Add(videoId);
                     }
-                    else if (videoIds[i].Contains("ypc-checkout-button"))
+                    else if (videoIds[i].Contains("grid-movie-renderer"))
                     {
                         videoIdList.Remove(videoId);
                     }
@@ -116,7 +116,7 @@ namespace YoutubeClientManager
         #region VIDEO
         private async Task<string> GetVideoInfoRawAsync(string videoId, string el)
         {
-            string requestEurl = WebUtility.UrlEncode($"https://youtube.googleapis.com/v/{videoId}");
+            string requestEurl = WebUtility.UrlEncode(($"https://youtube.googleapis.com/v/{videoId}"));
             string requestUri = ($"https://www.youtube.com/get_video_info?video_id={videoId}&el={el}&eurl={requestEurl}");
 
             return (await httpClient.GetStringAsync(requestUri).ConfigureAwait(false));
@@ -266,7 +266,7 @@ namespace YoutubeClientManager
             }
 
             Dictionary<string, string> videoInfoDictonary = (await GetVideoInfoADictonaryAsync(videoId).ConfigureAwait(false));
-            string videoWatchPageRaw = (await httpClient.GetStringAsync($"https://www.youtube.com/watch?v={videoId}").ConfigureAwait(false));
+            string videoWatchPageRaw = (await httpClient.GetStringAsync(($"https://www.youtube.com/watch?v={videoId}")).ConfigureAwait(false));
 
             VideoInfo videoInfo = new VideoInfo(videoId)
             {
