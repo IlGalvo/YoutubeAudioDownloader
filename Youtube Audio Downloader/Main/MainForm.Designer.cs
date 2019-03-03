@@ -64,11 +64,11 @@
             this.buttonResearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonResearch.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.buttonResearch.FlatAppearance.CheckedBackColor = System.Drawing.Color.PaleGreen;
-            this.buttonResearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
-            this.buttonResearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonResearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.buttonResearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkCyan;
             this.buttonResearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonResearch.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonResearch.ForeColor = System.Drawing.Color.DarkGreen;
+            this.buttonResearch.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonResearch.Image = ((System.Drawing.Image)(resources.GetObject("buttonResearch.Image")));
             this.buttonResearch.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonResearch.Location = new System.Drawing.Point(3, 3);
