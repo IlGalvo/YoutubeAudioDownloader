@@ -48,7 +48,7 @@
             // 
             // panelAction
             // 
-            this.panelAction.BackColor = System.Drawing.Color.SeaGreen;
+            this.panelAction.BackColor = System.Drawing.Color.Black;
             this.panelAction.Controls.Add(this.buttonShowAll);
             this.panelAction.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelAction.Location = new System.Drawing.Point(0, 10);
@@ -60,14 +60,14 @@
             // buttonShowAll
             // 
             this.buttonShowAll.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonShowAll.BackColor = System.Drawing.Color.Honeydew;
+            this.buttonShowAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(40)))), ((int)(((byte)(70)))));
             this.buttonShowAll.Enabled = false;
-            this.buttonShowAll.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
+            this.buttonShowAll.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.buttonShowAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
             this.buttonShowAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.buttonShowAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonShowAll.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonShowAll.ForeColor = System.Drawing.Color.DarkGreen;
+            this.buttonShowAll.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonShowAll.Location = new System.Drawing.Point(293, 7);
             this.buttonShowAll.Name = "buttonShowAll";
             this.buttonShowAll.Size = new System.Drawing.Size(148, 40);

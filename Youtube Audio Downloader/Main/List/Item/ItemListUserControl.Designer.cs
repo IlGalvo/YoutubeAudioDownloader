@@ -78,6 +78,7 @@
             this.groupBoxVideo.Controls.Add(this.labelDurationStatic);
             this.groupBoxVideo.Controls.Add(this.labelTitleStatic);
             this.groupBoxVideo.Controls.Add(this.labelAuthorStatic);
+            this.groupBoxVideo.ForeColor = System.Drawing.Color.White;
             this.groupBoxVideo.Location = new System.Drawing.Point(305, 8);
             this.groupBoxVideo.Name = "groupBoxVideo";
             this.groupBoxVideo.Size = new System.Drawing.Size(420, 134);
@@ -85,12 +86,13 @@
             this.groupBoxVideo.TabStop = false;
             this.groupBoxVideo.Text = "Video";
             // 
-            // optimizedLabelTitle
+            // resizableLabelTitle
             // 
             this.resizableLabelTitle.AutoSize = true;
             this.resizableLabelTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resizableLabelTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.resizableLabelTitle.Location = new System.Drawing.Point(94, 40);
-            this.resizableLabelTitle.Name = "optimizedLabelTitle";
+            this.resizableLabelTitle.Name = "resizableLabelTitle";
             this.resizableLabelTitle.Size = new System.Drawing.Size(41, 17);
             this.resizableLabelTitle.TabIndex = 5;
             this.resizableLabelTitle.Text = "Titolo";
@@ -99,6 +101,7 @@
             // 
             this.labelAuthor.AutoSize = true;
             this.labelAuthor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAuthor.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelAuthor.Location = new System.Drawing.Point(94, 23);
             this.labelAuthor.Name = "labelAuthor";
             this.labelAuthor.Size = new System.Drawing.Size(47, 17);
@@ -109,6 +112,7 @@
             // 
             this.labelRating.AutoSize = true;
             this.labelRating.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRating.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelRating.Location = new System.Drawing.Point(94, 91);
             this.labelRating.Name = "labelRating";
             this.labelRating.Size = new System.Drawing.Size(74, 17);
@@ -119,6 +123,7 @@
             // 
             this.labelDuration.AutoSize = true;
             this.labelDuration.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDuration.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelDuration.Location = new System.Drawing.Point(94, 57);
             this.labelDuration.Name = "labelDuration";
             this.labelDuration.Size = new System.Drawing.Size(47, 17);
@@ -129,6 +134,7 @@
             // 
             this.labelDate.AutoSize = true;
             this.labelDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDate.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelDate.Location = new System.Drawing.Point(94, 74);
             this.labelDate.Name = "labelDate";
             this.labelDate.Size = new System.Drawing.Size(35, 17);
@@ -140,7 +146,7 @@
             this.linkLabelShowExtra.AutoSize = true;
             this.linkLabelShowExtra.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelShowExtra.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabelShowExtra.LinkColor = System.Drawing.Color.Blue;
+            this.linkLabelShowExtra.LinkColor = System.Drawing.Color.RoyalBlue;
             this.linkLabelShowExtra.Location = new System.Drawing.Point(6, 110);
             this.linkLabelShowExtra.Name = "linkLabelShowExtra";
             this.linkLabelShowExtra.Size = new System.Drawing.Size(95, 17);
@@ -153,6 +159,7 @@
             // 
             this.labelRatingStatic.AutoSize = true;
             this.labelRatingStatic.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRatingStatic.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelRatingStatic.Location = new System.Drawing.Point(6, 91);
             this.labelRatingStatic.Name = "labelRatingStatic";
             this.labelRatingStatic.Size = new System.Drawing.Size(80, 17);
@@ -163,6 +170,7 @@
             // 
             this.labelDateStatic.AutoSize = true;
             this.labelDateStatic.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDateStatic.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelDateStatic.Location = new System.Drawing.Point(6, 74);
             this.labelDateStatic.Name = "labelDateStatic";
             this.labelDateStatic.Size = new System.Drawing.Size(39, 17);
@@ -173,6 +181,7 @@
             // 
             this.labelDurationStatic.AutoSize = true;
             this.labelDurationStatic.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDurationStatic.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelDurationStatic.Location = new System.Drawing.Point(6, 57);
             this.labelDurationStatic.Name = "labelDurationStatic";
             this.labelDurationStatic.Size = new System.Drawing.Size(52, 17);
@@ -183,6 +192,7 @@
             // 
             this.labelTitleStatic.AutoSize = true;
             this.labelTitleStatic.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitleStatic.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelTitleStatic.Location = new System.Drawing.Point(6, 40);
             this.labelTitleStatic.Name = "labelTitleStatic";
             this.labelTitleStatic.Size = new System.Drawing.Size(45, 17);
@@ -193,6 +203,7 @@
             // 
             this.labelAuthorStatic.AutoSize = true;
             this.labelAuthorStatic.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAuthorStatic.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelAuthorStatic.Location = new System.Drawing.Point(6, 23);
             this.labelAuthorStatic.Name = "labelAuthorStatic";
             this.labelAuthorStatic.Size = new System.Drawing.Size(53, 17);
@@ -209,6 +220,7 @@
             this.groupBoxAudio.Controls.Add(this.labelSizeStatic);
             this.groupBoxAudio.Controls.Add(this.labelBitrateStatic);
             this.groupBoxAudio.Controls.Add(this.labelEncodingStatic);
+            this.groupBoxAudio.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.groupBoxAudio.Location = new System.Drawing.Point(305, 148);
             this.groupBoxAudio.Name = "groupBoxAudio";
             this.groupBoxAudio.Size = new System.Drawing.Size(420, 80);
@@ -220,6 +232,7 @@
             // 
             this.labelEncoding.AutoSize = true;
             this.labelEncoding.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEncoding.ForeColor = System.Drawing.Color.White;
             this.labelEncoding.Location = new System.Drawing.Point(94, 23);
             this.labelEncoding.Name = "labelEncoding";
             this.labelEncoding.Size = new System.Drawing.Size(55, 17);
@@ -230,6 +243,7 @@
             // 
             this.labelBitrate.AutoSize = true;
             this.labelBitrate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBitrate.ForeColor = System.Drawing.Color.White;
             this.labelBitrate.Location = new System.Drawing.Point(94, 40);
             this.labelBitrate.Name = "labelBitrate";
             this.labelBitrate.Size = new System.Drawing.Size(45, 17);
@@ -240,6 +254,7 @@
             // 
             this.labelSize.AutoSize = true;
             this.labelSize.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSize.ForeColor = System.Drawing.Color.White;
             this.labelSize.Location = new System.Drawing.Point(94, 57);
             this.labelSize.Name = "labelSize";
             this.labelSize.Size = new System.Drawing.Size(76, 17);
@@ -250,6 +265,7 @@
             // 
             this.labelSizeStatic.AutoSize = true;
             this.labelSizeStatic.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSizeStatic.ForeColor = System.Drawing.Color.White;
             this.labelSizeStatic.Location = new System.Drawing.Point(6, 57);
             this.labelSizeStatic.Name = "labelSizeStatic";
             this.labelSizeStatic.Size = new System.Drawing.Size(82, 17);
@@ -260,6 +276,7 @@
             // 
             this.labelBitrateStatic.AutoSize = true;
             this.labelBitrateStatic.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBitrateStatic.ForeColor = System.Drawing.Color.White;
             this.labelBitrateStatic.Location = new System.Drawing.Point(6, 40);
             this.labelBitrateStatic.Name = "labelBitrateStatic";
             this.labelBitrateStatic.Size = new System.Drawing.Size(51, 17);
@@ -270,6 +287,7 @@
             // 
             this.labelEncodingStatic.AutoSize = true;
             this.labelEncodingStatic.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEncodingStatic.ForeColor = System.Drawing.Color.White;
             this.labelEncodingStatic.Location = new System.Drawing.Point(6, 23);
             this.labelEncodingStatic.Name = "labelEncodingStatic";
             this.labelEncodingStatic.Size = new System.Drawing.Size(58, 17);
@@ -294,7 +312,7 @@
             this.buttonDownload.UseVisualStyleBackColor = false;
             this.buttonDownload.Click += new System.EventHandler(this.buttonDownload_Click);
             // 
-            // EntryListUserControl
+            // ItemListUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -306,7 +324,7 @@
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(0);
-            this.Name = "EntryListUserControl";
+            this.Name = "ItemListUserControl";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
             this.Size = new System.Drawing.Size(734, 276);
             this.groupBoxVideo.ResumeLayout(false);

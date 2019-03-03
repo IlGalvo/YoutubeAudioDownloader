@@ -48,7 +48,7 @@
             // 
             // panelAction
             // 
-            this.panelAction.BackColor = System.Drawing.Color.SeaGreen;
+            this.panelAction.BackColor = System.Drawing.Color.Black;
             this.panelAction.Controls.Add(this.buttonRemoveAll);
             this.panelAction.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelAction.Location = new System.Drawing.Point(0, 10);

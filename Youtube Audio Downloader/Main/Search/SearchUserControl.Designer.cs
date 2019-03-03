@@ -77,7 +77,7 @@
             // 
             // panelAction
             // 
-            this.panelAction.BackColor = System.Drawing.Color.SeaGreen;
+            this.panelAction.BackColor = System.Drawing.Color.Black;
             this.panelAction.Controls.Add(this.buttonTemp);
             this.panelAction.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelAction.Location = new System.Drawing.Point(0, 10);
@@ -89,11 +89,12 @@
             // buttonTemp
             // 
             this.buttonTemp.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonTemp.BackColor = System.Drawing.Color.Honeydew;
-            this.buttonTemp.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
+            this.buttonTemp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(70)))));
+            this.buttonTemp.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.buttonTemp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
             this.buttonTemp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.buttonTemp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTemp.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonTemp.Location = new System.Drawing.Point(293, 7);
             this.buttonTemp.Name = "buttonTemp";
             this.buttonTemp.Size = new System.Drawing.Size(148, 40);
@@ -161,14 +162,14 @@
             this.placeholderRichTextBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.placeholderRichTextBoxSearch.AutoWordSelection = true;
             this.placeholderRichTextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.placeholderRichTextBoxSearch.Location = new System.Drawing.Point(9, 230);
+            this.placeholderRichTextBoxSearch.Location = new System.Drawing.Point(14, 230);
             this.placeholderRichTextBoxSearch.Multiline = false;
             this.placeholderRichTextBoxSearch.Name = "placeholderRichTextBoxSearch";
             this.placeholderRichTextBoxSearch.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.placeholderRichTextBoxSearch.PlaceholderText = "Cerca un video o incolla un link...";
             this.placeholderRichTextBoxSearch.PlaceholerFont = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.placeholderRichTextBoxSearch.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.placeholderRichTextBoxSearch.Size = new System.Drawing.Size(639, 43);
+            this.placeholderRichTextBoxSearch.Size = new System.Drawing.Size(631, 42);
             this.placeholderRichTextBoxSearch.TabIndex = 1;
             this.placeholderRichTextBoxSearch.Text = "";
             this.placeholderRichTextBoxSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.optimizedTextBoxSearch_KeyUp);

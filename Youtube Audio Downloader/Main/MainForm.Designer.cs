@@ -40,7 +40,7 @@
             // 
             // tableLayoutPanelMenu
             // 
-            this.tableLayoutPanelMenu.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.tableLayoutPanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.tableLayoutPanelMenu.ColumnCount = 1;
             this.tableLayoutPanelMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelMenu.Controls.Add(this.buttonResearch, 0, 0);
@@ -60,9 +60,9 @@
             // 
             // buttonResearch
             // 
-            this.buttonResearch.BackColor = System.Drawing.Color.Honeydew;
+            this.buttonResearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.buttonResearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonResearch.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
+            this.buttonResearch.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.buttonResearch.FlatAppearance.CheckedBackColor = System.Drawing.Color.PaleGreen;
             this.buttonResearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
             this.buttonResearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
@@ -82,9 +82,9 @@
             // 
             // buttonList
             // 
-            this.buttonList.BackColor = System.Drawing.Color.Honeydew;
+            this.buttonList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.buttonList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonList.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
+            this.buttonList.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.buttonList.FlatAppearance.CheckedBackColor = System.Drawing.Color.PaleGreen;
             this.buttonList.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
             this.buttonList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
@@ -105,9 +105,9 @@
             // 
             // buttonDownload
             // 
-            this.buttonDownload.BackColor = System.Drawing.Color.Honeydew;
+            this.buttonDownload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.buttonDownload.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonDownload.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
+            this.buttonDownload.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.buttonDownload.FlatAppearance.CheckedBackColor = System.Drawing.Color.PaleGreen;
             this.buttonDownload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
             this.buttonDownload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
@@ -128,9 +128,9 @@
             // 
             // buttonSettings
             // 
-            this.buttonSettings.BackColor = System.Drawing.Color.Honeydew;
+            this.buttonSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.buttonSettings.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSettings.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
+            this.buttonSettings.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.buttonSettings.FlatAppearance.CheckedBackColor = System.Drawing.Color.PaleGreen;
             this.buttonSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
             this.buttonSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
@@ -151,6 +151,7 @@
             // 
             // panelContent
             // 
+            this.panelContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(97, 0);
             this.panelContent.Name = "panelContent";

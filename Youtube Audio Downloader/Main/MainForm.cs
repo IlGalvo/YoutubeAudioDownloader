@@ -51,7 +51,7 @@ namespace YoutubeAudioDownloader.Main
             {
                 bool clickedButton = (keyValuePair.Key == ((Button)sender));
 
-                keyValuePair.Key.BackColor = (clickedButton ? Color.LightGreen : Color.Honeydew);
+                //keyValuePair.Key.BackColor = (clickedButton ? Color.LightGreen : Color.Honeydew);
                 keyValuePair.Value.Visible = clickedButton;
             }
         }
