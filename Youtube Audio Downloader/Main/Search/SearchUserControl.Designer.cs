@@ -35,16 +35,12 @@
             this.buttonTemp = new System.Windows.Forms.Button();
             this.panelContent = new System.Windows.Forms.Panel();
             this.labelInformation = new System.Windows.Forms.Label();
-            this.panelLoading = new System.Windows.Forms.Panel();
-            this.pictureBoxLoadingImage = new System.Windows.Forms.PictureBox();
-            this.pictureBoxLoadingText = new System.Windows.Forms.PictureBox();
             this.placeholderRichTextBoxSearch = new CustomControlCollection.RichTextBoxes.PlaceholderRichTextBox();
+            this.pictureBoxLoadingImage = new System.Windows.Forms.PictureBox();
             this.panelActionOffset.SuspendLayout();
             this.panelAction.SuspendLayout();
             this.panelContent.SuspendLayout();
-            this.panelLoading.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadingImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadingText)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonSearch
@@ -107,8 +103,8 @@
             // panelContent
             // 
             this.panelContent.AutoScroll = true;
+            this.panelContent.Controls.Add(this.pictureBoxLoadingImage);
             this.panelContent.Controls.Add(this.labelInformation);
-            this.panelContent.Controls.Add(this.panelLoading);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(0, 0);
             this.panelContent.Name = "panelContent";
@@ -127,36 +123,6 @@
             this.labelInformation.TabIndex = 7;
             this.labelInformation.Text = "Information";
             // 
-            // panelLoading
-            // 
-            this.panelLoading.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelLoading.Controls.Add(this.pictureBoxLoadingImage);
-            this.panelLoading.Controls.Add(this.pictureBoxLoadingText);
-            this.panelLoading.Location = new System.Drawing.Point(287, 282);
-            this.panelLoading.Name = "panelLoading";
-            this.panelLoading.Size = new System.Drawing.Size(148, 101);
-            this.panelLoading.TabIndex = 6;
-            this.panelLoading.Visible = false;
-            // 
-            // pictureBoxLoadingImage
-            // 
-            this.pictureBoxLoadingImage.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLoadingImage.Image")));
-            this.pictureBoxLoadingImage.Location = new System.Drawing.Point(41, 3);
-            this.pictureBoxLoadingImage.Name = "pictureBoxLoadingImage";
-            this.pictureBoxLoadingImage.Size = new System.Drawing.Size(60, 60);
-            this.pictureBoxLoadingImage.TabIndex = 0;
-            this.pictureBoxLoadingImage.TabStop = false;
-            // 
-            // pictureBoxLoadingText
-            // 
-            this.pictureBoxLoadingText.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLoadingText.Image")));
-            this.pictureBoxLoadingText.Location = new System.Drawing.Point(3, 57);
-            this.pictureBoxLoadingText.Name = "pictureBoxLoadingText";
-            this.pictureBoxLoadingText.Size = new System.Drawing.Size(142, 40);
-            this.pictureBoxLoadingText.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLoadingText.TabIndex = 1;
-            this.pictureBoxLoadingText.TabStop = false;
-            // 
             // placeholderRichTextBoxSearch
             // 
             this.placeholderRichTextBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -173,6 +139,18 @@
             this.placeholderRichTextBoxSearch.TabIndex = 1;
             this.placeholderRichTextBoxSearch.Text = "";
             this.placeholderRichTextBoxSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.optimizedTextBoxSearch_KeyUp);
+            // 
+            // pictureBoxLoadingImage
+            // 
+            this.pictureBoxLoadingImage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxLoadingImage.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLoadingImage.Image")));
+            this.pictureBoxLoadingImage.Location = new System.Drawing.Point(320, 296);
+            this.pictureBoxLoadingImage.Name = "pictureBoxLoadingImage";
+            this.pictureBoxLoadingImage.Size = new System.Drawing.Size(64, 64);
+            this.pictureBoxLoadingImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxLoadingImage.TabIndex = 0;
+            this.pictureBoxLoadingImage.TabStop = false;
+            this.pictureBoxLoadingImage.Visible = false;
             // 
             // SearchUserControl
             // 
@@ -192,9 +170,7 @@
             this.panelAction.ResumeLayout(false);
             this.panelContent.ResumeLayout(false);
             this.panelContent.PerformLayout();
-            this.panelLoading.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadingImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadingText)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -207,9 +183,7 @@
         private System.Windows.Forms.Panel panelContent;
         private System.Windows.Forms.Panel panelAction;
         private System.Windows.Forms.Button buttonTemp;
-        private System.Windows.Forms.PictureBox pictureBoxLoadingImage;
-        private System.Windows.Forms.PictureBox pictureBoxLoadingText;
-        private System.Windows.Forms.Panel panelLoading;
         private System.Windows.Forms.Label labelInformation;
+        private System.Windows.Forms.PictureBox pictureBoxLoadingImage;
     }
 }

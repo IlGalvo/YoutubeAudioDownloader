@@ -45,7 +45,7 @@ namespace YoutubeAudioDownloader.Main.Search
             {
                 ListUserControl.Instance.ClearAllVideo();
 
-                panelLoading.Visible = true;
+                pictureBoxLoadingImage.Visible = true;
                 buttonSearch.Enabled = false;
 
                 try
@@ -82,7 +82,7 @@ namespace YoutubeAudioDownloader.Main.Search
                 }
                 finally
                 {
-                    panelLoading.Visible = false;
+                    pictureBoxLoadingImage.Visible = false;
                     buttonSearch.Enabled = true;
                 }
             }
