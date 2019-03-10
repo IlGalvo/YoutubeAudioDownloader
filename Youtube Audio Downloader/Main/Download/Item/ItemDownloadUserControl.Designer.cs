@@ -81,6 +81,7 @@ namespace YoutubeAudioDownloader.Main.Download.Item
             this.groupBoxDownload.Controls.Add(this.labelTitleStatic);
             this.groupBoxDownload.Controls.Add(this.resizableLabelTitle);
             this.groupBoxDownload.Controls.Add(this.labelBitrateSizeStatic);
+            this.groupBoxDownload.ForeColor = System.Drawing.Color.White;
             this.groupBoxDownload.Location = new System.Drawing.Point(170, 8);
             this.groupBoxDownload.Name = "groupBoxDownload";
             this.groupBoxDownload.Size = new System.Drawing.Size(521, 86);
@@ -92,6 +93,7 @@ namespace YoutubeAudioDownloader.Main.Download.Item
             // 
             this.labelInformation.AutoSize = true;
             this.labelInformation.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInformation.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelInformation.Location = new System.Drawing.Point(6, 64);
             this.labelInformation.Name = "labelInformation";
             this.labelInformation.Size = new System.Drawing.Size(81, 17);
@@ -102,6 +104,7 @@ namespace YoutubeAudioDownloader.Main.Download.Item
             // 
             this.labelBitrateSize.AutoSize = true;
             this.labelBitrateSize.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBitrateSize.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelBitrateSize.Location = new System.Drawing.Point(91, 43);
             this.labelBitrateSize.Name = "labelBitrateSize";
             this.labelBitrateSize.Size = new System.Drawing.Size(73, 17);
@@ -112,18 +115,20 @@ namespace YoutubeAudioDownloader.Main.Download.Item
             // 
             this.labelTitleStatic.AutoSize = true;
             this.labelTitleStatic.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitleStatic.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelTitleStatic.Location = new System.Drawing.Point(6, 26);
             this.labelTitleStatic.Name = "labelTitleStatic";
             this.labelTitleStatic.Size = new System.Drawing.Size(45, 17);
             this.labelTitleStatic.TabIndex = 1;
             this.labelTitleStatic.Text = "Titolo:";
             // 
-            // optimizedLabelTitle
+            // resizableLabelTitle
             // 
             this.resizableLabelTitle.AutoSize = true;
             this.resizableLabelTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resizableLabelTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.resizableLabelTitle.Location = new System.Drawing.Point(91, 26);
-            this.resizableLabelTitle.Name = "optimizedLabelTitle";
+            this.resizableLabelTitle.Name = "resizableLabelTitle";
             this.resizableLabelTitle.Size = new System.Drawing.Size(41, 17);
             this.resizableLabelTitle.TabIndex = 2;
             this.resizableLabelTitle.Text = "Titolo";
@@ -132,6 +137,7 @@ namespace YoutubeAudioDownloader.Main.Download.Item
             // 
             this.labelBitrateSizeStatic.AutoSize = true;
             this.labelBitrateSizeStatic.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBitrateSizeStatic.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelBitrateSizeStatic.Location = new System.Drawing.Point(6, 43);
             this.labelBitrateSizeStatic.Name = "labelBitrateSizeStatic";
             this.labelBitrateSizeStatic.Size = new System.Drawing.Size(79, 17);
@@ -140,12 +146,12 @@ namespace YoutubeAudioDownloader.Main.Download.Item
             // 
             // buttonDownloadCancel
             // 
-            this.buttonDownloadCancel.BackColor = System.Drawing.Color.LightCyan;
-            this.buttonDownloadCancel.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.buttonDownloadCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise;
-            this.buttonDownloadCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
+            this.buttonDownloadCancel.BackColor = System.Drawing.Color.SteelBlue;
+            this.buttonDownloadCancel.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.buttonDownloadCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonDownloadCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonDownloadCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDownloadCancel.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.buttonDownloadCancel.ForeColor = System.Drawing.Color.Black;
             this.buttonDownloadCancel.Location = new System.Drawing.Point(170, 100);
             this.buttonDownloadCancel.Name = "buttonDownloadCancel";
             this.buttonDownloadCancel.Size = new System.Drawing.Size(75, 30);
@@ -174,6 +180,7 @@ namespace YoutubeAudioDownloader.Main.Download.Item
             // coloredProgressBarDownload
             // 
             this.coloredProgressBarDownload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.coloredProgressBarDownload.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coloredProgressBarDownload.ForeColor = System.Drawing.Color.Blue;
             this.coloredProgressBarDownload.Location = new System.Drawing.Point(251, 100);
             this.coloredProgressBarDownload.Name = "coloredProgressBarDownload";
@@ -182,7 +189,7 @@ namespace YoutubeAudioDownloader.Main.Download.Item
             this.coloredProgressBarDownload.Size = new System.Drawing.Size(440, 30);
             this.coloredProgressBarDownload.TabIndex = 7;
             // 
-            // EntryDownloadUserControl
+            // ItemDownloadUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -195,7 +202,7 @@ namespace YoutubeAudioDownloader.Main.Download.Item
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(0);
-            this.Name = "EntryDownloadUserControl";
+            this.Name = "ItemDownloadUserControl";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
             this.Size = new System.Drawing.Size(734, 138);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();

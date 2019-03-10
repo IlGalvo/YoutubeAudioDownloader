@@ -48,7 +48,7 @@
             // 
             // panelAction
             // 
-            this.panelAction.BackColor = System.Drawing.Color.Black;
+            this.panelAction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.panelAction.Controls.Add(this.buttonRemoveAll);
             this.panelAction.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelAction.Location = new System.Drawing.Point(0, 10);
@@ -60,14 +60,14 @@
             // buttonRemoveAll
             // 
             this.buttonRemoveAll.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonRemoveAll.BackColor = System.Drawing.Color.Honeydew;
+            this.buttonRemoveAll.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonRemoveAll.Enabled = false;
-            this.buttonRemoveAll.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
-            this.buttonRemoveAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
-            this.buttonRemoveAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonRemoveAll.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.buttonRemoveAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonRemoveAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonRemoveAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRemoveAll.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRemoveAll.ForeColor = System.Drawing.Color.DarkGreen;
+            this.buttonRemoveAll.ForeColor = System.Drawing.Color.Black;
             this.buttonRemoveAll.Location = new System.Drawing.Point(293, 7);
             this.buttonRemoveAll.Name = "buttonRemoveAll";
             this.buttonRemoveAll.Size = new System.Drawing.Size(148, 40);

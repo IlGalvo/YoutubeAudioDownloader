@@ -146,7 +146,7 @@
             this.linkLabelShowExtra.AutoSize = true;
             this.linkLabelShowExtra.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelShowExtra.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabelShowExtra.LinkColor = System.Drawing.Color.RoyalBlue;
+            this.linkLabelShowExtra.LinkColor = System.Drawing.Color.SteelBlue;
             this.linkLabelShowExtra.Location = new System.Drawing.Point(6, 110);
             this.linkLabelShowExtra.Name = "linkLabelShowExtra";
             this.linkLabelShowExtra.Size = new System.Drawing.Size(95, 17);
@@ -296,14 +296,14 @@
             // 
             // buttonDownload
             // 
-            this.buttonDownload.BackColor = System.Drawing.Color.LightCyan;
+            this.buttonDownload.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonDownload.Enabled = false;
-            this.buttonDownload.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.buttonDownload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise;
-            this.buttonDownload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
+            this.buttonDownload.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.buttonDownload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonDownload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDownload.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDownload.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.buttonDownload.ForeColor = System.Drawing.Color.Black;
             this.buttonDownload.Location = new System.Drawing.Point(305, 234);
             this.buttonDownload.Name = "buttonDownload";
             this.buttonDownload.Size = new System.Drawing.Size(85, 35);

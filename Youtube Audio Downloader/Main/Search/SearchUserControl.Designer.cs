@@ -50,13 +50,13 @@
             // buttonSearch
             // 
             this.buttonSearch.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonSearch.BackColor = System.Drawing.Color.Honeydew;
-            this.buttonSearch.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
-            this.buttonSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
-            this.buttonSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonSearch.BackColor = System.Drawing.Color.SteelBlue;
+            this.buttonSearch.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.buttonSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSearch.ForeColor = System.Drawing.Color.DarkGreen;
+            this.buttonSearch.ForeColor = System.Drawing.Color.Black;
             this.buttonSearch.Location = new System.Drawing.Point(644, 230);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(81, 42);
@@ -77,7 +77,7 @@
             // 
             // panelAction
             // 
-            this.panelAction.BackColor = System.Drawing.Color.Black;
+            this.panelAction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.panelAction.Controls.Add(this.buttonTemp);
             this.panelAction.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelAction.Location = new System.Drawing.Point(0, 10);
@@ -89,12 +89,12 @@
             // buttonTemp
             // 
             this.buttonTemp.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonTemp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(70)))));
+            this.buttonTemp.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonTemp.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.buttonTemp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
-            this.buttonTemp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonTemp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonTemp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonTemp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTemp.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonTemp.ForeColor = System.Drawing.Color.Black;
             this.buttonTemp.Location = new System.Drawing.Point(293, 7);
             this.buttonTemp.Name = "buttonTemp";
             this.buttonTemp.Size = new System.Drawing.Size(148, 40);
@@ -120,7 +120,7 @@
             this.labelInformation.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelInformation.AutoSize = true;
             this.labelInformation.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInformation.ForeColor = System.Drawing.Color.DarkGreen;
+            this.labelInformation.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelInformation.Location = new System.Drawing.Point(9, 279);
             this.labelInformation.Name = "labelInformation";
             this.labelInformation.Size = new System.Drawing.Size(115, 25);

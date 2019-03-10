@@ -66,7 +66,7 @@
             // 
             // panelAction
             // 
-            this.panelAction.BackColor = System.Drawing.Color.SeaGreen;
+            this.panelAction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.panelAction.Controls.Add(this.buttonRestore);
             this.panelAction.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelAction.Location = new System.Drawing.Point(0, 10);
@@ -78,13 +78,13 @@
             // buttonRestore
             // 
             this.buttonRestore.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonRestore.BackColor = System.Drawing.Color.Honeydew;
-            this.buttonRestore.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
-            this.buttonRestore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
-            this.buttonRestore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonRestore.BackColor = System.Drawing.Color.SteelBlue;
+            this.buttonRestore.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.buttonRestore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonRestore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRestore.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRestore.ForeColor = System.Drawing.Color.DarkGreen;
+            this.buttonRestore.ForeColor = System.Drawing.Color.Black;
             this.buttonRestore.Location = new System.Drawing.Point(293, 7);
             this.buttonRestore.Name = "buttonRestore";
             this.buttonRestore.Size = new System.Drawing.Size(148, 40);
@@ -116,6 +116,7 @@
             this.groupBoxGeneral.Controls.Add(this.labelSilentDownloadStatic);
             this.groupBoxGeneral.Controls.Add(this.toggleButtonSilentDownload);
             this.groupBoxGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxGeneral.ForeColor = System.Drawing.Color.White;
             this.groupBoxGeneral.Location = new System.Drawing.Point(9, 371);
             this.groupBoxGeneral.Name = "groupBoxGeneral";
             this.groupBoxGeneral.Size = new System.Drawing.Size(716, 177);
@@ -128,6 +129,7 @@
             this.labelSilentDownloadStatic.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelSilentDownloadStatic.AutoSize = true;
             this.labelSilentDownloadStatic.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSilentDownloadStatic.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelSilentDownloadStatic.Location = new System.Drawing.Point(5, 81);
             this.labelSilentDownloadStatic.Name = "labelSilentDownloadStatic";
             this.labelSilentDownloadStatic.Size = new System.Drawing.Size(248, 25);
@@ -145,7 +147,7 @@
             this.toggleButtonSilentDownload.Size = new System.Drawing.Size(50, 25);
             this.toggleButtonSilentDownload.TabIndex = 9;
             this.toggleButtonSilentDownload.ToggleColor = System.Drawing.Color.White;
-            this.toggleButtonSilentDownload.ToggleState = SettingsService.DefaultAutoDownload;
+            this.toggleButtonSilentDownload.ToggleState = false;
             this.toggleButtonSilentDownload.ToggleChanged += new CustomControlCollection.Buttons.ToggleButton.ToggledChangedEventHandler(this.toggleButtonSilentDownload_ToggleChanged);
             // 
             // groupBoxDownload
@@ -153,6 +155,7 @@
             this.groupBoxDownload.Controls.Add(this.buttonDownloadPath);
             this.groupBoxDownload.Controls.Add(this.richTextBoxDownloadPath);
             this.groupBoxDownload.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxDownload.ForeColor = System.Drawing.Color.White;
             this.groupBoxDownload.Location = new System.Drawing.Point(9, 190);
             this.groupBoxDownload.Name = "groupBoxDownload";
             this.groupBoxDownload.Size = new System.Drawing.Size(716, 175);
@@ -163,16 +166,16 @@
             // buttonDownloadPath
             // 
             this.buttonDownloadPath.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonDownloadPath.BackColor = System.Drawing.Color.Honeydew;
-            this.buttonDownloadPath.FlatAppearance.BorderColor = System.Drawing.Color.SpringGreen;
-            this.buttonDownloadPath.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
-            this.buttonDownloadPath.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonDownloadPath.BackColor = System.Drawing.Color.SteelBlue;
+            this.buttonDownloadPath.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.buttonDownloadPath.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonDownloadPath.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonDownloadPath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDownloadPath.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDownloadPath.ForeColor = System.Drawing.Color.DarkGreen;
+            this.buttonDownloadPath.ForeColor = System.Drawing.Color.Black;
             this.buttonDownloadPath.Location = new System.Drawing.Point(660, 74);
             this.buttonDownloadPath.Name = "buttonDownloadPath";
-            this.buttonDownloadPath.Size = new System.Drawing.Size(50, 35);
+            this.buttonDownloadPath.Size = new System.Drawing.Size(50, 36);
             this.buttonDownloadPath.TabIndex = 6;
             this.buttonDownloadPath.Text = ". . .";
             this.buttonDownloadPath.UseVisualStyleBackColor = false;
@@ -188,15 +191,16 @@
             this.richTextBoxDownloadPath.Name = "richTextBoxDownloadPath";
             this.richTextBoxDownloadPath.ReadOnly = true;
             this.richTextBoxDownloadPath.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBoxDownloadPath.Size = new System.Drawing.Size(652, 36);
+            this.richTextBoxDownloadPath.Size = new System.Drawing.Size(651, 36);
             this.richTextBoxDownloadPath.TabIndex = 5;
-            this.richTextBoxDownloadPath.Text = SettingsService.DefaultDownloadDirectoryPath;
+            this.richTextBoxDownloadPath.Text = "C:\\Users\\Andre\\Music";
             // 
             // groupBoxSearch
             // 
             this.groupBoxSearch.Controls.Add(this.labelSearchResultsStatic);
             this.groupBoxSearch.Controls.Add(this.numericUpDownSearchResults);
             this.groupBoxSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxSearch.ForeColor = System.Drawing.Color.White;
             this.groupBoxSearch.Location = new System.Drawing.Point(9, 9);
             this.groupBoxSearch.Name = "groupBoxSearch";
             this.groupBoxSearch.Size = new System.Drawing.Size(716, 175);
@@ -209,6 +213,7 @@
             this.labelSearchResultsStatic.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelSearchResultsStatic.AutoSize = true;
             this.labelSearchResultsStatic.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSearchResultsStatic.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelSearchResultsStatic.Location = new System.Drawing.Point(5, 81);
             this.labelSearchResultsStatic.Name = "labelSearchResultsStatic";
             this.labelSearchResultsStatic.Size = new System.Drawing.Size(286, 25);
@@ -222,12 +227,12 @@
             this.numericUpDownSearchResults.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownSearchResults.Location = new System.Drawing.Point(660, 77);
             this.numericUpDownSearchResults.Maximum = new decimal(new int[] {
-            SettingsService.MaximumSearchResults,
+            20,
             0,
             0,
             0});
             this.numericUpDownSearchResults.Minimum = new decimal(new int[] {
-            SettingsService.MinimumSearchResults,
+            1,
             0,
             0,
             0});
@@ -237,7 +242,7 @@
             this.numericUpDownSearchResults.TabIndex = 3;
             this.numericUpDownSearchResults.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDownSearchResults.Value = new decimal(new int[] {
-            SettingsService.DefaultSearchResults,
+            5,
             0,
             0,
             0});

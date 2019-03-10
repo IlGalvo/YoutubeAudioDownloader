@@ -40,7 +40,7 @@
             // 
             // tableLayoutPanelMenu
             // 
-            this.tableLayoutPanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.tableLayoutPanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.tableLayoutPanelMenu.ColumnCount = 1;
             this.tableLayoutPanelMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelMenu.Controls.Add(this.buttonResearch, 0, 0);
@@ -60,12 +60,12 @@
             // 
             // buttonResearch
             // 
-            this.buttonResearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.buttonResearch.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonResearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonResearch.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.buttonResearch.FlatAppearance.CheckedBackColor = System.Drawing.Color.PaleGreen;
-            this.buttonResearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
-            this.buttonResearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkCyan;
+            this.buttonResearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonResearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonResearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonResearch.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonResearch.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -82,15 +82,15 @@
             // 
             // buttonList
             // 
-            this.buttonList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.buttonList.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonList.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.buttonList.FlatAppearance.CheckedBackColor = System.Drawing.Color.PaleGreen;
-            this.buttonList.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
-            this.buttonList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonList.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonList.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonList.ForeColor = System.Drawing.Color.DarkGreen;
+            this.buttonList.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonList.Image = ((System.Drawing.Image)(resources.GetObject("buttonList.Image")));
             this.buttonList.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonList.Location = new System.Drawing.Point(3, 155);
@@ -105,15 +105,15 @@
             // 
             // buttonDownload
             // 
-            this.buttonDownload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.buttonDownload.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonDownload.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonDownload.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.buttonDownload.FlatAppearance.CheckedBackColor = System.Drawing.Color.PaleGreen;
-            this.buttonDownload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
-            this.buttonDownload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonDownload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonDownload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDownload.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDownload.ForeColor = System.Drawing.Color.DarkGreen;
+            this.buttonDownload.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonDownload.Image = ((System.Drawing.Image)(resources.GetObject("buttonDownload.Image")));
             this.buttonDownload.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonDownload.Location = new System.Drawing.Point(3, 310);
@@ -128,15 +128,15 @@
             // 
             // buttonSettings
             // 
-            this.buttonSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.buttonSettings.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonSettings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonSettings.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.buttonSettings.FlatAppearance.CheckedBackColor = System.Drawing.Color.PaleGreen;
-            this.buttonSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
-            this.buttonSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.buttonSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSettings.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSettings.ForeColor = System.Drawing.Color.DarkGreen;
+            this.buttonSettings.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonSettings.Image = ((System.Drawing.Image)(resources.GetObject("buttonSettings.Image")));
             this.buttonSettings.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonSettings.Location = new System.Drawing.Point(3, 465);
@@ -151,7 +151,7 @@
             // 
             // panelContent
             // 
-            this.panelContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.panelContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(97, 0);
             this.panelContent.Name = "panelContent";
